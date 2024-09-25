@@ -1,6 +1,6 @@
 /* Stili generali */
 body {
-    background-color: #F8F8F8; /* Sfondo bianco per l'intera pagina */
+    background-color: #F7F4F0; /* Sfondo bianco per l'intera pagina */
     font-family: Arial, sans-serif; /* Font di base */
     color: #333; /* Colore del testo per il corpo */
     margin: 0; /* Rimuove margini predefiniti del browser */
@@ -71,6 +71,15 @@ footer {
     margin-bottom: 20px;
 }
 
+/* Posiziona i box novità al centro della pagina */
+.bacheca {
+    display: flex;
+    flex-direction: column;
+    align-items: center;  /* Centra i box al centro della pagina */
+    gap: 20px;  /* Spaziatura tra i box */
+    padding: 20px;
+}
+
 /* Uniformare la dimensione dei box nella bacheca */
 .bacheca article {
     background-color: #fff;
@@ -80,7 +89,7 @@ footer {
     max-width: 800px;         /* Larghezza massima */
     min-height: 150px;        /* Altezza minima fissa */
     padding: 20px;
-    margin-bottom: 20px;
+    margin: 0 auto 20px auto; /* Centra il box orizzontalmente */
     text-align: left;
     display: flex;
     flex-direction: column;
