@@ -71,47 +71,46 @@ footer {
     margin-bottom: 20px;
 }
 
-.bacheca {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
+/* Uniformare la dimensione dei box nella bacheca */
 .bacheca article {
     background-color: #fff;
     border: 1px solid #ddd;
     border-radius: 8px;
-    max-width: 800px;
+    width: 100%;             /* Larghezza fissa */
+    max-width: 800px;         /* Larghezza massima */
+    min-height: 150px;        /* Altezza minima fissa */
     padding: 20px;
     margin-bottom: 20px;
     text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;  /* Distribuisce lo spazio tra titolo e contenuto */
 }
 
+/* Garantire che il titolo e il paragrafo siano allineati correttamente */
 .bacheca h3 {
     color: #333;
     font-size: 1.5em;
+    margin-bottom: 10px;  /* Aggiunge spazio tra il titolo e il testo */
 }
 
 .bacheca p {
     color: #666;
     font-size: 1em;
     text-align: justify;
+    flex-grow: 1;  /* Fa sì che il testo occupi tutto lo spazio disponibile */
 }
 
 /* Sezione per "La nostra storia" */
 #storia {
-    text-align: justify; /* Centra il titolo e il testo */
-    margin: 40px 20px; /* Aggiungi margini sopra e sotto e margini laterali più ampi */
-}
-
-#storia h2 {
-    color: #000; /* Colore del titolo in nero */
+    padding: 40px;
+    max-width: 800px;  /* Fissa la larghezza massima */
+    margin: 0 auto;    /* Centra la sezione */
+    text-align: center; /* Centra il testo */
 }
 
 #storia p {
-    max-width: 800px; /* Larghezza massima per il paragrafo */
-    margin: 0 auto; /* Centra il paragrafo */
-    padding: 0 20px; /* Aggiungi padding laterali */
+    text-align: justify;
 }
 
 /* Sezioni */
