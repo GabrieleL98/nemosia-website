@@ -11,7 +11,7 @@ body {
 
 /* Stile per l'intestazione */
 header {
-    background: #35424a; /* Colore di sfondo scuro per l'intestazione */
+    background: #F8EBD9; /* Colore di sfondo scuro per l'intestazione */
     color: #ffffff; /* Colore del testo bianco */
     text-align: center; /* Centra il testo */
 }
@@ -30,7 +30,7 @@ header {
     position: fixed; /* Fissa la navbar in alto */
     top: 0; /* Posizionamento in alto */
     width: 100%; /* Larghezza completa */
-    background: #35424a; /* Stesso colore dell'intestazione */
+    background: #F8EBD9; /* Stesso colore dell'intestazione */
     z-index: 1000; /* Mantiene la navbar sopra altri elementi */
 }
 
@@ -94,7 +94,7 @@ section {
 footer {
     text-align: center; /* Centra il testo nel piè di pagina */
     padding: 10px 0; /* Spaziatura verticale */
-    background: #35424a; /* Stesso colore dell'intestazione */
+    background: #F8EBD9; /* Stesso colore dell'intestazione */
     color: #ffffff; /* Colore del testo bianco */
     position: relative; /* Posizione relativa */
     bottom: 0; /* Mantiene il piè di pagina in basso */
