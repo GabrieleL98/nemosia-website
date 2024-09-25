@@ -67,7 +67,7 @@ footer {
 
 /* Sezione per "La nostra storia" */
 #storia {
-    text-align: center; /* Centra il titolo e il testo */
+    text-align: justify; /* Centra il titolo e il testo */
     margin: 40px 20px; /* Aggiungi margini sopra e sotto e margini laterali più ampi */
 }
 
