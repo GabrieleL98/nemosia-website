@@ -1,46 +1,65 @@
+/* style.css */
+
+/* Impostazioni globali */
 body {
     font-family: Arial, sans-serif;
+    line-height: 1.6;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    background-color: #f4f4f4; /* Colore di sfondo chiaro */
 }
 
+/* Stile per l'intestazione */
 header {
-    background: #35424a;
-    color: #ffffff;
-    padding: 20px 0;
-    text-align: center;
+    background: #35424a; /* Colore di sfondo scuro per l'intestazione */
+    color: #ffffff; /* Colore del testo bianco */
+    padding: 20px 0; /* Spaziatura verticale */
+    text-align: center; /* Centra il testo */
 }
 
 nav ul {
-    list-style: none;
     padding: 0;
+    list-style: none; /* Rimuovi i punti elenco */
 }
 
 nav ul li {
-    display: inline;
-    margin: 0 15px;
+    display: inline; /* Visualizza i link in linea */
+    margin: 0 15px; /* Spaziatura tra i link */
 }
 
-nav ul li a {
-    color: #ffffff;
-    text-decoration: none;
+nav a {
+    color: #ffffff; /* Colore dei link */
+    text-decoration: none; /* Rimuovi la sottolineatura */
 }
 
+nav a:hover {
+    text-decoration: underline; /* Sottolinea il link al passaggio del mouse */
+}
+
+/* Stile per il contenuto principale */
 main {
-    padding: 20px;
+    padding: 20px; /* Spaziatura attorno al contenuto */
+    max-width: 800px; /* Larghezza massima del contenuto */
+    margin: auto; /* Centra il contenuto */
+    background: #ffffff; /* Sfondo bianco per il contenuto */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Leggera ombra */
 }
 
+/* Stile per le sezioni */
 section {
-    margin-bottom: 20px;
-    background: #ffffff;
-    padding: 15px;
-    border-radius: 5px;
+    margin-bottom: 20px; /* Spaziatura tra le sezioni */
+    padding: 15px; /* Spaziatura interna */
+    border-radius: 5px; /* Angoli arrotondati */
+    background: #e2e2e2; /* Sfondo grigio chiaro per le sezioni */
 }
 
+/* Stile per il piè di pagina */
 footer {
-    text-align: center;
-    padding: 10px;
-    background: #35424a;
-    color: #ffffff;
+    text-align: center; /* Centra il testo nel piè di pagina */
+    padding: 10px 0; /* Spaziatura verticale */
+    background: #35424a; /* Stesso colore dell'intestazione */
+    color: #ffffff; /* Colore del testo bianco */
+    position: relative; /* Posizione relativa */
+    bottom: 0; /* Mantiene il piè di pagina in basso */
+    width: 100%; /* Larghezza completa */
 }
