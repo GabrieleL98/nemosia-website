@@ -1,57 +1,56 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-	<link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nemosia</title>
 </head>
 <body>
     <header>
-        <h1>Benvenuti in Nemosia, la nostra associazione culturale!</h1>
-		<nav>
-			<ul>
-				<li><a href="index.html">Home</a></li>
-				<li><a href="chi-siamo.html">Chi Siamo</a></li>
-				<li><a href="eventi.html">Eventi</a></li>
-				<li><a href="donazioni.html">Donazioni</a></li>
-				<li><a href="contatti.html">Contatti</a></li>
-			</ul>
-		</nav>
-
+        <div class="banner">
+           <img src="logo.png" alt="Logo di Nemosia" class="logo" />
+        </div>
+        <nav class="navbar">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="chi-siamo.html">Chi Siamo</a></li>
+                <li><a href="eventi.html">Eventi</a></li>
+                <li><a href="donazioni.html">Donazioni</a></li>
+                <li><a href="contatti.html">Contatti</a></li>
+            </ul>
+        </nav>
     </header>
 
     <main>
-    <section id="news">
-            <h2>News e Prossimi Eventi</h2>
-            <p>Qui puoi aggiungere informazioni sui prossimi eventi della tua associazione.</p>
-        </section>
+        <section class="foto-scorrimento">
+    <h2>Foto Recenti</h2>
+    <div class="slideshow">
+        <img src="https://via.placeholder.com/800x300.png?text=Immagine+1" alt="Foto 1" />
+        <img src="https://via.placeholder.com/800x300.png?text=Immagine+2" alt="Foto 2" />
+        <img src="https://via.placeholder.com/800x300.png?text=Immagine+3" alt="Foto 3" />
+    </div>
+</section>
 
-        <section id="chi-siamo">
-            <h2>Chi Siamo</h2>
-            <p>Descrivi qui la tua associazione e la sua missione.</p>
+        <section id="la-nostra-storia">
+            <h2>La nostra storia</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus.</p>
         </section>
-
-        <section id="eventi">
-            <h2>Eventi</h2>
-            <p>Elenca qui gli eventi passati e futuri.</p>
-        </section>
-
-        <section id="donazioni">
-            <h2>Donazioni</h2>
-            <p>Informazioni su come sostenere la tua associazione e ringraziamenti agli sponsor.</p>
-            <!-- Puoi aggiungere qui i loghi degli sponsor -->
-        </section>
-
-        <section id="contatti">
-            <h2>Contatti</h2>
-            <p>Inserisci le informazioni di contatto della tua associazione.</p>
-        </section>
-    </main>
     </main>
 
     <footer>
         <p>&copy; 2024 Nemosia. Tutti i diritti riservati.</p>
     </footer>
+
+    <script>
+        // Codice per la slideshow
+        let currentIndex = 0;
+        const images = document.querySelectorAll('.slideshow img');
+        setInterval(() => {
+            images[currentIndex].style.display = 'none'; // Nasconde l'immagine corrente
+            currentIndex = (currentIndex + 1) % images.length; // Aggiorna l'indice
+            images[currentIndex].style.display = 'block'; // Mostra la nuova immagine
+        }, 3000); // Cambia immagine ogni 3 secondi
+    </script>
 </body>
 </html>

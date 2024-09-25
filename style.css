@@ -6,20 +6,38 @@ body {
     line-height: 1.6;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4; /* Colore di sfondo chiaro */
+    background-color: #ffffff; /* Sfondo bianco per l'intera pagina */
 }
 
 /* Stile per l'intestazione */
 header {
     background: #35424a; /* Colore di sfondo scuro per l'intestazione */
     color: #ffffff; /* Colore del testo bianco */
-    padding: 20px 0; /* Spaziatura verticale */
     text-align: center; /* Centra il testo */
+}
+
+.banner {
+    padding: 50px 0; /* Spaziatura verticale per il banner */
+}
+
+.logo {
+    max-width: 100%; /* Rende il logo responsive */
+    height: auto; /* Mantiene le proporzioni */
+}
+
+/* Stile per la barra di navigazione */
+.navbar {
+    position: fixed; /* Fissa la navbar in alto */
+    top: 0; /* Posizionamento in alto */
+    width: 100%; /* Larghezza completa */
+    background: #35424a; /* Stesso colore dell'intestazione */
+    z-index: 1000; /* Mantiene la navbar sopra altri elementi */
 }
 
 nav ul {
     padding: 0;
     list-style: none; /* Rimuovi i punti elenco */
+    margin: 0; /* Rimuovi margini */
 }
 
 nav ul li {
@@ -33,7 +51,7 @@ nav a {
 }
 
 nav a:hover {
-    text-decoration: underline; /* Sottolinea il link al passaggio del mouse */
+    text-decoration: underline; /* Sottolinea al passaggio del mouse */
 }
 
 /* Stile per il contenuto principale */
@@ -41,8 +59,27 @@ main {
     padding: 20px; /* Spaziatura attorno al contenuto */
     max-width: 800px; /* Larghezza massima del contenuto */
     margin: auto; /* Centra il contenuto */
-    background: #ffffff; /* Sfondo bianco per il contenuto */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Leggera ombra */
+}
+
+/* Sezione delle foto */
+.foto-scorrimento {
+    text-align: center; /* Centra il testo e le immagini */
+    margin-bottom: 20px; /* Spaziatura sotto la sezione */
+}
+
+.slideshow {
+    position: relative; /* Posizione relativa per il contenitore delle immagini */
+    height: 300px; /* Altezza fissa per la slideshow */
+}
+
+.slideshow img {
+    display: none; /* Nascondi tutte le immagini all'inizio */
+    width: 100%; /* Rende le immagini responsive */
+    height: auto; /* Mantiene le proporzioni */
+}
+
+.slideshow img:first-child {
+    display: block; /* Mostra la prima immagine */
 }
 
 /* Stile per le sezioni */
