@@ -43,18 +43,38 @@ footer {
     width: 100%; /* Larghezza al 100% */
 }
 
-/* Stili per la slideshow */
+/* Stile per la slideshow */
 .foto-scorrimento {
     text-align: center; /* Centra il contenuto */
+    margin: 20px 0; /* Aggiungi un margine sopra e sotto la slideshow */
 }
 
+.slideshow {
+    display: flex; /* Utilizza flexbox per centrare */
+    overflow: hidden; /* Nasconde le immagini che escono dal contenitore */
+    position: relative; /* Necessario per il posizionamento delle immagini */
+    justify-content: center; /* Centra il contenuto */
+}
+
+/* Stile per le immagini nella slideshow */
 .slideshow img {
     width: 100%; /* Adatta l'immagine alla larghezza del contenitore */
     max-width: 800px; /* Limita la larghezza massima */
     height: auto; /* Mantiene le proporzioni */
+    margin: 0 auto; /* Centra l'immagine */
 }
 
-/* Sezioni */
-h2 {
+/* Sezione per "La nostra storia" */
+#storia {
+    text-align: center; /* Centra il titolo e il testo */
+    margin: 40px 0; /* Margini sopra e sotto */
+}
+
+#storia h2 {
     color: #000; /* Colore del titolo in nero */
+}
+
+#storia p {
+    max-width: 800px; /* Larghezza massima per il paragrafo */
+    margin: 0 auto; /* Centra il paragrafo */
 }
