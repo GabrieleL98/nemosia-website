@@ -1,102 +1,60 @@
-/* style.css */
-
-/* Impostazioni globali */
+/* Stili generali */
 body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    margin: 0;
-    padding: 0;
     background-color: #ffffff; /* Sfondo bianco per l'intera pagina */
+    font-family: Arial, sans-serif; /* Font di base */
+    color: #333; /* Colore del testo per il corpo */
 }
 
-/* Stile per l'intestazione */
+/* Stile per l'header */
 header {
-    background: #F8EBD9; /* Colore di sfondo scuro per l'intestazione */
-    color: #ffffff; /* Colore del testo bianco */
-    text-align: center; /* Centra il testo */
+    background-color: #F8EBD9; /* Colore di sfondo per l'header */
+    padding: 20px;
+    text-align: center;
 }
 
-.banner {
-    padding: 50px 0; /* Spaziatura verticale per il banner */
-}
-
-.logo {
-    max-width: 100%; /* Rende il logo responsive */
-    height: auto; /* Mantiene le proporzioni */
-}
-
-/* Stile per la barra di navigazione */
+/* Stile per la navbar */
 .navbar {
-    position: fixed; /* Fissa la navbar in alto */
-    top: 0; /* Posizionamento in alto */
-    width: 100%; /* Larghezza completa */
-    background: #F8EBD9; /* Stesso colore dell'intestazione */
-    z-index: 1000; /* Mantiene la navbar sopra altri elementi */
+    background-color: #F8EBD9; /* Colore di sfondo per la navbar */
+    margin-top: 10px;
 }
 
-nav ul {
+.navbar ul {
+    list-style: none; /* Rimuove i punti elenco */
     padding: 0;
-    list-style: none; /* Rimuovi i punti elenco */
-    margin: 0; /* Rimuovi margini */
 }
 
-nav ul li {
-    display: inline; /* Visualizza i link in linea */
-    margin: 0 15px; /* Spaziatura tra i link */
+.navbar li {
+    display: inline; /* Gli elementi della lista sono affiancati */
+    margin-right: 15px; /* Spaziatura tra i link */
 }
 
-nav a {
-    color: #ffffff; /* Colore dei link */
-    text-decoration: none; /* Rimuovi la sottolineatura */
+.navbar a {
+    text-decoration: none; /* Rimuove la sottolineatura dai link */
+    color: #000; /* Colore del testo in nero per i link */
 }
 
-nav a:hover {
-    text-decoration: underline; /* Sottolinea al passaggio del mouse */
+/* Stile per il footer */
+footer {
+    background-color: #F8EBD9; /* Colore di sfondo per il footer */
+    padding: 10px;
+    text-align: center;
+    position: relative; /* Per un posizionamento corretto */
+    bottom: 0;
+    width: 100%; /* Larghezza al 100% */
 }
 
-/* Stile per il contenuto principale */
-main {
-    padding: 20px; /* Spaziatura attorno al contenuto */
-    max-width: 800px; /* Larghezza massima del contenuto */
-    margin: auto; /* Centra il contenuto */
-}
-
-/* Sezione delle foto */
+/* Stili per la slideshow */
 .foto-scorrimento {
-    text-align: center; /* Centra il testo e le immagini */
-    margin-bottom: 20px; /* Spaziatura sotto la sezione */
-}
-
-.slideshow {
-    position: relative; /* Posizione relativa per il contenitore delle immagini */
-    height: 300px; /* Altezza fissa per la slideshow */
+    text-align: center; /* Centra il contenuto */
 }
 
 .slideshow img {
-    display: none; /* Nascondi tutte le immagini all'inizio */
-    width: 100%; /* Rende le immagini responsive */
+    width: 100%; /* Adatta l'immagine alla larghezza del contenitore */
+    max-width: 800px; /* Limita la larghezza massima */
     height: auto; /* Mantiene le proporzioni */
 }
 
-.slideshow img:first-child {
-    display: block; /* Mostra la prima immagine */
-}
-
-/* Stile per le sezioni */
-section {
-    margin-bottom: 20px; /* Spaziatura tra le sezioni */
-    padding: 15px; /* Spaziatura interna */
-    border-radius: 5px; /* Angoli arrotondati */
-    background: #e2e2e2; /* Sfondo grigio chiaro per le sezioni */
-}
-
-/* Stile per il piè di pagina */
-footer {
-    text-align: center; /* Centra il testo nel piè di pagina */
-    padding: 10px 0; /* Spaziatura verticale */
-    background: #F8EBD9; /* Stesso colore dell'intestazione */
-    color: #ffffff; /* Colore del testo bianco */
-    position: relative; /* Posizione relativa */
-    bottom: 0; /* Mantiene il piè di pagina in basso */
-    width: 100%; /* Larghezza completa */
+/* Sezioni */
+h2 {
+    color: #000; /* Colore del titolo in nero */
 }
