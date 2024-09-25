@@ -45,24 +45,57 @@ footer {
     width: 100%; /* Larghezza al 100% */
 }
 
-/* Stile per la slideshow */
-.foto-scorrimento {
-    text-align: center; /* Centra il contenuto */
-    margin: 20px 0; /* Aggiungi un margine sopra e sotto la slideshow */
+/* Carousel - Immagini in scorrimento */
+.carousel {
+    display: flex;
+    overflow: hidden;
+    width: 100%; /* Copre l'intera larghezza della pagina */
 }
 
-.slideshow {
-    display: flex; /* Utilizza flexbox per centrare */
-    overflow: hidden; /* Nasconde le immagini che escono dal contenitore */
-    position: relative; /* Necessario per il posizionamento delle immagini */
-    justify-content: center; /* Centra il contenuto */
+.carousel img {
+    width: 100vw; /* Larghezza 100% della visualizzazione */
+    height: 60vh; /* Altezza dinamica per adattare le immagini */
+    object-fit: cover; /* Zoomma per coprire l'intera area, anche se taglia una parte */
 }
 
-.slideshow img {
-    width: 100%; /* Adatta l'immagine alla larghezza del contenitore */
-    max-width: 800px; /* Limita la larghezza massima */
-    height: auto; /* Mantiene le proporzioni */
-    margin: 0 auto; /* Centra l'immagine */
+/* Sezione Novità */
+#novita {
+    background-color: #F8EBD9; /* Colore simile all'header */
+    padding: 30px;
+    text-align: center;
+}
+
+#novita h2 {
+    color: #333;
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.bacheca {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.bacheca article {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    max-width: 800px;
+    padding: 20px;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.bacheca h3 {
+    color: #333;
+    font-size: 1.5em;
+}
+
+.bacheca p {
+    color: #666;
+    font-size: 1em;
+    text-align: justify;
 }
 
 /* Sezione per "La nostra storia" */
