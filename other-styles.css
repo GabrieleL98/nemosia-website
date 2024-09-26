@@ -1,0 +1,48 @@
+body {
+    background-color: #F0F0F0; /* Un grigio chiaro per le pagine */
+    font-family: Arial, sans-serif;
+}
+
+h1, h2, h3 {
+    color: #333; /* Colore del testo per i titoli */
+}
+
+p {
+    text-align: justify; /* Giustifica il testo nei paragrafi */
+}
+
+/* Stili per i box delle informazioni */
+.info-box {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
+    margin: 20px 0;
+    background-color: #fff; /* Bianco per il box */
+}
+nav {
+    background-color: #F8EBD9; /* Colore di sfondo della nav bar */
+    padding: 10px 20px; /* Padding per la nav bar */
+}
+
+nav ul {
+    list-style-type: none; /* Rimuove i punti dall'elenco */
+    margin: 0; /* Rimuove il margine */
+    padding: 0; /* Rimuove il padding */
+    display: flex; /* Fa sì che gli elementi siano affiancati */
+}
+
+nav ul li {
+    margin-right: 20px; /* Spazio tra le opzioni */
+}
+
+nav ul li a {
+    text-decoration: none; /* Rimuove la sottolineatura dei link */
+    color: black; /* Colore del testo */
+    padding: 5px 10px; /* Padding per i link */
+    transition: color 0.3s, text-decoration 0.3s; /* Transizione per il passaggio del cursore */
+}
+
+nav ul li a:hover {
+    text-decoration: underline; /* Sottolinea il testo al passaggio del cursore */
+    color: #333; /* Colore del testo al passaggio del cursore */
+}
