@@ -286,11 +286,38 @@ nav a {
 }
 
 
+
+
+
+
+/* Barre del menu hamburger */
+.bar {
+    height: 3px; /* Spessore delle barre */
+    width: 25px; /* Larghezza delle barre */
+    background-color: black; /* Colore delle barre */
+    margin: 4px; /* Margine tra le barre */
+	
+
+/* Barre del menu hamburger */
+.bar {
+    height: 3px; /* Spessore delle barre */
+    width: 25px; /* Larghezza delle barre */
+    background-color: black; /* Colore delle barre */
+    margin: 4px; /* Margine tra le barre */
+}
+
 @media (max-width: 768px) {
-    nav a {
-        font-size: 15px; /* Dimensione per mobile */
-        padding: 10px 15px; /* Maggiore padding per una nav più spaziosa */
-        display: inline-block; /* Assicura che i link siano inline */
+    .menu-toggle {
+        display: flex; /* Mostra il menu hamburger solo su schermi <= 768px */
+    }
+
+    .navbar ul {
+        display: none; /* Nasconde la navbar normale sui dispositivi mobili */
+    }
+
+    .navbar.active ul {
+        display: flex; /* Mostra la navbar quando il menu hamburger è attivo */
     }
 }
+
 
