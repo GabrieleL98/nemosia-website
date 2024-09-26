@@ -15,24 +15,33 @@ header {
 }
 
 /* Stile per la navbar */
-.navbar {
-    background-color: #F8EBD9; /* Colore di sfondo per la navbar */
-    margin-top: 10px;
+nav {
+    background-color: #F8EBD9; /* Colore di sfondo della nav bar */
+    padding: 10px 20px; /* Padding per la nav bar */
 }
 
-.navbar ul {
-    list-style: none; /* Rimuove i punti elenco */
-    padding: 0;
+nav ul {
+    list-style-type: none; /* Rimuove i punti dall'elenco */
+    margin: 0; /* Rimuove il margine */
+    padding: 0; /* Rimuove il padding */
+    display: flex; /* Fa sì che gli elementi siano affiancati */
+	justify-content: center; /* Centra gli elementi orizzontalmente */
 }
 
-.navbar li {
-    display: inline; /* Gli elementi della lista sono affiancati */
-    margin-right: 15px; /* Spaziatura tra i link */
+nav ul li {
+    margin-right: 20px; /* Spazio tra le opzioni */
 }
 
-.navbar a {
-    text-decoration: none; /* Rimuove la sottolineatura dai link */
-    color: #000; /* Colore del testo in nero per i link */
+nav ul li a {
+    text-decoration: none; /* Rimuove la sottolineatura dei link */
+    color: black; /* Colore del testo */
+    padding: 5px 10px; /* Padding per i link */
+    transition: color 0.3s, text-decoration 0.3s; /* Transizione per il passaggio del cursore */
+}
+
+nav ul li a:hover {
+    text-decoration: underline; /* Sottolinea il testo al passaggio del cursore */
+    color: #333; /* Colore del testo al passaggio del cursore */
 }
 
 
