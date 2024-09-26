@@ -97,6 +97,11 @@ nav ul li a:hover {
     justify-content: space-between;  /* Distribuisce lo spazio tra titolo e contenuto */
 }
 
+/* Stile per la bacheca nel suo complesso mobile*/
+.bacheca {
+    padding: 0 20px; /* Aggiungi padding laterale per evitare che gli articoli aderiscano ai bordi su mobile */
+}
+
 /* Garantire che il titolo e il paragrafo siano allineati correttamente */
 .bacheca h3 {
     color: #333;
@@ -328,3 +333,23 @@ nav ul {
     }
 }
 
+
+/* Stile responsive per mobile */
+@media (max-width: 768px) {
+    .bacheca {
+        padding: 0 10px; /* Riduci il padding su schermi piccoli */
+    }
+
+    .bacheca article {
+        padding: 15px;  /* Riduci il padding interno degli articoli */
+        margin-bottom: 15px; /* Diminuisci il margine inferiore */
+    }
+
+    .bacheca h3 {
+        font-size: 1.2em; /* Ridimensiona il titolo su mobile */
+    }
+
+    .bacheca p {
+        font-size: 0.9em; /* Ridimensiona il testo del paragrafo su mobile */
+    }
+}
