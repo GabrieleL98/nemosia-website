@@ -279,3 +279,14 @@ img {
 .item {
     margin: 10px; /* Spazio tra gli elementi */
 }
+nav a {
+    font-size: 16px; /* Dimensione per desktop */
+    padding: 10px 15px; /* Padding per aumentare l'area cliccabile */
+}
+
+@media (max-width: 768px) {
+    nav a {
+        font-size: 20px; /* Dimensione più grande per mobile */
+        padding: 15px 20px; /* Maggiore padding per una nav più spaziosa */
+    }
+}
