@@ -1,15 +1,14 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-    <link rel="stylesheet" href="style.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Iscriviti a Nemosia</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
     <header>
-        <h1>Diventa socio di Nemosia!</h1>
+        <h1>Iscriviti a Nemosia</h1>
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
@@ -17,63 +16,55 @@
                 <li><a href="eventi.html">Eventi</a></li>
                 <li><a href="donazioni.html">Donazioni</a></li>
                 <li><a href="contatti.html">Contatti</a></li>
+                <li><a href="iscrizioni.html">Diventa Socio</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
-            <section>
-				<h2>Perché diventare socio?</h2>
-					<p>Diventare socio di Nemosia ti permette di partecipare attivamente alla vita democratica dell'associazione e di contribuire alla nostra missione culturale.</p>
+        <section>
+            <h2>Modulo di iscrizione</h2>
+            <form action="submit-form.php" method="POST">
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome" required><br>
 
-						<ol>
-							<li><strong>Partecipare all'Assemblea dei Soci</strong>: Come socio, avrai il diritto di partecipare alle riunioni dell'Assemblea dei Soci, dove potrai esprimere le tue idee, proporre iniziative e contribuire alle decisioni importanti riguardanti l'associazione.</li>
-							<li><strong>Contribuire all'organizzazione degli eventi</strong>: I soci sono invitati a collaborare attivamente nella progettazione e realizzazione degli eventi culturali dell'associazione. Questo ti permetterà di dare il tuo contributo diretto alla promozione della cultura.</li>
-							<li><strong>Proporre nuove iniziative</strong>: Potrai proporre progetti, attività e eventi da realizzare insieme, in un ambiente collaborativo in cui ogni proposta è considerata e valutata in base agli obiettivi comuni.</li>
-							<li><strong>Sostenere la missione dell'associazione</strong>: Diventando socio, contribuirai in modo attivo a promuovere i valori e la missione di Nemosia, partecipando a un progetto che mira a valorizzare la cultura e le arti nel nostro territorio.</li>
-							<li><strong>Votare nelle decisioni strategiche</strong>: Come membro dell'Assemblea, avrai il diritto di voto nelle decisioni che riguardano il futuro dell'associazione, garantendo una gestione partecipativa e trasparente.</li>
-							<li><strong>Collaborare in modo inclusivo e aperto</strong>: L’associazione si basa su valori di uguaglianza e partecipazione. Essere socio non comporta privilegi esclusivi, ma la possibilità di lavorare insieme, in modo democratico e inclusivo, per il bene comune.</li>
-						</ol>
-			</section
+                <label for="cognome">Cognome:</label>
+                <input type="text" id="cognome" name="cognome" required><br>
 
-        <section id="form-iscrizione">
-            <h2>Iscriviti ora</h2>
-            <form action="iscrizione_successo.html" method="POST">
-                <label for="nome">Nome Completo:</label>
-                <input type="text" id="nome" name="nome" required><br><br>
+                <label for="data-nascita">Data di Nascita:</label>
+                <input type="date" id="data-nascita" name="data-nascita" required><br>
+
+                <label for="luogo-nascita">Luogo di Nascita (Comune + Provincia):</label>
+                <input type="text" id="luogo-nascita" name="luogo-nascita" required><br>
 
                 <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required><br><br>
+                <input type="email" id="email" name="email" required><br>
 
-                <label for="telefono">Numero di Telefono:</label>
-                <input type="tel" id="telefono" name="telefono"><br><br>
+                <p><strong>Costo tessera associativa:</strong> La tessera associativa ha un costo di 15€ annui, che sarà richiesto solo dopo l'approvazione della richiesta di iscrizione.</p>
+                <label for="costo-checkbox">
+                    <input type="checkbox" id="costo-checkbox" name="costo-checkbox" required>
+                    Confermo di essere a conoscenza del costo della tessera associativa.
+                </label><br>
 
-                <label for="indirizzo">Indirizzo:</label>
-                <input type="text" id="indirizzo" name="indirizzo"><br><br>
+                <p>Leggi il nostro <a href="statuto.pdf" target="_blank">Statuto</a> e accetta le normative.</p>
+                <label for="statuto-checkbox">
+                    <input type="checkbox" id="statuto-checkbox" name="statuto-checkbox" required>
+                    Confermo di aver preso visione dello statuto e delle normative.
+                </label><br>
 
-                <label for="motivazione">Perché vuoi diventare socio?</label><br>
-                <textarea id="motivazione" name="motivazione" rows="4" cols="50"></textarea><br><br>
+                <p>Accetta la nostra <a href="privacy-policy.html" target="_blank">Privacy Policy</a>.</p>
+                <label for="privacy-checkbox">
+                    <input type="checkbox" id="privacy-checkbox" name="privacy-checkbox" required>
+                    Accetto la politica sulla privacy.
+                </label><br>
 
-                <button type="submit" class="cta-button">Invia Iscrizione</button>
+                <input type="submit" value="Invia la Richiesta di Iscrizione">
             </form>
         </section>
     </main>
 
     <footer>
         <p>&copy; 2024 Nemosia. Tutti i diritti riservati.</p>
-        <div class="social">
-            <a href="https://instagram.com/tuoaccount" target="_blank">
-                <img src="instagram-logo.png" alt="Instagram" class="social-icon">
-            </a>
-            <a href="mailto:info@nemosia.com">
-                <img src="mail-logo.png" alt="Email" class="social-icon">
-            </a>
-            <p>
-                <a href="https://instagram.com/tuoaccount" target="_blank">instagram.com/tuoaccount</a> | 
-                <a href="mailto:info@nemosia.com">info@nemosia.com</a>
-            </p>
-        </div>
     </footer>
-
 </body>
 </html>
