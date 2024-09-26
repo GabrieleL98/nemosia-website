@@ -8,28 +8,26 @@
     <title>Nemosia</title>
 </head>
 <body>
-    <header>
-        <div class="banner">
-           <img src="logo.png" alt="Logo di Nemosia" class="logo" />
-        </div>
-        <nav class="navbar">
-	
-			<div class="menu-toggle" id="mobile-menu">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </div>
-			
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="chi-siamo.html">Chi Siamo</a></li>
-                <li><a href="eventi.html">Eventi</a></li>
-				<li><a href="iscriviti.html">Iscriviti</a></li>
-                <li><a href="donazioni.html">Donazioni</a></li>
-                <li><a href="contatti.html">Contatti</a></li>
-            </ul>
-        </nav>
-    </header>
+   <header>
+    <div class="banner">
+       <img src="logo.png" alt="Logo di Nemosia" class="logo" />
+    </div>
+    
+    <!-- Icona del menu hamburger -->
+    <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
+    
+    <nav class="navbar">
+        <ul id="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="chi-siamo.html">Chi Siamo</a></li>
+            <li><a href="eventi.html">Eventi</a></li>
+            <li><a href="iscriviti.html">Iscriviti</a></li>
+            <li><a href="donazioni.html">Donazioni</a></li>
+            <li><a href="contatti.html">Contatti</a></li>
+        </ul>
+    </nav>
+</header>
+
 
     <main>
         <section class="carousel">
@@ -125,12 +123,15 @@
             images[currentIndex].style.display = 'block'; // Mostra la nuova immagine
         }, 3000); // Cambia immagine ogni 3 secondi
 		
-		const mobileMenu = document.getElementById('mobile-menu');
-    const navbar = document.querySelector('.navbar');
-
-    mobileMenu.addEventListener('click', () => {
-        navbar.classList.toggle('active'); // Aggiunge o rimuove la classe 'active'
-    });
+		 // Codice per il menu ad hamburger
+    function toggleMenu() {
+        const navLinks = document.getElementById("nav-links");
+        if (navLinks.style.display === "block") {
+            navLinks.style.display = "none";
+        } else {
+            navLinks.style.display = "block";
+        }
+    }
 		
     </script>
 </body>

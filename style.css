@@ -290,34 +290,41 @@ nav a {
 
 
 
-/* Barre del menu hamburger */
-.bar {
-    height: 3px; /* Spessore delle barre */
-    width: 25px; /* Larghezza delle barre */
-    background-color: black; /* Colore delle barre */
-    margin: 4px; /* Margine tra le barre */
-	
-
-/* Barre del menu hamburger */
-.bar {
-    height: 3px; /* Spessore delle barre */
-    width: 25px; /* Larghezza delle barre */
-    background-color: black; /* Colore delle barre */
-    margin: 4px; /* Margine tra le barre */
+/* Nascondi il menu su dispositivi mobili inizialmente */
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
 }
 
+/* Hamburger nascosto su desktop */
+.hamburger {
+    display: none;
+}
+
+/* Mostra il menu ad hamburger solo su mobile */
 @media (max-width: 768px) {
-    .menu-toggle {
-        display: flex; /* Mostra il menu hamburger solo su schermi <= 768px */
+    .hamburger {
+        display: block;
+        font-size: 30px;
+        cursor: pointer;
     }
 
-    .navbar ul {
-        display: none; /* Nasconde la navbar normale sui dispositivi mobili */
+    /* Nascondere i link di navigazione su mobile inizialmente */
+    nav ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
     }
 
-    .navbar.active ul {
-        display: flex; /* Mostra la navbar quando il menu hamburger è attivo */
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    /* Mostrare il menu quando l'hamburger è cliccato */
+    nav ul.show {
+        display: block;
     }
 }
-
 
