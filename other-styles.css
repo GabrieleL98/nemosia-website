@@ -103,3 +103,9 @@ h1, h2, h3, p {
     margin: 10px 0; /* Margini verticali per separare i paragrafi */
     line-height: 1.6; /* Interlinea per migliorare la leggibilità */
 }
+
+form label {
+    display: block; /* Rende ogni label un blocco per un miglior allineamento */
+    margin-bottom: 10px; /* Aggiunge spazio tra le checkbox */
+}
+
