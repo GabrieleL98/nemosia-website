@@ -52,6 +52,7 @@ nav ul li a:hover {
 
 
 footer {
+	width: 100%; /*forza il footer a occupare l'intera pagina/*/
     text-align: center; /* Centra il testo nel footer */
     padding: 20px; /* Aggiunge un padding attorno al footer */
     background-color: #F8EBD9; /* Colore di sfondo del footer */
