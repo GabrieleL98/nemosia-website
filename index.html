@@ -13,6 +13,13 @@
            <img src="logo.png" alt="Logo di Nemosia" class="logo" />
         </div>
         <nav class="navbar">
+	
+			<div class="menu-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+			
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="chi-siamo.html">Chi Siamo</a></li>
@@ -117,6 +124,14 @@
             currentIndex = (currentIndex + 1) % images.length; // Aggiorna l'indice
             images[currentIndex].style.display = 'block'; // Mostra la nuova immagine
         }, 3000); // Cambia immagine ogni 3 secondi
+		
+		const mobileMenu = document.getElementById('mobile-menu');
+    const navbar = document.querySelector('.navbar');
+
+    mobileMenu.addEventListener('click', () => {
+        navbar.classList.toggle('active'); // Aggiunge o rimuove la classe 'active'
+    });
+		
     </script>
 </body>
 </html>
