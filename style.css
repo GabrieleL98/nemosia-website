@@ -292,13 +292,22 @@ nav a {
 }
 
 /*Nav bar o hamburger menu */ 
+.hamburger {
+    display: none; /* Nascondi di default */
+    cursor: pointer; /* Cambia il cursore su pointer */
+}
+
 @media (max-width: 768px) {
+    .hamburger {
+        display: block; /* Mostra l'icona hamburger solo su dispositivi mobili */
+    }
+
     .navbar {
         display: none; /* Nascondi il menu di navigazione di default su mobile */
     }
 
-    .hamburger {
-        display: block; /* Mostra l'icona del menu a hamburger su mobile */
+    .nav-menu {
+        display: none; /* Nascondi il menu di navigazione di default */
     }
 
     .nav-menu.open {
@@ -310,5 +319,12 @@ nav a {
         width: 100%; /* Larghezza 100% */
         background-color: white; /* Sfondo bianco */
         z-index: 1; /* Portalo in primo piano */
+    }
+}
+
+/* Visibilità del menu di navigazione su desktop */
+@media (min-width: 769px) {
+    .nav-menu {
+        display: flex; /* Mostra il menu di navigazione su desktop */
     }
 }
