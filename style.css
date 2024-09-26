@@ -1,38 +1,82 @@
 /* Stili generali */
 body {
-    background-color: #F7F4F0; /* Sfondo bianco per l'intera pagina */
-    font-family: Arial, sans-serif; /* Font di base */
-    color: #333; /* Colore del testo per il corpo */
-    margin: 0; /* Rimuove margini predefiniti del browser */
-    padding: 0; /* Rimuove padding predefiniti del browser */
+    font-family: Arial, sans-serif;
+    background-color: #F8EBD9; /* Sfondo più scuro */
+    margin: 0;
+    padding: 0;
 }
 
-/* Stile per l'header */
 header {
-    background-color: #F8EBD9; /* Colore di sfondo per l'header */
-    padding: 10px; /* Ridotto da 20px a 10px */
+    background-color: #F8EBD9;
+    padding: 20px;
     text-align: center;
-}
-
+	
 /* Stile per la navbar */
 .navbar {
     background-color: #F8EBD9; /* Colore di sfondo per la navbar */
     margin-top: 10px;
 }
 
+..navbar {
+    background-color: #F8EBD9; /* Colore di sfondo */
+    padding: 20px;
+    text-align: center; /* Centra il contenuto */
+}
+
 .navbar ul {
-    list-style: none; /* Rimuove i punti elenco */
-    padding: 0;
+    list-style-type: none; /* Rimuove i punti dall'elenco */
+    padding: 0; /* Rimuove padding di default */
 }
 
-.navbar li {
-    display: inline; /* Gli elementi della lista sono affiancati */
-    margin-right: 15px; /* Spaziatura tra i link */
+.navbar ul li {
+    display: inline; /* Disporre i tasti orizzontalmente */
+    margin-right: 20px; /* Spazio tra i tasti */
 }
 
-.navbar a {
-    text-decoration: none; /* Rimuove la sottolineatura dai link */
-    color: #000; /* Colore del testo in nero per i link */
+h1, h2 {
+    color: #333;
+}
+
+main {
+    padding: 20px; /* Aggiungere spazio attorno al contenuto principale */
+    max-width: 800px; /* Larghezza massima per il contenuto */
+    margin: 0 auto; /* Centrare il contenuto */
+}
+
+form {
+    background-color: #FFFFFF; /* Sfondo bianco per il modulo */
+    padding: 20px;
+    border-radius: 5px; /* Angoli arrotondati */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Ombra leggera */
+}
+
+label {
+    display: block; /* Ogni etichetta occupa l'intera larghezza */
+    margin-bottom: 5px; /* Spazio sotto l'etichetta */
+}
+
+input[type="text"],
+input[type="date"],
+input[type="email"],
+select {
+    width: 100%; /* Campo largo come il genitore */
+    padding: 10px; /* Padding interno */
+    margin-bottom: 15px; /* Spazio sotto il campo */
+    border: 1px solid #ccc; /* Bordo grigio chiaro */
+    border-radius: 4px; /* Angoli arrotondati */
+}
+
+button {
+    background-color: #4CAF50; /* Colore del pulsante */
+    color: white; /* Colore del testo */
+    padding: 10px 15px; /* Padding del pulsante */
+    border: none; /* Nessun bordo */
+    border-radius: 4px; /* Angoli arrotondati */
+    cursor: pointer; /* Puntatore a mano */
+}
+
+button:hover {
+    background-color: #45a049; /* Colore del pulsante al passaggio */
 }
 
 
