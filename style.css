@@ -155,10 +155,27 @@ header {
 }
 
 
-/* Sezioni */
-h2 {
-    color: #000; /* Colore del titolo in nero */
+
+
+/* Sezioni e spaziatura elenchi*/
+h1, h2, h3, p {
+    text-align: center; /* Giustifica il testo al centro */
+    margin: 10px 0; /* Margini verticali per separare i paragrafi */
+    line-height: 1.5; /* Interlinea per migliorare la leggibilità */
 }
+
+ol, ul {
+    margin: 20px 0; /* Aggiunge margine sopra e sotto l'elenco */
+    padding-left: 20px; /* Distanza del contenuto dalla sinistra */
+}
+
+li {
+    margin-bottom: 10px; /* Aggiunge spazio tra i punti dell'elenco */
+}
+
+
+
+
 
 /* Footer */
 footer {
