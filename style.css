@@ -1,3 +1,4 @@
+
 /* Stili generali */
 body {
     background-color: #F7F4F0; /* Sfondo bianco per l'intera pagina */
@@ -288,43 +289,5 @@ nav a {
     nav a {
         font-size: 30px; /* Dimensione più grande per mobile */
         padding: 20px 25px; /* Maggiore padding per una nav più spaziosa */
-    }
-}
-
-/*Nav bar o hamburger menu */ 
-.hamburger {
-    display: none; /* Nascondi di default */
-    cursor: pointer; /* Cambia il cursore su pointer */
-}
-
-@media (max-width: 768px) {
-    .hamburger {
-        display: block; /* Mostra l'icona hamburger solo su dispositivi mobili */
-    }
-
-    .navbar {
-        display: none; /* Nascondi il menu di navigazione di default su mobile */
-    }
-
-    .nav-menu {
-        display: none; /* Nascondi il menu di navigazione di default */
-    }
-
-    .nav-menu.open {
-        display: flex; /* Mostra il menu a navigazione quando è aperto */
-        flex-direction: column; /* Dispone gli elementi in colonna */
-        position: absolute; /* Posiziona il menu in modo assoluto */
-        top: 60px; /* Posiziona sotto l'intestazione */
-        left: 0; /* Allinea a sinistra */
-        width: 100%; /* Larghezza 100% */
-        background-color: white; /* Sfondo bianco */
-        z-index: 1; /* Portalo in primo piano */
-    }
-}
-
-/* Visibilità del menu di navigazione su desktop */
-@media (min-width: 769px) {
-    .nav-menu {
-        display: flex; /* Mostra il menu di navigazione su desktop */
     }
 }

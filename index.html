@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="it">
 <head>
@@ -9,21 +10,19 @@
 <body>
     <header>
         <div class="banner">
-            <img src="logo.png" alt="Logo di Nemosia" class="logo" />
+           <img src="logo.png" alt="Logo di Nemosia" class="logo" />
         </div>
-    <nav class="navbar">
-        <div class="hamburger">☰</div> <!-- Aggiunta dell'icona hamburger -->
-        <ul class="nav-menu"> <!-- Aggiunta della classe nav-menu -->
-            <li><a href="index.html">Home</a></li>
-            <li><a href="chi-siamo.html">Chi Siamo</a></li>
-            <li><a href="eventi.html">Eventi</a></li>
-            <li><a href="iscriviti.html">Iscriviti</a></li>
-            <li><a href="donazioni.html">Donazioni</a></li>
-            <li><a href="contatti.html">Contatti</a></li>
-        </ul>
-    </nav>
+        <nav class="navbar">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="chi-siamo.html">Chi Siamo</a></li>
+                <li><a href="eventi.html">Eventi</a></li>
+				<li><a href="iscriviti.html">Iscriviti</a></li>
+                <li><a href="donazioni.html">Donazioni</a></li>
+                <li><a href="contatti.html">Contatti</a></li>
+            </ul>
+        </nav>
     </header>
-
 
     <main>
         <section class="carousel">
@@ -118,16 +117,6 @@
             currentIndex = (currentIndex + 1) % images.length; // Aggiorna l'indice
             images[currentIndex].style.display = 'block'; // Mostra la nuova immagine
         }, 3000); // Cambia immagine ogni 3 secondi
-		
-		 // Seleziona il pulsante del menu a hamburger e il menu di navigazione
-    const hamburger = document.querySelector('.hamburger');
-    const navMenu = document.querySelector('.nav-menu');
-
-    // Aggiungi un listener per il click sull'hamburger
-    hamburger.addEventListener('click', () => {
-        // Toglie o aggiunge la classe 'open' al menu
-        navMenu.classList.toggle('open');
-    });
     </script>
 </body>
 </html>
