@@ -118,6 +118,11 @@ form label {
 }
 
 
+.donazione {
+    text-align: center; /* Centra il contenuto della sezione */
+    margin: 20px 0;
+}
+
 .paypal-button {
     background-color: #FFC439;
     color: #000;
@@ -127,8 +132,11 @@ form label {
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    margin: 0 auto; /* Centra il pulsante orizzontalmente */
+    display: block;  /* Trasforma il pulsante in un elemento a blocco per applicare il margin auto */
 }
 
 .paypal-button:hover {
     background-color: #FFB100;
 }
+
