@@ -123,15 +123,30 @@
             images[currentIndex].style.display = 'block'; // Mostra la nuova immagine
         }, 3000); // Cambia immagine ogni 3 secondi
 		
-		 // Codice per il menu ad hamburger
-    function toggleMenu() {
-        const navLinks = document.getElementById("nav-links");
-        if (navLinks.style.display === "block") {
-            navLinks.style.display = "none";
-        } else {
-            navLinks.style.display = "block";
-        }
+		// Codice per il menu ad hamburger
+function toggleMenu() {
+    const navLinks = document.getElementById("nav-links");
+    const navbar = document.querySelector('.navbar'); // Seleziona la navbar
+
+    // Verifica se il menu è aperto
+    if (navLinks.style.display === "block") {
+        navLinks.style.display = "none";
+        navbar.classList.remove('active'); // Rimuove la classe 'active' se il menu è chiuso
+    } else {
+        navLinks.style.display = "block";
+        navbar.classList.add('active'); // Aggiunge la classe 'active' se il menu è aperto
     }
+}
+
+// Aggiungi la classe 'active' al caricamento della pagina
+window.onload = () => {
+    const navLinks = document.getElementById("nav-links");
+    const navbar = document.querySelector('.navbar');
+    
+    navLinks.style.display = "block"; // Imposta il menu su "block"
+    navbar.classList.add('active'); // Apre il menu all'avvio
+};
+
 		
     </script>
 </body>
