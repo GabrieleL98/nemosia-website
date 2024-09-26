@@ -132,7 +132,7 @@ form label {
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    margin: 0 auto; /* Centra il pulsante orizzontalmente */
+    margin: 20px auto; /* Centra il pulsante orizzontalmente */
     display: block;  /* Trasforma il pulsante in un elemento a blocco per applicare il margin auto */
 }
 
