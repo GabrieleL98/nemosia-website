@@ -109,3 +109,10 @@ form label {
     margin-bottom: 10px; /* Aggiunge spazio tra le checkbox */
 }
 
+.costo-box {
+    background-color: #EFD8C3; /* Colore di sfondo */
+    padding: 15px; /* Padding interno per distanziare il testo dai bordi */
+    margin: 20px 0; /* Margini sopra e sotto per distanziare dalla scrittura circostante */
+    border-radius: 5px; /* Angoli arrotondati per un aspetto più morbido */
+    text-align: center; /* Centra il testo all'interno della box */
+}
