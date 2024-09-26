@@ -290,3 +290,25 @@ nav a {
         padding: 20px 25px; /* Maggiore padding per una nav più spaziosa */
     }
 }
+
+/*Nav bar o hamburger menu */ 
+@media (max-width: 768px) {
+    .navbar {
+        display: none; /* Nascondi il menu di navigazione di default su mobile */
+    }
+
+    .hamburger {
+        display: block; /* Mostra l'icona del menu a hamburger su mobile */
+    }
+
+    .nav-menu.open {
+        display: flex; /* Mostra il menu a navigazione quando è aperto */
+        flex-direction: column; /* Dispone gli elementi in colonna */
+        position: absolute; /* Posiziona il menu in modo assoluto */
+        top: 60px; /* Posiziona sotto l'intestazione */
+        left: 0; /* Allinea a sinistra */
+        width: 100%; /* Larghezza 100% */
+        background-color: white; /* Sfondo bianco */
+        z-index: 1; /* Portalo in primo piano */
+    }
+}
