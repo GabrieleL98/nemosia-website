@@ -288,8 +288,8 @@ nav a {
 
 @media (max-width: 768px) {
     nav a {
-        font-size: 20px; /* Dimensione per mobile */
-        padding: 15px 20px; /* Maggiore padding per una nav più spaziosa */
+        font-size: 15px; /* Dimensione per mobile */
+        padding: 10px 15px; /* Maggiore padding per una nav più spaziosa */
         display: inline-block; /* Assicura che i link siano inline */
     }
 }
