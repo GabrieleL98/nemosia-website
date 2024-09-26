@@ -302,7 +302,7 @@ nav a {
     display: none;
 }
 
-/* Mostra il menu ad hamburger solo su mobile */
+/* Regole per il menu ad hamburger su mobile */
 @media (max-width: 768px) {
     .hamburger {
         display: block;
@@ -312,7 +312,7 @@ nav a {
 
     /* Nascondere i link di navigazione su mobile inizialmente */
     nav ul {
-        display: none;
+        display: none; /* Questo nasconde il menu */
         flex-direction: column;
         width: 100%;
         text-align: center;
@@ -324,9 +324,27 @@ nav a {
 
     /* Mostrare il menu quando l'hamburger è cliccato */
     nav ul.show {
-        display: block;
+        display: block; /* Questo mostra il menu */
     }
 }
+
+/* Regole per il menu in generale */
+#nav-links {
+    display: none; /* Nasconde il menu per impostazione predefinita */
+}
+
+#nav-links.active {
+    display: block; /* Mostra il menu se la classe "active" è presente */
+}
+
+/* Regole per il menu su desktop */
+@media (min-width: 769px) {
+    #nav-links {
+        display: flex; /* Mantiene il menu orizzontale su desktop */
+    }
+}
+
+
 
 
 /* Stile responsive per mobile */
