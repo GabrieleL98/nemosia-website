@@ -116,3 +116,19 @@ form label {
     border-radius: 5px; /* Angoli arrotondati per un aspetto più morbido */
     text-align: center; /* Centra il testo all'interno della box */
 }
+
+
+.paypal-button {
+    background-color: #FFC439;
+    color: #000;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.paypal-button:hover {
+    background-color: #FFB100;
+}
