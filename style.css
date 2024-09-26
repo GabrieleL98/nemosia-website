@@ -81,6 +81,18 @@ nav ul li a:hover {
     padding: 20px;
 }
 
+/* Aggiorniamo il layout per assicurare che la bacheca sia responsiva */
+.bacheca {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Assicura che i box siano centrati */
+    margin: 0 auto; /* Centra la bacheca orizzontalmente */
+    width: 100%; /* Imposta la larghezza della bacheca per riempire il contenitore */
+    max-width: 100%; /* Assicura che non superi mai la larghezza del dispositivo */
+    padding: 0 20px; /* Aggiunge padding ai lati per gestire il contenuto */
+    box-sizing: border-box; /* Include il padding nella larghezza totale */
+}
+
 /* Uniformare la dimensione dei box nella bacheca */
 .bacheca article {
     background-color: #fff;
@@ -95,11 +107,6 @@ nav ul li a:hover {
     display: flex;
     flex-direction: column;
     justify-content: space-between;  /* Distribuisce lo spazio tra titolo e contenuto */
-}
-
-/* Stile per la bacheca nel suo complesso mobile*/
-.bacheca {
-    padding: 0 20px; /* Aggiungi padding laterale per evitare che gli articoli aderiscano ai bordi su mobile */
 }
 
 /* Garantire che il titolo e il paragrafo siano allineati correttamente */
