@@ -253,3 +253,29 @@ footer p {
 #form-iscrizione .cta-button:hover {
     background-color: #555;
 }
+
+/* Stili per dispositivi mobili */
+@media (max-width: 768px) {
+    body {
+        font-size: 14px; /* Dimensione del testo per mobile */
+    }
+    
+    .header {
+        text-align: center; /* Centra il contenuto nella header */
+    }
+    
+    /* Altri stili specifici per mobile */
+}
+img {
+    max-width: 100%; /* Limita la larghezza massima al 100% del contenitore */
+    height: auto; /* Mantiene le proporzioni */
+}
+.container {
+    display: flex;
+    flex-direction: column; /* Imposta la direzione in colonna */
+    align-items: center; /* Centra gli elementi orizzontalmente */
+}
+
+.item {
+    margin: 10px; /* Spazio tra gli elementi */
+}
