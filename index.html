@@ -123,27 +123,15 @@
             images[currentIndex].style.display = 'block'; // Mostra la nuova immagine
         }, 3000); // Cambia immagine ogni 3 secondi
 		
-		// Codice per il menu ad hamburger
-function toggleMenu() {
-    const navLinks = document.getElementById("nav-links");
-    navLinks.classList.toggle('active'); // Toglie o aggiunge la classe 'active'
-}
-
-// Aggiungi la classe 'active' solo se il viewport è mobile
-window.onload = () => {
-    const navLinks = document.getElementById("nav-links");
-    if (window.innerWidth <= 768) { // Controlla se la larghezza dello schermo è mobile
-        navLinks.classList.add('active'); // Apre il menu all'avvio
+	// Codice per il menu ad hamburger
+    function toggleMenu() {
+        const navLinks = document.getElementById("nav-links");
+        if (navLinks.style.display === "block") {
+            navLinks.style.display = "none";
+        } else {
+            navLinks.style.display = "block";
+        }
     }
-};
-
-// Per gestire il resize della finestra
-window.onresize = () => {
-    const navLinks = document.getElementById("nav-links");
-    if (window.innerWidth > 768) {
-        navLinks.classList.remove('active'); // Chiude il menu su desktop
-    }
-};
 		
     </script>
 </body>
