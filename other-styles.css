@@ -48,9 +48,57 @@ nav ul li a:hover {
     color: #333; /* Colore del testo al passaggio del cursore */
 }
 
+
+
+
 footer {
-    background-color: #F8EBD9; /* Colore di sfondo del footer */
     text-align: center; /* Centra il testo nel footer */
-    padding: 20px 0; /* Padding verticale per il footer */
-    margin-top: 20px; /* Margine superiore per separare dal contenuto */
+    padding: 20px; /* Aggiunge un padding attorno al footer */
+    background-color: #F8EBD9; /* Colore di sfondo del footer */
+    margin-top: 20px; /* Aggiunge spazio sopra il footer */
+}
+
+footer p {
+    margin: 0; /* Rimuove il margine predefinito per il paragrafo */
+}
+
+footer .social {
+    margin-top: 10px; /* Aggiunge spazio sopra le icone social */
+}
+
+footer .social-icon {
+    width: 24px; /* Dimensioni delle icone social */
+    height: auto; /* Mantiene le proporzioni delle icone */
+    margin: 0 5px; /* Spazio tra le icone */
+}
+
+
+
+
+/* Per la pagina Iscriviti */
+main {
+    background-color: #fff; /* Imposta lo sfondo bianco */
+    padding: 20px; /* Aggiungi padding per separare il contenuto dai bordi */
+    margin: 20px auto; /* Margini automatici per centrare il main */
+    max-width: 800px; /* Imposta una larghezza massima per il main */
+}
+
+h1, h2, h3, p {
+    text-align: center; /* Giustifica il testo al centro */
+    margin: 10px 0; /* Margini verticali per separare i paragrafi */
+    line-height: 1.6; /* Interlinea per migliorare la leggibilità */
+}
+
+/* Se vuoi aggiungere uno stile specifico solo per la pagina Iscriviti */
+.iscriviti {
+       background-color: #fff; /* Imposta lo sfondo bianco */
+    padding: 20px; /* Aggiungi padding per separare il contenuto dai bordi */
+    margin: 20px auto; /* Margini automatici per centrare il main */
+    max-width: 800px; /* Imposta una larghezza massima per il main */
+}
+
+h1, h2, h3, p {
+    text-align: center; /* Giustifica il testo al centro */
+    margin: 10px 0; /* Margini verticali per separare i paragrafi */
+    line-height: 1.6; /* Interlinea per migliorare la leggibilità */
 }
