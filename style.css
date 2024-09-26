@@ -285,9 +285,12 @@ nav a {
     padding: 10px 15px; /* Padding per aumentare l'area cliccabile */
 }
 
+
 @media (max-width: 768px) {
     nav a {
-        font-size: 30px; /* Dimensione più grande per mobile */
-        padding: 20px 25px; /* Maggiore padding per una nav più spaziosa */
+        font-size: 20px; /* Dimensione per mobile */
+        padding: 15px 20px; /* Maggiore padding per una nav più spaziosa */
+        display: inline-block; /* Assicura che i link siano inline */
     }
 }
+
