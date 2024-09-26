@@ -29,6 +29,7 @@ nav ul {
     margin: 0; /* Rimuove il margine */
     padding: 0; /* Rimuove il padding */
     display: flex; /* Fa sì che gli elementi siano affiancati */
+	justify-content: center; /* Centra gli elementi orizzontalmente */
 }
 
 nav ul li {
@@ -45,4 +46,11 @@ nav ul li a {
 nav ul li a:hover {
     text-decoration: underline; /* Sottolinea il testo al passaggio del cursore */
     color: #333; /* Colore del testo al passaggio del cursore */
+}
+
+footer {
+    background-color: #F8EBD9; /* Colore di sfondo del footer */
+    text-align: center; /* Centra il testo nel footer */
+    padding: 20px 0; /* Padding verticale per il footer */
+    margin-top: 20px; /* Margine superiore per separare dal contenuto */
 }
