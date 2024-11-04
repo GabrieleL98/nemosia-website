@@ -41,19 +41,26 @@
 
 <section id="novita">
     <h2>Novità</h2>
-    <div class="bacheca">
-        <article>
-            <h3>Evento culturale di Ottobre</h3>
-            <p>10 Ottobre 2024 - Un grande evento che celebra la cultura del nostro territorio.</p>
-        </article>
-        <article>
-            <h3>Workshop su Tradizioni locali</h3>
-            <p>24 Settembre 2024 - Un incontro dedicato alle tradizioni locali con esperti del settore.</p>
-        </article>
-        <article>
-            <h3>Nuovo sponsor ufficiale</h3>
-            <p>5 Settembre 2024 - Annunciamo con piacere la collaborazione con il nostro nuovo sponsor XYZ!</p>
-        </article>
+    <div class="bacheca-carousel">
+        <button class="carousel-btn left-btn" onclick="prevSlide()">&#10094;</button>
+        <div class="bacheca-container">
+            <div class="bacheca-slides">
+                <article class="bacheca-item">
+                    <h3>Evento culturale di Ottobre</h3>
+                    <p>10 Ottobre 2024 - Un grande evento che celebra la cultura del nostro territorio.</p>
+                </article>
+                <article class="bacheca-item">
+                    <h3>Workshop su Tradizioni locali</h3>
+                    <p>24 Settembre 2024 - Un incontro dedicato alle tradizioni locali con esperti del settore.</p>
+                </article>
+                <article class="bacheca-item">
+                    <h3>Nuovo sponsor ufficiale</h3>
+                    <p>5 Settembre 2024 - Annunciamo con piacere la collaborazione con il nostro nuovo sponsor XYZ!</p>
+                </article>
+                <!-- Aggiungi altri articoli qui, se necessario -->
+            </div>
+        </div>
+        <button class="carousel-btn right-btn" onclick="nextSlide()">&#10095;</button>
     </div>
 </section>
 
@@ -132,9 +139,31 @@
             navLinks.style.display = "block";
         }
     }
-	
+<script>
 
-		
-    </script>
+<!-- Altri contenuti HTML -->
+
+<script>
+    let currentIndex = 0;
+    const slides = document.querySelector('.bacheca-slides');
+    const items = document.querySelectorAll('.bacheca-item');
+    const totalItems = items.length;
+
+    function showSlide(index) {
+        if (index >= totalItems) currentIndex = 0;
+        if (index < 0) currentIndex = totalItems - 1;
+        slides.style.transform = `translateX(-${currentIndex * 100}%)`;
+    }
+
+    document.querySelector('.left-btn').addEventListener('click', () => {
+        currentIndex--;
+        showSlide(currentIndex);
+    });
+
+    document.querySelector('.right-btn').addEventListener('click', () => {
+        currentIndex++;
+        showSlide(currentIndex);
+    });
+</script>
 </body>
 </html>
