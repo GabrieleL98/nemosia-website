@@ -72,7 +72,19 @@ nav ul li a:hover {
     margin-bottom: 20px;
 }
 
-/* Stile per il carousel della bacheca */
+/* Sezione Novità */
+#novita {
+    background-color: #F8EBD9; /* Colore simile all'header */
+    padding: 30px;
+    text-align: center;
+}
+
+#novita h2 {
+    color: #333;
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
 /* Stile per il carousel della bacheca */
 .bacheca-carousel {
     display: flex;
@@ -90,7 +102,8 @@ nav ul li a:hover {
 
 .bacheca-slides {
     display: flex;
-    transition: transform 0.5s ease-in-out; /* Transizione per lo scorrimento */
+    transition: transform 0.5s ease-in-out;
+    overflow: hidden;
 }
 
 .bacheca-item {
@@ -98,24 +111,14 @@ nav ul li a:hover {
     border: 1px solid #ddd;
     box-sizing: border-box;
     border-radius: 8px;
-    width: 100%; /* Imposta la larghezza per occupare l'intera area disponibile */
-    max-width: 800px; /* Mantieni il max-width se vuoi limitare la larghezza */
+    min-width: 100%; 
+    max-width: 800px;
     padding: 20px;
     text-align: left;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-}
-
-/* Modifica per mostrare solo un elemento alla volta */
-.bacheca-slides {
-    width: calc(100% * 3); /* Mantieni questo se hai tre elementi */
-    /* Assicurati che la larghezza totale sia il numero di articoli */
-}
-
-.bacheca-item {
-    flex: 0 0 100%; /* Rende ciascun articolo largo il 100% del contenitore */
 }
 
 .carousel-btn {
@@ -150,7 +153,6 @@ nav ul li a:hover {
     text-align: justify;
     flex-grow: 1;
 }
-
 
 /* Sezione per "La nostra storia" */
 #storia {
