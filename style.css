@@ -61,13 +61,14 @@ nav ul li a:hover {
 
 /* Sezione Novità */
 #novita {
-    width: 90%; /* Usa una percentuale per renderlo più largo rispetto al contenitore */
-    max-width: 800px; /* Aumenta la larghezza massima */
-    margin: 30px auto; /* Aggiunge spazio sopra e centra orizzontalmente */
+    width: 90%;
+    max-width: 800px;
+    margin: 30px auto;
     position: relative;
     background-color: #F8EBD9;
     padding: 20px;
     border-radius: 10px;
+    text-align: center; /* Centra il titolo */
 }
 
 .bacheca-carousel {
@@ -105,20 +106,18 @@ nav ul li a:hover {
 
 .bacheca-content {
     flex: 1;
+    text-align: left; /* Testo a sinistra */
 }
 
-.bacheca-image {
-    width: 150px; /* Regola la larghezza dell'immagine */
-    height: auto;
-    border-radius: 8px;
-    margin-left: 20px;
+.bacheca-content h3 {
+    text-align: center; /* Centra il titolo dell'articolo */
 }
 
 .btn-partecipa {
     display: inline-block;
-    margin-top: 10px;
+    margin: 10px auto 0; /* Spazio sopra e centrato */
     padding: 10px 20px;
-    background-color: #FF5733; /* Colore del pulsante */
+    background-color: #FF5733;
     color: #ffffff;
     text-decoration: none;
     border-radius: 5px;
@@ -127,8 +126,16 @@ nav ul li a:hover {
 }
 
 .btn-partecipa:hover {
-    background-color: #E04D2C; /* Colore al passaggio del mouse */
+    background-color: #E04D2C;
 }
+
+.bacheca-image {
+    width: 150px;
+    height: auto;
+    border-radius: 8px;
+    margin-left: 20px;
+}
+
 /* Sezione per "La nostra storia" */
 #storia {
     padding: 40px;
