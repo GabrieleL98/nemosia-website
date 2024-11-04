@@ -72,57 +72,72 @@ nav ul li a:hover {
     margin-bottom: 20px;
 }
 
-/* Posiziona i box novità al centro della pagina */
-.bacheca {
+/* Stile per il carousel della bacheca */
+.bacheca-carousel {
     display: flex;
-    flex-direction: column;
-    align-items: center;  /* Centra i box al centro della pagina */
-    gap: 20px;  /* Spaziatura tra i box */
-    padding: 20px;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    width: 80%; /* Cambia la larghezza a piacere */
+    margin: 0 auto;
 }
 
-/* Aggiorniamo il layout per assicurare che la bacheca sia responsiva */
-.bacheca {
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Assicura che i box siano centrati */
-    margin: 0 auto; /* Centra la bacheca orizzontalmente */
-    width: 100%; /* Imposta la larghezza della bacheca per riempire il contenitore */
-    max-width: 100%; /* Assicura che non superi mai la larghezza del dispositivo */
-    padding: 0 20px; /* Aggiunge padding ai lati per gestire il contenuto */
-    box-sizing: border-box; /* Include il padding nella larghezza totale */
+.bacheca-container {
+    overflow: hidden;
+    width: 100%;
 }
 
-/* Uniformare la dimensione dei box nella bacheca */
-.bacheca article {
+.bacheca-slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.bacheca-item {
     background-color: #fff;
     border: 1px solid #ddd;
     border-radius: 8px;
-    width: 100%;             /* Larghezza fissa */
-    max-width: 800px;         /* Larghezza massima */
-    min-height: 150px;        /* Altezza minima fissa */
+    min-width: 100%;
+    max-width: 800px;
     padding: 20px;
-    margin: 0 auto 20px auto; /* Centra il box orizzontalmente */
     text-align: left;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
     display: flex;
     flex-direction: column;
-    justify-content: space-between;  /* Distribuisce lo spazio tra titolo e contenuto */
+    justify-content: space-between;
 }
 
-/* Garantire che il titolo e il paragrafo siano allineati correttamente */
-.bacheca h3 {
+.carousel-btn {
+    font-size: 24px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #333;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 10px;
+}
+
+.left-btn {
+    left: 0;
+}
+
+.right-btn {
+    right: 0;
+}
+
+.bacheca-item h3 {
     color: #333;
     font-size: 1.5em;
-    margin-bottom: 10px;  /* Aggiunge spazio tra il titolo e il testo */
+    margin-bottom: 10px;
 }
 
-.bacheca p {
+.bacheca-item p {
     color: #666;
     font-size: 1em;
     text-align: justify;
-    flex-grow: 1;  /* Fa sì che il testo occupi tutto lo spazio disponibile */
+    flex-grow: 1;
 }
-
 /* Sezione per "La nostra storia" */
 #storia {
     padding: 40px;
