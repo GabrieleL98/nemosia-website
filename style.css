@@ -73,6 +73,7 @@ nav ul li a:hover {
 }
 
 /* Stile per il carousel della bacheca */
+/* Stile per il carousel della bacheca */
 .bacheca-carousel {
     display: flex;
     align-items: center;
@@ -97,15 +98,24 @@ nav ul li a:hover {
     border: 1px solid #ddd;
     box-sizing: border-box;
     border-radius: 8px;
-    min-width: 100%; /* Mantieni questa proprietà */
-    max-width: 800px;
+    width: 100%; /* Imposta la larghezza per occupare l'intera area disponibile */
+    max-width: 800px; /* Mantieni il max-width se vuoi limitare la larghezza */
     padding: 20px;
     text-align: left;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    flex-shrink: 0; /* Evita che gli articoli si riducano */
+}
+
+/* Modifica per mostrare solo un elemento alla volta */
+.bacheca-slides {
+    width: calc(100% * 3); /* Mantieni questo se hai tre elementi */
+    /* Assicurati che la larghezza totale sia il numero di articoli */
+}
+
+.bacheca-item {
+    flex: 0 0 100%; /* Rende ciascun articolo largo il 100% del contenitore */
 }
 
 .carousel-btn {
