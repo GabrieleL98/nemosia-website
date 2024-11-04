@@ -156,21 +156,31 @@
     const totalItems = items.length;
 
     function showSlide(index) {
-        if (index >= totalItems) currentIndexBacheca = 0;
-        if (index < 0) currentIndexBacheca = totalItems - 1;
+        // Gestisce i limiti dell'indice
+        if (index >= totalItems) {
+            currentIndexBacheca = 0;
+        } else if (index < 0) {
+            currentIndexBacheca = totalItems - 1;
+        } else {
+            currentIndexBacheca = index; // Aggiorna solo se l'indice è valido
+        }
         slides.style.transform = `translateX(-${currentIndexBacheca * 100}%)`;
     }
 
-    document.querySelector('.left-btn').addEventListener('click', () => {
-        currentIndexBacheca--;
-        showSlide(currentIndexBacheca);
-    });
+    function prevSlide() {
+        currentIndexBacheca--; // Decrementa l'indice
+        showSlide(currentIndexBacheca); // Mostra la slide corrispondente
+    }
 
-    document.querySelector('.right-btn').addEventListener('click', () => {
-        currentIndexBacheca++;
-        showSlide(currentIndexBacheca);
-    });
+    function nextSlide() {
+        currentIndexBacheca++; // Incrementa l'indice
+        showSlide(currentIndexBacheca); // Mostra la slide corrispondente
+    }
+
+    document.querySelector('.left-btn').addEventListener('click', prevSlide); // Listener per il pulsante sinistro
+    document.querySelector('.right-btn').addEventListener('click', nextSlide); // Listener per il pulsante destro
 </script>
+
 
 </body>
 </html>
