@@ -83,14 +83,13 @@ nav ul li a:hover {
 }
 
 .bacheca-container {
-    overflow: hidden;
+    overflow: hidden; /* Questo è corretto */
     width: 100%;
 }
 
 .bacheca-slides {
     display: flex;
-    transition: transform 0.5s ease-in-out;
-    overflow: hidden;
+    transition: transform 0.5s ease-in-out; /* Transizione per lo scorrimento */
 }
 
 .bacheca-item {
@@ -98,7 +97,7 @@ nav ul li a:hover {
     border: 1px solid #ddd;
     box-sizing: border-box;
     border-radius: 8px;
-    min-width: 100%;
+    min-width: 100%; /* Mantieni questa proprietà */
     max-width: 800px;
     padding: 20px;
     text-align: left;
@@ -106,6 +105,7 @@ nav ul li a:hover {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    flex-shrink: 0; /* Evita che gli articoli si riducano */
 }
 
 .carousel-btn {
@@ -140,6 +140,7 @@ nav ul li a:hover {
     text-align: justify;
     flex-grow: 1;
 }
+
 /* Sezione per "La nostra storia" */
 #storia {
     padding: 40px;
