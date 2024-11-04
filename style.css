@@ -107,6 +107,22 @@ nav ul li a:hover {
     flex: 0 0 100%;
 }
 
+.btn-partecipa {
+    display: inline-block; /* Rende il link simile a un pulsante. */
+    padding: 10px 20px; /* Spaziatura interna: 10px sopra e sotto, 20px ai lati. */
+    background-color: #FF9F00; /* Colore di sfondo del pulsante. */
+    color: white; /* Colore del testo. */
+    font-size: 1.2rem; /* Dimensione del font. */
+    text-align: center; /* Allinea il testo al centro. */
+    text-decoration: none; /* Rimuove la sottolineatura dal link. */
+    border-radius: 5px; /* Arrotonda gli angoli del pulsante. */
+    transition: background-color 0.3s ease; /* Aggiunge una transizione per il cambio di colore. */
+}
+
+.btn-partecipa:hover {
+    background-color: #FF7F00; /* Colore di sfondo al passaggio del mouse. */
+}
+
 /* Sezione per "La nostra storia" */
 #storia {
     padding: 40px;
