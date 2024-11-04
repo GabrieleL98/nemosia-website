@@ -90,6 +90,7 @@ nav ul li a:hover {
 .bacheca-slides {
     display: flex;
     transition: transform 0.5s ease-in-out; /* Transizione per lo scorrimento */
+    width: 100%; /* Assicurati che occupi l'intera larghezza */
 }
 
 .bacheca-item {
@@ -97,7 +98,7 @@ nav ul li a:hover {
     border: 1px solid #ddd;
     box-sizing: border-box;
     border-radius: 8px;
-    min-width: 300px; /* Imposta una larghezza minima */
+    width: 100%; /* Imposta la larghezza per occupare l'intera area disponibile */
     max-width: 800px; /* Mantieni il max-width se vuoi limitare la larghezza */
     padding: 20px;
     text-align: left;
@@ -107,6 +108,10 @@ nav ul li a:hover {
     justify-content: space-between;
 }
 
+/* Modifica per il ridimensionamento */
+.bacheca-slides {
+    width: calc(100% * 3); /* Calcola la larghezza totale per mostrare tutti gli elementi */
+}
 
 .carousel-btn {
     font-size: 24px;
@@ -140,6 +145,7 @@ nav ul li a:hover {
     text-align: justify;
     flex-grow: 1;
 }
+
 
 /* Sezione per "La nostra storia" */
 #storia {
