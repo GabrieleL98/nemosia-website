@@ -90,11 +90,13 @@ nav ul li a:hover {
 .bacheca-slides {
     display: flex;
     transition: transform 0.5s ease-in-out;
+    overflow: hidden;
 }
 
 .bacheca-item {
     background-color: #fff;
     border: 1px solid #ddd;
+    box-sizing: border-box;
     border-radius: 8px;
     min-width: 100%;
     max-width: 800px;
