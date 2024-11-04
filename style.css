@@ -108,7 +108,7 @@ nav ul li a:hover {
 }
 
 .btn-partecipa {
-    display: inline-block; /* Rende il link simile a un pulsante. */
+    display: block; /* Rende il link un elemento di blocco. */
     padding: 10px 20px; /* Spaziatura interna: 10px sopra e sotto, 20px ai lati. */
     background-color: #FF9F00; /* Colore di sfondo del pulsante. */
     color: white; /* Colore del testo. */
@@ -117,6 +117,8 @@ nav ul li a:hover {
     text-decoration: none; /* Rimuove la sottolineatura dal link. */
     border-radius: 5px; /* Arrotonda gli angoli del pulsante. */
     transition: background-color 0.3s ease; /* Aggiunge una transizione per il cambio di colore. */
+    margin: 20px auto; /* Aggiunge margini automatici per centrare orizzontalmente. */
+    width: fit-content; /* Imposta la larghezza del pulsante in base al contenuto. */
 }
 
 .btn-partecipa:hover {
