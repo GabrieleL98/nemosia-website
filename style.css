@@ -61,14 +61,10 @@ nav ul li a:hover {
 
 /* Sezione Novità */
 #novita {
-    width: 90%;
-    max-width: 800px;
-    margin: 30px auto;
+    width: 100%;
+    max-width: 600px;
+    margin: auto;
     position: relative;
-    background-color: #F8EBD9;
-    padding: 20px;
-    border-radius: 10px;
-    text-align: center; /* Centra il titolo */
 }
 
 .bacheca-carousel {
@@ -94,47 +90,27 @@ nav ul li a:hover {
 }
 
 .bacheca-item {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    display: none; /* Nasconde tutte le slide inizialmente */
     padding: 20px;
     box-sizing: border-box;
-    background-color: #ffffff;
-    border-radius: 8px;
-    margin-bottom: 20px;
+    flex: 0 0 100%;
 }
 
-.bacheca-content {
-    flex: 1;
-    text-align: left; /* Testo a sinistra */
-}
-
-.bacheca-content h3 {
-    text-align: center; /* Centra il titolo dell'articolo */
-}
-
-.btn-partecipa {
-    display: inline-block;
-    margin: 10px auto 0; /* Spazio sopra e centrato */
-    padding: 10px 20px;
-    background-color: #FF5733;
-    color: #ffffff;
-    text-decoration: none;
-    border-radius: 5px;
-    font-weight: bold;
-    text-align: center;
-}
-
-.btn-partecipa:hover {
-    background-color: #E04D2C;
+.bacheca-horizontal {
+    display: flex;
+    align-items: center;
 }
 
 .bacheca-image {
-    width: 150px;
-    height: auto;
-    border-radius: 8px;
-    margin-left: 20px;
+    width: 40%; /* Dimensione immagine - regolabile */
+    max-width: 200px; /* Limita la larghezza massima */
+    margin-right: 20px; /* Spazio tra immagine e testo */
 }
+
+.bacheca-content {
+    width: 60%; /* Dimensione del contenuto testo */
+}
+
 
 /* Sezione per "La nostra storia" */
 #storia {
