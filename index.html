@@ -148,37 +148,38 @@
 </script>
 
 <!-- Altri contenuti HTML -->
-
 <script>
-    let currentIndexBacheca = 0; // Variabile per la bacheca
-    const slides = document.querySelector('.bacheca-slides');
-    const items = document.querySelectorAll('.bacheca-item');
-    const totalItems = items.length;
+	
+let currentSlide = 0;
 
-    function showSlide(index) {
-        // Gestisce i limiti dell'indice
-        if (index >= totalItems) {
-            currentIndexBacheca = 0;
-        } else if (index < 0) {
-            currentIndexBacheca = totalItems - 1;
-        } else {
-            currentIndexBacheca = index; // Aggiorna solo se l'indice è valido
-        }
-        slides.style.transform = `translateX(-${currentIndexBacheca * 100}%)`;
-    }
+function showSlide(index) {
+    const slides = document.querySelectorAll('.bacheca-item');
+    const totalSlides = slides.length;
 
-    function prevSlide() {
-        currentIndexBacheca--; // Decrementa l'indice
-        showSlide(currentIndexBacheca); // Mostra la slide corrispondente
-    }
+    // Nascondi tutte le slide
+    slides.forEach(slide => {
+        slide.style.display = 'none';
+    });
 
-    function nextSlide() {
-        currentIndexBacheca++; // Incrementa l'indice
-        showSlide(currentIndexBacheca); // Mostra la slide corrispondente
-    }
+    // Mostra la slide corrente
+    slides[index].style.display = 'block';
+}
 
-    document.querySelector('.left-btn').addEventListener('click', prevSlide); // Listener per il pulsante sinistro
-    document.querySelector('.right-btn').addEventListener('click', nextSlide); // Listener per il pulsante destro
+function nextSlide() {
+    const slides = document.querySelectorAll('.bacheca-item');
+    currentSlide = (currentSlide + 1) % slides.length;
+    showSlide(currentSlide);
+}
+
+function prevSlide() {
+    const slides = document.querySelectorAll('.bacheca-item');
+    currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+    showSlide(currentSlide);
+}
+
+// Inizializza la prima slide visibile
+showSlide(currentSlide);
+
 </script>
 
 
