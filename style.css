@@ -97,8 +97,7 @@ nav ul li a:hover {
     border: 1px solid #ddd;
     box-sizing: border-box;
     border-radius: 8px;
-    width: 100%; /* Cambia min-width a width */
-    max-width: 800px; /* Mantieni il max-width se vuoi limitare la larghezza */
+    width: 100%; /* Rimuovi questa riga */
     padding: 20px;
     text-align: left;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
@@ -106,6 +105,7 @@ nav ul li a:hover {
     flex-direction: column;
     justify-content: space-between;
 }
+
 
 .carousel-btn {
     font-size: 24px;
