@@ -61,25 +61,12 @@ nav ul li a:hover {
 
 /* Sezione Novità */
 #novita {
-    background-color: #F8EBD9; /* Colore simile all'header */
-    padding: 30px;
-    text-align: center;
-}
-
-#novita h2 {
-    color: #333;
-    font-size: 2em;
-    margin-bottom: 20px;
-}
-
-/* Sezione Novità */
-#novita {
     width: 100%;
     max-width: 600px;
-    margin: auto;
+    margin: 30px auto;
     position: relative;
     background-color: #F8EBD9; /* Colore di sfondo */
-    padding: 20px; /* Aggiunge spazio intorno al contenuto */
+    padding: 30px; /* Aggiunge spazio intorno al contenuto */
     border-radius: 10px; /* Smussa gli angoli */
 }
 
