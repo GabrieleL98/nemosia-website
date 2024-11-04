@@ -120,17 +120,23 @@
 
 
 
-    <script>
-        // Codice per la slideshow
-        let currentIndex = 0;
-        const images = document.querySelectorAll('.slideshow img');
-        setInterval(() => {
-            images[currentIndex].style.display = 'none'; // Nasconde l'immagine corrente
-            currentIndex = (currentIndex + 1) % images.length; // Aggiorna l'indice
-            images[currentIndex].style.display = 'block'; // Mostra la nuova immagine
-        }, 3000); // Cambia immagine ogni 3 secondi
-		
-	// Codice per il menu ad hamburger
+<script>
+    // Codice per la slideshow
+    let currentIndexSlideshow = 0; // Variabile per la slideshow
+    const images = document.querySelectorAll('.slideshow img');
+    
+    // Mostra solo la prima immagine all'inizio
+    images.forEach((img, index) => {
+        img.style.display = index === 0 ? 'block' : 'none';
+    });
+
+    setInterval(() => {
+        images[currentIndexSlideshow].style.display = 'none'; // Nasconde l'immagine corrente
+        currentIndexSlideshow = (currentIndexSlideshow + 1) % images.length; // Aggiorna l'indice
+        images[currentIndexSlideshow].style.display = 'block'; // Mostra la nuova immagine
+    }, 3000); // Cambia immagine ogni 3 secondi
+
+    // Codice per il menu ad hamburger
     function toggleMenu() {
         const navLinks = document.getElementById("nav-links");
         if (navLinks.style.display === "block") {
@@ -139,31 +145,32 @@
             navLinks.style.display = "block";
         }
     }
-<script>
+</script>
 
 <!-- Altri contenuti HTML -->
 
 <script>
-    let currentIndex = 0;
+    let currentIndexBacheca = 0; // Variabile per la bacheca
     const slides = document.querySelector('.bacheca-slides');
     const items = document.querySelectorAll('.bacheca-item');
     const totalItems = items.length;
 
     function showSlide(index) {
-        if (index >= totalItems) currentIndex = 0;
-        if (index < 0) currentIndex = totalItems - 1;
-        slides.style.transform = `translateX(-${currentIndex * 100}%)`;
+        if (index >= totalItems) currentIndexBacheca = 0;
+        if (index < 0) currentIndexBacheca = totalItems - 1;
+        slides.style.transform = `translateX(-${currentIndexBacheca * 100}%)`;
     }
 
     document.querySelector('.left-btn').addEventListener('click', () => {
-        currentIndex--;
-        showSlide(currentIndex);
+        currentIndexBacheca--;
+        showSlide(currentIndexBacheca);
     });
 
     document.querySelector('.right-btn').addEventListener('click', () => {
-        currentIndex++;
-        showSlide(currentIndex);
+        currentIndexBacheca++;
+        showSlide(currentIndexBacheca);
     });
 </script>
+
 </body>
 </html>
