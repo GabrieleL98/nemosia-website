@@ -76,6 +76,10 @@ nav ul li a:hover {
     margin-bottom: 20px;
 }
 
+#novita p {
+    text-align: justify;
+}
+
 /* Stile per il carousel della bacheca */
 
 .bacheca-carousel {
