@@ -136,8 +136,7 @@ nav ul li a:hover {
 #storia p {
     text-align: center;
     font-family: "Moon Dance", cursive;
-    font-weight: 400;
-    font-style: normal;
+    text-size: 40px !important;
 }
 
 
