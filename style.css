@@ -134,12 +134,12 @@ nav ul li a:hover {
 }
 
 #storia p {
+    font-size: 1.2em; /* Aumenta la dimensione del font come desiderato */
     text-align: center;
     font-family: "Moon Dance", cursive;
     font-weight: 400;
     font-style: normal;
 }
-
 
 /* Sezione Diventa Socio */
 #call-to-action {
