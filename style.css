@@ -97,15 +97,14 @@ nav ul li a:hover {
     border: 1px solid #ddd;
     box-sizing: border-box;
     border-radius: 8px;
-    min-width: 100%; /* Mantieni questa proprietà */
-    max-width: 800px;
+    width: 100%; /* Cambia min-width a width */
+    max-width: 800px; /* Mantieni il max-width se vuoi limitare la larghezza */
     padding: 20px;
     text-align: left;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    flex-shrink: 0; /* Evita che gli articoli si riducano */
 }
 
 .carousel-btn {
