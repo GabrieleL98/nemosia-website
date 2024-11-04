@@ -74,9 +74,13 @@ nav ul li a:hover {
 
 /* Sezione Novità */
 #novita {
-    background-color: #F8EBD9; /* Colore simile all'header */
-    padding: 30px;
-    text-align: center;
+    width: 100%;
+    max-width: 600px;
+    margin: auto;
+    position: relative;
+    background-color: #F8EBD9; /* Colore di sfondo */
+    padding: 20px; /* Aggiunge spazio intorno al contenuto */
+    border-radius: 10px; /* Smussa gli angoli */
 }
 
 #novita h2 {
@@ -86,72 +90,34 @@ nav ul li a:hover {
 }
 
 /* Stile per il carousel della bacheca */
+
 .bacheca-carousel {
     display: flex;
     align-items: center;
-    position: relative;
-    overflow: hidden;
-    width: 80%; /* Cambia la larghezza a piacere */
-    margin: 0 auto;
+}
+
+.carousel-btn {
+    background-color: transparent;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
 }
 
 .bacheca-container {
-    overflow: hidden; /* Questo è corretto */
+    overflow: hidden;
     width: 100%;
 }
 
 .bacheca-slides {
     display: flex;
-    transition: transform 0.5s ease-in-out;
-    overflow: hidden;
+    transition: transform 0.5s ease;
 }
 
 .bacheca-item {
-    background-color: #fff;
-    border: 1px solid #ddd;
-    box-sizing: border-box;
-    border-radius: 8px;
-    min-width: 100%; 
-    max-width: 800px;
+    display: none; /* Nasconde tutte le slide inizialmente */
     padding: 20px;
-    text-align: left;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
-.carousel-btn {
-    font-size: 24px;
-    background: none;
-    border: none;
-    cursor: pointer;
-    color: #333;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    padding: 10px;
-}
-
-.left-btn {
-    left: 0;
-}
-
-.right-btn {
-    right: 0;
-}
-
-.bacheca-item h3 {
-    color: #333;
-    font-size: 1.5em;
-    margin-bottom: 10px;
-}
-
-.bacheca-item p {
-    color: #666;
-    font-size: 1em;
-    text-align: justify;
-    flex-grow: 1;
+    box-sizing: border-box;
+    flex: 0 0 100%;
 }
 
 /* Sezione per "La nostra storia" */
