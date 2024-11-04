@@ -61,15 +61,22 @@ nav ul li a:hover {
 
 /* Sezione Novità */
 #novita {
-    width: 100%; /* Usa una percentuale per renderlo più largo rispetto al contenitore */
-    max-width: 800px; /* Aumenta la larghezza massima */
-    margin: 30px auto; /* Aggiunge spazio sopra e centra orizzontalmente */
+    width: 100%;
+    max-width: 800px;
+    margin: 30px auto;
     position: relative;
-    background-color: #F8EBD9;
-    padding: 20px;
-    border-radius: 10px;
+    background-color: #F8EBD9; /* Colore di sfondo */
+    padding: 30px; /* Aggiunge spazio intorno al contenuto */
+    border-radius: 10px; /* Smussa gli angoli */
 }
 
+#novita h2 {
+    color: #333;
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+/* Stile per il carousel della bacheca */
 
 .bacheca-carousel {
     display: flex;
@@ -99,22 +106,6 @@ nav ul li a:hover {
     box-sizing: border-box;
     flex: 0 0 100%;
 }
-
-.bacheca-horizontal {
-    display: flex;
-    align-items: center;
-}
-
-.bacheca-image {
-    width: 40%; /* Dimensione immagine - regolabile */
-    max-width: 200px; /* Limita la larghezza massima */
-    margin-right: 20px; /* Spazio tra immagine e testo */
-}
-
-.bacheca-content {
-    width: 60%; /* Dimensione del contenuto testo */
-}
-
 
 /* Sezione per "La nostra storia" */
 #storia {
