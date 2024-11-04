@@ -61,11 +61,15 @@ nav ul li a:hover {
 
 /* Sezione Novità */
 #novita {
-    width: 100%;
-    max-width: 600px;
-    margin: auto;
+    width: 100%; /* Usa una percentuale per renderlo più largo rispetto al contenitore */
+    max-width: 800px; /* Aumenta la larghezza massima */
+    margin: 30px auto; /* Aggiunge spazio sopra e centra orizzontalmente */
     position: relative;
+    background-color: #F8EBD9;
+    padding: 20px;
+    border-radius: 10px;
 }
+
 
 .bacheca-carousel {
     display: flex;
