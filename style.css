@@ -90,7 +90,6 @@ nav ul li a:hover {
 .bacheca-slides {
     display: flex;
     transition: transform 0.5s ease-in-out; /* Transizione per lo scorrimento */
-    width: 100%; /* Assicurati che occupi l'intera larghezza */
 }
 
 .bacheca-item {
@@ -98,19 +97,15 @@ nav ul li a:hover {
     border: 1px solid #ddd;
     box-sizing: border-box;
     border-radius: 8px;
-    width: 100%; /* Imposta la larghezza per occupare l'intera area disponibile */
-    max-width: 800px; /* Mantieni il max-width se vuoi limitare la larghezza */
+    min-width: 100%; /* Mantieni questa proprietà */
+    max-width: 800px;
     padding: 20px;
     text-align: left;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-}
-
-/* Modifica per il ridimensionamento */
-.bacheca-slides {
-    width: calc(100% * 3); /* Calcola la larghezza totale per mostrare tutti gli elementi */
+    flex-shrink: 0; /* Evita che gli articoli si riducano */
 }
 
 .carousel-btn {
