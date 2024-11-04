@@ -105,10 +105,11 @@ nav ul li a:hover {
     padding: 20px;
     box-sizing: border-box;
     flex: 0 0 100%;
+    text-align: center;
 }
 
 .btn-partecipa {
-    display: block; /* Rende il link un elemento di blocco. */
+    display: inline-block; /* Rende il link un elemento di blocco. */
     padding: 10px 20px; /* Spaziatura interna: 10px sopra e sotto, 20px ai lati. */
     background-color: #FF9F00; /* Colore di sfondo del pulsante. */
     color: white; /* Colore del testo. */
