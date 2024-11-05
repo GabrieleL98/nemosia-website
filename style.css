@@ -44,6 +44,12 @@ nav ul li a:hover {
     color: #333; /* Colore del testo al passaggio del cursore */
 }
 
+nav ul li a.active {
+    color: #FFC439; /* Colore del testo attivo */
+    font-weight: bold; /* Rende il testo in grassetto */
+    text-decoration: underline; /* Sottolinea il testo attivo */
+}
+
 
 /* Carousel - Immagini in scorrimento */
 .carousel {
