@@ -11,6 +11,20 @@ p {
     text-align: justify; /* Giustifica il testo nei paragrafi */
 }
 
+/* Stile per l'header delle pagine secondarie */
+.secondary-header {
+    background-color: #F8EBD9; /* Colore di sfondo per l'header */
+    padding: 10px; /* Ridotto da 20px a 10px */
+    display: flex; /* Usa flexbox per allineare gli elementi */
+    align-items: center; /* Allinea verticalmente al centro */
+}
+
+.secondary-header h1 {
+    margin: 0; /* Rimuovi margine per mantenere il titolo vicino al logo */
+    flex-grow: 1; /* Consenti al titolo di espandersi e occupare spazio */
+    text-align: center; /* Centra il titolo all'interno del suo spazio */
+}
+
 .secondary-logo {
     display: inline-block; /* Permette di posizionare il logo a sinistra */
     margin-right: 20px; /* Spazio tra il logo e il titolo */
