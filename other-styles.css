@@ -73,8 +73,44 @@ footer .social-icon {
     margin: 0 5px; /* Spazio tra le icone */
 }
 
+/* Per la pagina Chi Siamo */
+/* Stili per i membri del team */
+.member {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 0;
+}
 
+/* Alternanza delle direzioni */
+.member:nth-child(odd) {
+    flex-direction: row;
+}
 
+.member:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+/* Stili per l'immagine del membro */
+.member img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin: 0 20px;
+    object-fit: cover;
+}
+
+/* Stili per la descrizione del membro */
+.member-info {
+    max-width: 60%;
+}
+
+.member-info p {
+    font-family: 'Moon Dance', cursive;
+    font-size: 1.5em;
+    color: #555;
+    margin: 0;
+}
 
 /* Per la pagina Iscriviti */
 main {
