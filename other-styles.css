@@ -11,6 +11,18 @@ p {
     text-align: justify; /* Giustifica il testo nei paragrafi */
 }
 
+.secondary-logo {
+    display: inline-block; /* Permette di posizionare il logo a sinistra */
+    margin-right: 20px; /* Spazio tra il logo e il titolo */
+}
+
+.secondary-logo .logo-img {
+    width: 50px; /* Imposta la larghezza del logo */
+    height: auto; /* Mantiene le proporzioni del logo */
+    vertical-align: middle; /* Allinea il logo con il testo dell'intestazione */
+}
+
+
 /* Stili per i box delle informazioni */
 .info-box {
     border: 1px solid #ccc;
