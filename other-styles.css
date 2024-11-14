@@ -126,7 +126,7 @@ footer .social-icon {
 
 /* Per la pagina Iscriviti */
 .iscriviti {
-    background-color: #fff;
+    background-color: #fff; /* Imposta lo sfondo bianco per l'intera sezione */
     padding: 20px;
     margin: 20px auto;
     max-width: 800px;
@@ -151,7 +151,8 @@ footer .social-icon {
 }
 
 .card-image {
-    width: 150px;
+    width: 50%; /* Imposta la larghezza dell'immagine a circa metà della larghezza disponibile */
+    max-width: 400px; /* Limita la larghezza massima */
     height: auto;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -173,11 +174,28 @@ footer .social-icon {
     cursor: pointer;
     margin-bottom: 10px;
     transition: color 0.3s ease;
+    position: relative; /* Posizionamento per aggiungere la freccia */
+    padding-left: 25px; /* Spazio per la freccia */
     font-family: 'Playfair Display', serif; /* Applica il font ai punti della lista */
+}
+
+/* Freccia decorativa */
+.benefits li::before {
+    content: '▶'; /* Usa un simbolo di freccia decorativo */
+    font-size: 1.2em;
+    color: #FF5733; /* Colore per rendere la freccia visibile e accattivante */
+    position: absolute;
+    left: 0;
+    top: 0;
+    transition: transform 0.3s ease;
 }
 
 .benefits li:hover {
     color: #555;
+}
+
+.benefits li:hover::before {
+    transform: scale(1.2); /* Ingrandisce leggermente la freccia al passaggio del mouse */
 }
 
 .description {
@@ -193,6 +211,7 @@ footer .social-icon {
 .description.open {
     display: block; /* Mostra la descrizione quando è aperta */
 }
+
 
 /*Donazioni*/ 
 
