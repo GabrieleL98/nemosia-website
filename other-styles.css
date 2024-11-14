@@ -23,13 +23,6 @@ p {
     vertical-align: middle; 
 }
 
-/* QUESTO MODIFICA IL BOX BIANCO DI TUTTE LE PAGINE */
-main {
-    background-color: #fff; 
-    padding: 20px; 
-    margin: 20px auto; 
-    max-width: 800px; */
-
 /* Stili per i box delle informazioni */
 .info-box {
     border: 1px solid #ccc;
@@ -131,12 +124,12 @@ footer p {
     margin: 0;
 }
 
-/* Per la pagina Iscriviti 
+/* QUESTO MAIN INLFUENZA TUTTE LE PAGINE */
 main {
     background-color: #fff; 
     padding: 20px; 
     margin: 20px auto; 
-    max-width: 800px; */
+    max-width: 800px; 
 	
 .iscriviti h1, 
 .iscriviti h2, 
