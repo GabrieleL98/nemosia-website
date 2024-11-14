@@ -60,6 +60,30 @@ nav ul li a:hover {
     color: #333; /* Colore del testo al passaggio del cursore */
 }
 
+/* Footer */
+footer {
+    background-color: #F8EBD9; /* Colore di sfondo del footer */
+    text-align: center; /* Centra il testo */
+    padding: 20px 0; /* Padding verticale per il footer */
+    margin-top: 20px; /* Margine superiore per separare dal contenuto */
+}
+
+.social {
+    margin: 10px 0; /* Margine sopra e sotto le icone social */
+}
+
+.social-icon {
+    width: 30px; /* Dimensione icone social */
+    height: 30px; /* Dimensione icone social */
+    margin: 0 5px; /* Margine laterale tra le icone */
+}
+
+/* Aggiunta per separare le sezioni nel footer */
+footer p {
+    margin: 10px 0; /* Margine verticale tra i paragrafi */
+}
+
+
 /* Per la pagina Chi Siamo */
 /* Stili per i membri del team */
 .member {
