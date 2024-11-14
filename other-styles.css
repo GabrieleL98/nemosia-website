@@ -81,6 +81,7 @@ footer {
 /* Aggiunta per separare le sezioni nel footer */
 footer p {
     margin: 10px 0; /* Margine verticale tra i paragrafi */
+    text-align: center; /* Centra il testo */
 }
 
 
