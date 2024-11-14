@@ -156,6 +156,15 @@ main {
     color: #555;
 }
 
+.benefits li::before {
+    content: "✔"; /* Aggiunge un checkmark prima di ogni elemento */
+    margin-right: 8px; /* Spazio tra il checkmark e il testo */
+    color: #333; /* Colore del checkmark */
+    font-size: 18px; /* Dimensione del checkmark */
+    vertical-align: middle; /* Allinea verticalmente il checkmark con il testo */
+}
+
+
 .description {
     display: none; /* Nasconde inizialmente le descrizioni */
     margin-top: 5px;
