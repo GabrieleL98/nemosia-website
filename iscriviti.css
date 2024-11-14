@@ -1,10 +1,12 @@
 body {
+    margin: 0; /* Elimina i margini */
     background-color: #fff; 
     font-family: Arial, sans-serif;
 }
 
 /* Stile per l'header */
 header {
+    width: 100%;
     background-color: #F8EBD9; /* Colore di sfondo per l'header */
     padding: 10px; /* Ridotto da 20px a 10px */
     text-align: center;
@@ -76,6 +78,7 @@ nav ul li a.active {
 
 /* Footer */
 footer {
+    width: 100%;
     background-color: #F8EBD9; /* Colore di sfondo del footer */
     text-align: center; /* Centra il testo */
     padding: 20px 0; /* Padding verticale per il footer */
@@ -163,4 +166,105 @@ main {
 
 .description.open {
     display: block; /* Mostra la descrizione quando è aperta */
+}
+
+
+
+
+
+/* Stili per dispositivi mobili */
+@media (max-width: 768px) {
+    body {
+        font-size: 14px; /* Dimensione del testo per mobile */
+    }
+    
+    .header {
+        text-align: center; /* Centra il contenuto nella header */
+    }
+    
+    /* Altri stili specifici per mobile */
+}
+img {
+    max-width: 100%; /* Limita la larghezza massima al 100% del contenitore */
+    height: auto; /* Mantiene le proporzioni */
+}
+.container {
+    display: flex;
+    flex-direction: column; /* Imposta la direzione in colonna */
+    align-items: center; /* Centra gli elementi orizzontalmente */
+}
+
+.item {
+    margin: 10px; /* Spazio tra gli elementi */
+}
+nav a {
+    font-size: 16px; /* Dimensione per desktop */
+    padding: 10px 15px; /* Padding per aumentare l'area cliccabile */
+}
+
+/* Hamburger nascosto su desktop */
+.hamburger {
+    display: none;
+}
+
+/* Regole per il menu ad hamburger su mobile */
+@media (max-width: 768px) {
+    .hamburger {
+        display: block;
+        font-size: 30px;
+        cursor: pointer;
+    }
+
+    /* Nascondere i link di navigazione su mobile inizialmente */
+    nav ul {
+        display: none; /* Questo nasconde il menu */
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    /* Mostrare il menu quando l'hamburger è cliccato */
+    nav ul.show {
+        display: block; /* Questo mostra il menu */
+    }
+}
+
+/* Regole per il menu in generale */
+#nav-links {
+    display: none; /* Nasconde il menu per impostazione predefinita */
+}
+
+#nav-links.active {
+    display: block; /* Mostra il menu se la classe "active" è presente */
+}
+
+/* Regole per il menu su desktop */
+@media (min-width: 769px) {
+    #nav-links {
+        display: flex; /* Mantiene il menu orizzontale su desktop */
+    }
+}
+
+/* Stile responsive per mobile */
+@media (max-width: 768px) {
+    .bacheca {
+        padding: 0 10px; /* Riduci il padding su schermi piccoli */
+    }
+
+    .bacheca article {
+        padding: 15px;  /* Riduci il padding interno degli articoli */
+        margin-bottom: 15px; /* Diminuisci il margine inferiore */
+    }
+
+    .bacheca h3 {
+        font-size: 1.2em; /* Ridimensiona il titolo su mobile */
+    }
+
+    .bacheca p {
+        font-size: 0.9em; /* Ridimensiona il testo del paragrafo su mobile */
+    }
 }
