@@ -146,14 +146,9 @@ main {
 .benefits li {
     font-weight: bold;
     color: #333;
-    cursor: pointer;
     margin-bottom: 10px;
     transition: color 0.3s ease;
     font-family: 'Playfair Display', serif; /* Applica il font ai punti della lista */
-}
-
-.benefits li:hover {
-    color: #555;
 }
 
 .benefits li::before {
