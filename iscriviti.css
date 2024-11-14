@@ -164,10 +164,11 @@ main {
     vertical-align: middle; /* Allinea verticalmente il checkmark con il testo */
 }
 
-/*
+
 .description {
     display: none; 
     margin-top: 5px;
+    margin-bottom: 5px;
     padding-left: 10px;
     color: #666;
     font-weight: normal;
@@ -178,7 +179,7 @@ main {
 .description.open {
     display: block; 
 }
- */
+ 
 
 
 /* Stili per dispositivi mobili */
