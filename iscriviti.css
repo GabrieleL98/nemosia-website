@@ -166,7 +166,6 @@ main {
 
 
 .description {
-    display: none; 
     margin-top: 5px;
     margin-bottom: 5px;
     padding-left: 10px;
@@ -175,11 +174,6 @@ main {
     transition: max-height 0.3s ease;
     font-family: 'Playfair Display', serif; 
 }
-
-.description.open {
-    display: block; 
-}
- 
 
 
 /* Stili per dispositivi mobili */
