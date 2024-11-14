@@ -246,6 +246,13 @@ nav a {
     display: block; /* Mostra il menu se la classe "active" è presente */
 }
 
+/* Rimozione foto su mobile */
+@media (max-width: 768px) {
+    .card-image {
+        display: none; /* Nasconde l'immagine su dispositivi mobili */
+    }
+}
+
 /* Regole per il menu su desktop */
 @media (min-width: 769px) {
     #nav-links {
