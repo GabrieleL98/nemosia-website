@@ -124,12 +124,12 @@ footer p {
     margin: 0;
 }
 
-/* Per la pagina Iscriviti */
+/* Per la pagina Iscriviti 
 main {
-    background-color: #fff; /* Imposta lo sfondo bianco */
-    padding: 20px; /* Aggiungi padding per separare il contenuto dai bordi */
-    margin: 20px auto; /* Margini automatici per centrare il main */
-    max-width: 800px; /* Imposta una larghezza massima per il main */
+    background-color: #fff; 
+    padding: 20px; 
+    margin: 20px auto; 
+    max-width: 800px; */
 	
 .iscriviti h1, 
 .iscriviti h2, 
