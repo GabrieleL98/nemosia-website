@@ -138,6 +138,57 @@ h1, h2, h3, p {
     line-height: 1.6; /* Interlinea per migliorare la leggibilità */
 }
 
+/* Stili per la sezione "Perché diventare socio?" */
+.membership-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    margin: 20px 0;
+}
+
+.card-image {
+    width: 150px;
+    height: auto;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.card-content {
+    flex: 1;
+}
+
+.benefits {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.benefits li {
+    font-weight: bold;
+    color: #333;
+    cursor: pointer;
+    margin-bottom: 10px;
+    transition: color 0.3s ease;
+}
+
+.benefits li:hover {
+    color: #555;
+}
+
+.description {
+    display: none; /* Nasconde inizialmente le descrizioni */
+    margin-top: 5px;
+    padding-left: 10px;
+    color: #666;
+    font-weight: normal;
+    transition: max-height 0.3s ease;
+}
+
+.description.open {
+    display: block; /* Mostra la descrizione quando è aperta */
+}
+
+
 /* Se vuoi aggiungere uno stile specifico solo per la pagina Iscriviti */
 .iscriviti {
        background-color: #fff; /* Imposta lo sfondo bianco */
