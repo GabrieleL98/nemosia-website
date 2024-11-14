@@ -125,17 +125,21 @@ footer .social-icon {
 }
 
 /* Per la pagina Iscriviti */
-main {
-    background-color: #fff; /* Imposta lo sfondo bianco */
-    padding: 20px; /* Aggiungi padding per separare il contenuto dai bordi */
-    margin: 20px auto; /* Margini automatici per centrare il main */
-    max-width: 800px; /* Imposta una larghezza massima per il main */
+.iscriviti {
+    background-color: #fff;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 800px;
 }
 
-h1, h2, h3, p {
-    text-align: center; /* Giustifica il testo al centro */
-    margin: 10px 0; /* Margini verticali per separare i paragrafi */
-    line-height: 1.6; /* Interlinea per migliorare la leggibilità */
+.iscriviti h1, 
+.iscriviti h2, 
+.iscriviti h3, 
+.iscriviti p {
+    text-align: center;
+    margin: 10px 0;
+    line-height: 1.6;
+    font-family: 'Playfair Display', serif; /* Applica il font a questi elementi */
 }
 
 /* Stili per la sezione "Perché diventare socio?" */
@@ -169,6 +173,7 @@ h1, h2, h3, p {
     cursor: pointer;
     margin-bottom: 10px;
     transition: color 0.3s ease;
+    font-family: 'Playfair Display', serif; /* Applica il font ai punti della lista */
 }
 
 .benefits li:hover {
@@ -182,40 +187,12 @@ h1, h2, h3, p {
     color: #666;
     font-weight: normal;
     transition: max-height 0.3s ease;
+    font-family: 'Playfair Display', serif; /* Applica il font alle descrizioni */
 }
 
 .description.open {
     display: block; /* Mostra la descrizione quando è aperta */
 }
-
-
-/* Se vuoi aggiungere uno stile specifico solo per la pagina Iscriviti */
-.iscriviti {
-       background-color: #fff; /* Imposta lo sfondo bianco */
-    padding: 20px; /* Aggiungi padding per separare il contenuto dai bordi */
-    margin: 20px auto; /* Margini automatici per centrare il main */
-    max-width: 800px; /* Imposta una larghezza massima per il main */
-}
-
-h1, h2, h3, p {
-    text-align: center; /* Giustifica il testo al centro */
-    margin: 10px 0; /* Margini verticali per separare i paragrafi */
-    line-height: 1.6; /* Interlinea per migliorare la leggibilità */
-}
-
-form label {
-    display: block; /* Rende ogni label un blocco per un miglior allineamento */
-    margin-bottom: 10px; /* Aggiunge spazio tra le checkbox */
-}
-
-.costo-box {
-    background-color: #EFD8C3; /* Colore di sfondo */
-    padding: 15px; /* Padding interno per distanziare il testo dai bordi */
-    margin: 20px 0; /* Margini sopra e sotto per distanziare dalla scrittura circostante */
-    border-radius: 5px; /* Angoli arrotondati per un aspetto più morbido */
-    text-align: center; /* Centra il testo all'interno della box */
-}
-
 
 /*Donazioni*/ 
 
