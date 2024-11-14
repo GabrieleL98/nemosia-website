@@ -8,7 +8,7 @@ h1, h2, h3 {
 }
 
 p {
-    text-align: justify; /* Giustifica il testo nei paragrafi */
+    text-align: center; /* Giustifica il testo nei paragrafi */
 }
 
 .secondary-logo {
