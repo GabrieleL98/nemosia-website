@@ -3,6 +3,13 @@ body {
     font-family: Arial, sans-serif;
 }
 
+/* Stile per l'header */
+header {
+    background-color: #F8EBD9; /* Colore di sfondo per l'header */
+    padding: 10px; /* Ridotto da 20px a 10px */
+    text-align: center;
+}
+
 h1, h2, h3 {
     color: #333; /* Colore del testo per i titoli */
 }
