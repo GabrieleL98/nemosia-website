@@ -127,9 +127,9 @@ footer p {
 /* QUESTO MAIN INLFUENZA TUTTE LE PAGINE */
 main {
     background-color: #fff; 
-    padding: 20px 600px; 
+    padding: 20px /* aggiungi 120px se vuoi modificare i marginia lato, la prima cifra è sopra-sotto, la seconda sx dx*/; 
     margin: 20px auto; 
-    max-width: 1000px; 
+    max-width: 800px; /*modifica ampiezza*/
 
 /* per iscrizioni html */
 	
