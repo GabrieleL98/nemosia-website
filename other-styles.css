@@ -60,31 +60,6 @@ nav ul li a:hover {
     color: #333; /* Colore del testo al passaggio del cursore */
 }
 
-
-
-
-footer {
-	width: 100%; /*forza il footer a occupare l'intera pagina/*/
-    text-align: center; /* Centra il testo nel footer */
-    padding: 20px; /* Aggiunge un padding attorno al footer */
-    background-color: #F8EBD9; /* Colore di sfondo del footer */
-    margin-top: 20px; /* Aggiunge spazio sopra il footer */
-}
-
-footer p {
-    margin: 0; /* Rimuove il margine predefinito per il paragrafo */
-}
-
-footer .social {
-    margin-top: 10px; /* Aggiunge spazio sopra le icone social */
-}
-
-footer .social-icon {
-    width: 24px; /* Dimensioni delle icone social */
-    height: auto; /* Mantiene le proporzioni delle icone */
-    margin: 0 5px; /* Spazio tra le icone */
-}
-
 /* Per la pagina Chi Siamo */
 /* Stili per i membri del team */
 .member {
@@ -130,17 +105,7 @@ main {
     padding: 20px; /* Aggiungi padding per separare il contenuto dai bordi */
     margin: 20px auto; /* Margini automatici per centrare il main */
     max-width: 800px; /* Imposta una larghezza massima per il main */
-/*.iscriviti {
-    background-color: #fff;
-    padding: 20px;
-    margin: 20px auto;
-    max-width: 800px;
-} 
-
-h1, h2, h3, p {
-    text-align: center; 
-    margin: 10px 0;  
-    line-height: 1.6;  */
+	
 .iscriviti h1, 
 .iscriviti h2, 
 .iscriviti h3, 
