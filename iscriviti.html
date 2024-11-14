@@ -4,12 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Iscriviti a Nemosia</title>
-     <link rel="stylesheet" type="text/css" href="style.css"> <!-- Stili generali -->
-	 <link rel="stylesheet" type="text/css" href="other-styles.css"> <!-- Stili specifici per le altre pagine -->
+    <link rel="stylesheet" type="text/css" href="style.css"> <!-- Stili generali -->
+    <link rel="stylesheet" type="text/css" href="other-styles.css"> <!-- Stili specifici per le altre pagine -->
 </head>
 <body>
-  <header>
-	<div class="secondary-logo">
+    <header>
+        <div class="secondary-logo">
             <img src="logo-finale.jpg" alt="Logo di Nemosia" class="logo-img">
         </div>
         <nav>
@@ -17,7 +17,7 @@
                 <li><a href="index.html">Home</a></li>
                 <li><a href="chi-siamo.html">Chi Siamo</a></li>
                 <li><a href="eventi.html">Eventi</a></li>
-		<li><a href="iscriviti.html" class="active">Iscriviti</a></li>
+                <li><a href="iscriviti.html" class="active">Iscriviti</a></li>
                 <li><a href="donazioni.html">Donazioni</a></li>
                 <li><a href="contatti.html">Contatti</a></li>
             </ul>
@@ -25,53 +25,65 @@
     </header>
 
     <main class="iscriviti">
-	
-	 <section>
-            <h2>Perché diventare socio?</h2>
-            <p>Diventare socio di Nemosia ti permette di partecipare attivamente alla vita democratica dell'associazione e di contribuire alla nostra missione culturale.</p>
-
-            <ol>
-                <li><strong>Partecipare all'Assemblea dei Soci</strong>: Come socio, avrai il diritto di partecipare alle riunioni dell'Assemblea dei Soci, dove potrai esprimere le tue idee, proporre iniziative e contribuire alle decisioni importanti riguardanti l'associazione.</li>
-                <li><strong>Contribuire all'organizzazione degli eventi</strong>: I soci sono invitati a collaborare attivamente nella progettazione e realizzazione degli eventi culturali dell'associazione. Questo ti permetterà di dare il tuo contributo diretto alla promozione della cultura.</li>
-                <li><strong>Proporre nuove iniziative</strong>: Potrai proporre progetti, attività e eventi da realizzare insieme, in un ambiente collaborativo in cui ogni proposta è considerata e valutata in base agli obiettivi comuni.</li>
-                <li><strong>Sostenere la missione dell'associazione</strong>: Diventando socio, contribuirai in modo attivo a promuovere i valori e la missione di Nemosia, partecipando a un progetto che mira a valorizzare la cultura e le arti nel nostro territorio.</li>
-                <li><strong>Votare nelle decisioni strategiche</strong>: Come membro dell'Assemblea, avrai il diritto di voto nelle decisioni che riguardano il futuro dell'associazione, garantendo una gestione partecipativa e trasparente.</li>
-                <li><strong>Collaborare in modo inclusivo e aperto</strong>: L’associazione si basa su valori di uguaglianza e partecipazione. Essere socio non comporta privilegi esclusivi, ma la possibilità di lavorare insieme, in modo democratico e inclusivo, per il bene comune.</li>
-            </ol>
-        </section>
-	
-	  <!-- Aggiungi uno spazio qui -->
-    <div class="spazio"></div>
-	
         <section>
-             <h2>Modulo di iscrizione</h2>
-    
-    <p>
-        <a href="https://forms.gle/TeXhxigNx2SrMbcA9" target="_blank">
-            Clicca qui per compilare il form di iscrizione!
-        </a>
-    </p>
+            <h2>Perché diventare socio?</h2>
+            <div class="membership-card">
+                <img src="path/to/tessera.jpg" alt="Tessera" class="card-image">
+                <div class="card-content">
+                    <ul class="benefits">
+                        <li onclick="toggleDescription(1)">Partecipare all'Assemblea dei Soci</li>
+                        <div id="desc1" class="description">Come socio, avrai il diritto di partecipare alle riunioni dell'Assemblea dei Soci, dove potrai esprimere le tue idee, proporre iniziative e contribuire alle decisioni importanti riguardanti l'associazione.</div>
+                        
+                        <li onclick="toggleDescription(2)">Proporre nuove iniziative</li>
+                        <div id="desc2" class="description">Potrai proporre progetti, attività e eventi da realizzare insieme, in un ambiente collaborativo in cui ogni proposta è considerata e valutata in base agli obiettivi comuni.</div>
+                        
+                        <li onclick="toggleDescription(3)">Votare nelle decisioni strategiche</li>
+                        <div id="desc3" class="description">Come membro dell'Assemblea, avrai il diritto di voto nelle decisioni che riguardano il futuro dell'associazione, garantendo una gestione partecipativa e trasparente.</div>
+                        
+                        <li onclick="toggleDescription(4)">Collaborare in modo inclusivo e aperto</li>
+                        <div id="desc4" class="description">L’associazione si basa su valori di uguaglianza e partecipazione. Essere socio non comporta privilegi esclusivi, ma la possibilità di lavorare insieme, in modo democratico e inclusivo, per il bene comune.</div>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <div class="spazio"></div>
+
+        <section>
+            <h2>Modulo di iscrizione</h2>
+            <p>
+                <a href="https://forms.gle/TeXhxigNx2SrMbcA9" target="_blank">
+                    Clicca qui per compilare il form di iscrizione!
+                </a>
+            </p>
         </section>
     </main>
 
     <footer>
-    <div class="social">
-        <a href="https://instagram.com/tuoaccount" target="_blank">
-            <img src="instagram.png" alt="Instagram" class="social-icon">
-        </a>
-        <a href="mailto:info@nemosia.com">
-            <img src="mail.png" alt="Email" class="social-icon">
-        </a>
-    </div>
-    
-    <p>
-        <a href="https://instagram.com/tuoaccount" target="_blank">instagram.com/tuoaccount</a> | 
-        <a href="mailto:info@nemosia.com">info@nemosia.com</a>
-    </p>
+        <div class="social">
+            <a href="https://instagram.com/tuoaccount" target="_blank">
+                <img src="instagram.png" alt="Instagram" class="social-icon">
+            </a>
+            <a href="mailto:info@nemosia.com">
+                <img src="mail.png" alt="Email" class="social-icon">
+            </a>
+        </div>
+        
+        <p>
+            <a href="https://instagram.com/tuoaccount" target="_blank">instagram.com/tuoaccount</a> | 
+            <a href="mailto:info@nemosia.com">info@nemosia.com</a>
+        </p>
+        
+        <br> <!-- Aggiunto per creare uno spazio -->
+        
+        <p>&copy; 2024 Nemosia. Tutti i diritti riservati.</p>
+    </footer>
 
-    <br> <!-- Aggiunto per creare uno spazio -->
-    
-    <p>&copy; 2024 Nemosia. Tutti i diritti riservati.</p>
-</footer>
+    <script>
+        function toggleDescription(id) {
+            const desc = document.getElementById(`desc${id}`);
+            desc.classList.toggle('open');
+        }
+    </script>
 </body>
 </html>
