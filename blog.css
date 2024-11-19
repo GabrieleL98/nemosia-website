@@ -1,0 +1,222 @@
+body {
+    margin: 0; /* Elimina i margini */
+    background-color: #fff; 
+    font-family: Arial, sans-serif;
+}
+
+/* Stile per l'header */
+header {
+    width: 100%;
+    background-color: #F8EBD9; /* Colore di sfondo per l'header */
+    padding: 10px; /* Ridotto da 20px a 10px */
+    text-align: center;
+}
+
+h1, h2, h3 {
+    color: #333; /* Colore del testo per i titoli */
+}
+
+p {
+    text-align: center; /* Giustifica il testo nei paragrafi */
+}
+
+.secondary-logo {
+    display: block; /* Cambiato da inline-block a block per centrare */
+    margin: 0 auto; /* Aggiunto per centrare il logo */
+    text-align: center; /* Centra il contenuto all'interno del blocco */
+}
+
+.secondary-logo .logo-img {
+    width: 300px; 
+    height: auto; 
+    vertical-align: middle; 
+}
+
+/* Stili per i box delle informazioni */
+.info-box {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
+    margin: 20px 0;
+    background-color: #fff; /* Bianco per il box */
+}
+/* Stile per la navbar */
+nav {
+    background-color: #F8EBD9; /* Colore di sfondo della nav bar */
+    padding: 10px 20px; /* Padding per la nav bar */
+}
+
+nav ul {
+    list-style-type: none; /* Rimuove i punti dall'elenco */
+    margin: 0; /* Rimuove il margine */
+    padding: 0; /* Rimuove il padding */
+    display: flex; /* Fa sì che gli elementi siano affiancati */
+	justify-content: center; /* Centra gli elementi orizzontalmente */
+}
+
+nav ul li {
+    margin-right: 20px; /* Spazio tra le opzioni */
+}
+
+nav ul li a {
+    text-decoration: none; /* Rimuove la sottolineatura dei link */
+    color: black; /* Colore del testo */
+    padding: 5px 10px; /* Padding per i link */
+    transition: color 0.3s, text-decoration 0.3s; /* Transizione per il passaggio del cursore */
+}
+
+nav ul li a:hover {
+    text-decoration: underline; /* Sottolinea il testo al passaggio del cursore */
+    color: #333; /* Colore del testo al passaggio del cursore */
+}
+
+nav ul li a.active {
+    color: #333; /* Colore del testo attivo */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3); /* Aggiunge un'ombra al testo */
+    font-weight: bold; /* Rende il testo in grassetto */
+}
+
+/* Footer */
+footer {
+    width: 100%;
+    background-color: #F8EBD9; /* Colore di sfondo del footer */
+    text-align: center; /* Centra il testo */
+    padding: 20px 0; /* Padding verticale per il footer */
+    margin-top: 20px; /* Margine superiore per separare dal contenuto */
+}
+
+/* Aggiunta per separare le sezioni nel footer */
+footer p {
+    margin: 10px 0; /* Margine verticale tra i paragrafi */
+    text-align: center; /* Centra il testo */
+}
+
+.social {
+    margin: 10px 0; /* Margine sopra e sotto le icone social */
+}
+
+.social-icon {
+    width: 30px; /* Dimensione icone social */
+    height: 30px; /* Dimensione icone social */
+    margin: 0 5px; /* Margine laterale tra le icone */
+}
+
+
+main {
+    background-color: #fff; /* Imposta lo sfondo bianco */
+    padding: 20px 120px; /* Padding laterale di 120px, sopra e sotto di 20px */
+    margin: 0 auto; /* Centra orizzontalmente il contenuto se la larghezza è fissa */
+    box-sizing: border-box; /* Garantisce che il padding sia incluso nella larghezza totale */
+}
+
+	h1, h2, h3, p {
+    text-align: center;
+    margin: 10px 0;
+    line-height: 1.6;
+    font-family: 'Playfair Display', serif; /* Applica il font a questi elementi */
+}
+
+
+/* Stili per dispositivi mobili */
+@media (max-width: 768px) {
+    body {
+        font-size: 14px; /* Dimensione del testo per mobile */
+    }
+    
+    .header {
+        text-align: center; /* Centra il contenuto nella header */
+    }
+    
+    /* Altri stili specifici per mobile */
+}
+img {
+    max-width: 100%; /* Limita la larghezza massima al 100% del contenitore */
+    height: auto; /* Mantiene le proporzioni */
+}
+.container {
+    display: flex;
+    flex-direction: column; /* Imposta la direzione in colonna */
+    align-items: center; /* Centra gli elementi orizzontalmente */
+}
+
+.item {
+    margin: 10px; /* Spazio tra gli elementi */
+}
+nav a {
+    font-size: 16px; /* Dimensione per desktop */
+    padding: 10px 15px; /* Padding per aumentare l'area cliccabile */
+}
+
+/* Hamburger nascosto su desktop */
+.hamburger {
+    display: none;
+}
+
+/* Regole per il menu ad hamburger su mobile */
+@media (max-width: 768px) {
+    .hamburger {
+        display: block;
+        font-size: 30px;
+        cursor: pointer;
+    }
+
+    /* Nascondere i link di navigazione su mobile inizialmente */
+    nav ul {
+        display: none; /* Questo nasconde il menu */
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    /* Mostrare il menu quando l'hamburger è cliccato */
+    nav ul.show {
+        display: block; /* Questo mostra il menu */
+    }
+}
+
+/* Regole per il menu in generale */
+#nav-links {
+    display: none; /* Nasconde il menu per impostazione predefinita */
+}
+
+#nav-links.active {
+    display: block; /* Mostra il menu se la classe "active" è presente */
+}
+
+/* Rimozione foto su mobile */
+@media (max-width: 768px) {
+    .card-image {
+        display: none; /* Nasconde l'immagine su dispositivi mobili */
+    }
+}
+
+/* Regole per il menu su desktop */
+@media (min-width: 769px) {
+    #nav-links {
+        display: flex; /* Mantiene il menu orizzontale su desktop */
+    }
+}
+
+/* Stile responsive per mobile */
+@media (max-width: 768px) {
+    .bacheca {
+        padding: 0 10px; /* Riduci il padding su schermi piccoli */
+    }
+
+    .bacheca article {
+        padding: 15px;  /* Riduci il padding interno degli articoli */
+        margin-bottom: 15px; /* Diminuisci il margine inferiore */
+    }
+
+    .bacheca h3 {
+        font-size: 1.2em; /* Ridimensiona il titolo su mobile */
+    }
+
+    .bacheca p {
+        font-size: 0.9em; /* Ridimensiona il testo del paragrafo su mobile */
+    }
+}
