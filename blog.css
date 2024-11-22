@@ -1,3 +1,173 @@
+main {
+    background-color: #fff; /* Imposta lo sfondo bianco */
+    padding: 20px 60px; /* Padding laterale di 60px, sopra e sotto di 20px */
+    margin: 0 auto; /* Centra orizzontalmente il contenuto se la larghezza è fissa */
+    box-sizing: border-box; /* Garantisce che il padding sia incluso nella larghezza totale */
+}
+
+	h1, h2, p {
+    text-align: center;
+    margin: 10px 0;
+    line-height: 1.6;
+    font-family: 'Playfair Display', serif; /* Applica il font a questi elementi */
+}
+
+
+.blog-container {
+  display: grid;
+  grid-template-columns: 2fr 5fr 2fr;
+  gap: 5px;
+  padding: 10px;
+}
+
+.sidebar {
+  background: #fff;
+  padding: 10px;
+  border: 1px solid #fff;
+}
+
+/* Per il titolo degli articoli */
+h3 {
+  text-align: center;
+  margin: 10px 0;
+  line-height: 1.6;
+  font-family: "Abril Fatface", serif; /* Applica il font */
+  font-weight: 200; /* Imposta il peso normale */
+  font-style: normal; /* Nessuna inclinazione */
+  text-decoration: none; /* Rimuove la sottolineatura */
+}
+
+.main-content article {
+  margin-bottom: 20px;
+  text-align: justify; /* Giustifica il testo */
+}
+
+
+.main-content img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+/* Per il titolo degli articoli */
+.article-title {
+  font-family: "Abril Fatface", serif; /* Applica il font */
+  font-weight: 400; /* Imposta il peso normale */
+  font-style: normal; /* Nessuna inclinazione */
+  text-decoration: none; /* Rimuove la sottolineatura */
+}
+
+/* Rimuove la sottolineatura specificamente dai link all'interno dell'h2 */
+.article-title a {
+  text-decoration: none; /* Rimuove la sottolineatura dal link */
+  color: inherit; /* Mantiene il colore del titolo */
+}
+
+/* Per giustificare il testo */
+.justify-text {
+  text-align: justify;
+}
+
+/* Meta-info: data, autore e tag */
+.meta-info {
+  text-align: center;
+  font-size: 0.9em; /* Più piccolo della descrizione */
+  color: #555; /* Colore testo più tenue */
+  margin-top: 20px;
+}
+
+.meta-divider {
+  border-top: 1px solid #ccc; /* Righe sottili */
+  margin: 10px 0;
+}
+
+.meta-details {
+  margin: 5px 0;
+}
+
+.meta-details .tag {
+  text-decoration: none;
+  color: #007BFF; /* Colore link tag */
+}
+
+.meta-details .tag:hover {
+  text-decoration: underline; /* Effetto al passaggio */
+}
+
+
+/* Meta-info: data, autore e tag */
+.meta-info {
+  text-align: center;
+  font-size: 0.9em; /* Più piccolo della descrizione */
+  color: #555; /* Colore testo più tenue */
+  margin-top: 20px;
+}
+
+.meta-divider {
+  border-top: 1px solid #ccc; /* Righe sottili */
+  margin: 10px 0;
+}
+
+.meta-details {
+  margin: 5px 0;
+}
+
+.meta-details .tag {
+  text-decoration: none;
+  color: #007BFF; /* Colore link tag */
+}
+
+.meta-details .tag:hover {
+  text-decoration: underline; /* Effetto al passaggio */
+}
+
+/* Sidebar: filtro per tag */
+.sidebar.right .tag-filter {
+  margin-top: 20px;
+}
+
+.sidebar.right .filter-tag {
+  display: inline-block; /* I tag sono box separati */
+  margin: 5px 0;
+  padding: 8px 15px; /* Spazi interni per un look più definito */
+  text-decoration: none;
+  color: #fff; /* Testo bianco */
+  background-color: #EFD8C3; /* Sfondo richiesto */
+  border-radius: 5px; /* Angoli arrotondati */
+  font-size: 14px; /* Testo un po' più piccolo */
+  font-weight: bold;
+  text-align: center;
+  transition: background-color 0.3s ease; /* Animazione di transizione */
+}
+
+.sidebar.right .filter-tag:hover {
+  background-color: #D8BFA9; /* Sfondo più scuro al passaggio del mouse */
+}
+
+/* Stile per il pulsante "Torna alla lista" */
+#back-to-list.back_button {
+  display: inline-block; /* Imposta il pulsante come blocco in linea */
+  padding: 10px 20px; /* Aggiungi un po' di spazio interno per renderlo più grande */
+  font-size: 18px; /* Imposta la dimensione del font */
+  background-color: #f0a500; /* Colore di sfondo (puoi cambiarlo come preferisci) */
+  color: white; /* Colore del testo */
+  border: none; /* Rimuove il bordo */
+  border-radius: 5px; /* Angoli arrotondati */
+  cursor: pointer; /* Cambia il cursore quando ci si passa sopra */
+  text-align: center; /* Centra il testo */
+  margin-left: auto; /* Centra il pulsante orizzontalmente */
+  margin-right: auto; /* Centra il pulsante orizzontalmente */
+  text-decoration: none; /* Rimuove la sottolineatura */
+  margin-top: 20px; /* Distanza dall'articolo */
+  display: block; /* Impostato su block per forzare il centraggio */
+}
+
+#back-to-list.back_button:hover {
+  background-color: #d78c00; /* Colore di sfondo al passaggio del mouse */
+}
+
+
+/*FISSI*/
 body {
     margin: 0; /* Elimina i margini */
     background-color: #fff; 
@@ -100,22 +270,6 @@ footer p {
     height: 30px; /* Dimensione icone social */
     margin: 0 5px; /* Margine laterale tra le icone */
 }
-
-
-main {
-    background-color: #fff; /* Imposta lo sfondo bianco */
-    padding: 20px 120px; /* Padding laterale di 120px, sopra e sotto di 20px */
-    margin: 0 auto; /* Centra orizzontalmente il contenuto se la larghezza è fissa */
-    box-sizing: border-box; /* Garantisce che il padding sia incluso nella larghezza totale */
-}
-
-	h1, h2, h3, p {
-    text-align: center;
-    margin: 10px 0;
-    line-height: 1.6;
-    font-family: 'Playfair Display', serif; /* Applica il font a questi elementi */
-}
-
 
 /* Stili per dispositivi mobili */
 @media (max-width: 768px) {
