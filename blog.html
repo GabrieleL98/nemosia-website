@@ -5,9 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blog</title> 
     <link rel="stylesheet" type="text/css" href="blog.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Moon+Dance&family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Moon+Dance&family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Moon+Dance&family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&display=swap" rel="stylesheet">
+<script src="blog.js" defer></script>
 </head>
 <body>
     <header>
@@ -16,17 +20,44 @@
         </div>
         <nav>
             <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="chi-siamo.html">Chi Siamo</a></li>
-                <li><a href="eventi.html">Eventi</a></li>
-                <li><a href="blog.html" class="active">Blog</a></li>
-                <li><a href="iscriviti.html">Iscriviti</a></li>
-                <li><a href="donazioni.html">Donazioni</a></li>
-                <li><a href="contatti.html">Contatti</a></li>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="chi-siamo.html">CHI SIAMO</a></li>
+                <li><a href="blog.html" class="active">BLOG</a></li>
+                <li><a href="iscriviti.html">ISCRIVITI</a></li>
+                <li><a href="donazioni.html">DONAZIONI</a></li>
+                <li><a href="contatti.html">CONTATTI</a></li>
             </ul>
         </nav>
     </header>
 
+<div class="blog-container">
+  <!-- Colonna sinistra -->
+  <aside class="sidebar left">
+    <h3>Ultimi Post</h3>
+    <ul>
+     
+    </ul>
+   
+  </aside>
+
+  <!-- Colonna centrale -->
+  <main class="main-content">
+  <div id="articles-container"></div>
+</main>
+
+
+  <!-- Colonna destra -->
+  <aside class="sidebar right">
+    <div class="tag-filter">
+      <h3>Filtra per Tag</h3>
+      <a href="?tag=cinema" class="filter-tag">#cinema</a>
+      <a href="?tag=società" class="filter-tag">#società</a>
+      <a href="?tag=identità" class="filter-tag">#identità</a>
+    </div>
+  </aside>
+</div>
+
+    
     <footer>
         <div class="social">
             <a href="https://instagram.com/tuoaccount" target="_blank">
@@ -46,6 +77,6 @@
         
         <p>&copy; 2024 Nemosia. Tutti i diritti riservati.</p>
     </footer>
-
+    
 </body>
 </html>
