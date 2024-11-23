@@ -32,14 +32,26 @@
 
 <div class="blog-container">
   <!-- Colonna sinistra -->
-  <aside class="sidebar left">
-    <h3>Ultimi Post</h3>
-    <ul>
-     
-    </ul>
-   
-  </aside>
+ <aside class="sidebar left">
+  <section class="novita">
+    <h3>Novità da Nemosia</h3>
+    <p>Partecipa al Concorso Letterario "Le Muse di San Paolo". Categorie in gara: poesia, prosa, saggistica. Le iscrizioni sono aperte!</p>
+    <a href="dettagli-evento-1.html" class="btn">Scopri di più</a>
+  </section>
 
+  <section class="aiuta">
+    <h3>Aiuta il nostro progetto</h3>
+    <p>Nemosia è una organizzazione no-profit che si dedica alla promozione della cultura. Ogni piccola donazione ci aiuta a crescere e a realizzare i nostri progetti.</p>
+    <form action="https://www.paypal.com/donate" method="post" target="_blank">
+        <input type="hidden" name="business" value="gloccioni@gmail.com">
+        <input type="hidden" name="item_name" value="Sostieni la nostra associazione culturale">
+        <input type="hidden" name="currency_code" value="EUR">
+        <input type="submit" value="Sostieni ora" class="paypal-button">
+    </form>
+  </section>
+</aside>
+
+    
   <!-- Colonna centrale -->
   <main class="main-content">
   <div id="articles-container"></div>
