@@ -106,7 +106,7 @@ h3 {
   padding: 8px 15px; /* Spazi interni per un look più definito */
   text-decoration: none;
   color: #fff; /* Testo bianco */
-  background-color: #EFD8C3; /* Sfondo richiesto */
+  background-color: #E5C8AF; /* Sfondo richiesto */
   border-radius: 5px; /* Angoli arrotondati */
   font-size: 14px; /* Testo un po' più piccolo */
   font-weight: bold;
@@ -122,10 +122,14 @@ h3 {
 .sidebar.right .remove-filters {
   display: block;
   margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
   padding: 10px;
   background-color: #EFD8C3;
   border: 1px solid #ccc;
+  border-radius: 5px; /* Angoli arrotondati */
   text-align: center;
+  color: #fff;
   cursor: pointer;
 }
 
