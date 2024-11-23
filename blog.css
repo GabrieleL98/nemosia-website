@@ -226,6 +226,25 @@ nav ul li a.active {
     font-weight: bold; /* Rende il testo in grassetto */
 }
 
+/* Stile per il bottone PayPal */
+.paypal-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #0070ba; /* Colore ufficiale PayPal */
+  color: #fff;
+  font-size: 14px;
+  font-weight: bold;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.paypal-button:hover {
+  background-color: #005ea6; /* Colore più scuro al passaggio del mouse */
+}
+
 /* Footer 
 footer {
     width: 100%;
