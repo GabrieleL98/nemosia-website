@@ -53,33 +53,56 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   };
 
-  // Funzione per generare i filtri dalla lista dei tag
-  const generateFilters = (articles) => {
-    const tags = new Set(); // Set per evitare duplicati
-    articles.forEach((article) => {
-      article.tags.forEach((tag) => tags.add(tag));
+// Funzione per generare i filtri dalla lista dei tag
+const generateFilters = (articles) => {
+  const tags = new Set(); // Set per evitare duplicati
+  articles.forEach((article) => {
+    article.tags.forEach((tag) => tags.add(tag));
+  });
+
+  filterContainer.innerHTML = ''; // Pulisce i filtri esistenti
+
+  tags.forEach((tag) => {
+    const tagButton = document.createElement('button');
+    tagButton.classList.add('filter-tag');
+    tagButton.textContent = `#${tag}`;
+    tagButton.setAttribute('data-tag', tag);
+
+    // Aggiungi evento click per attivare/disattivare i filtri
+    tagButton.addEventListener('click', () => {
+      tagButton.classList.toggle('active'); // Attiva/disattiva la classe
+      updateArticleFilters(); // Filtra gli articoli
     });
 
-    filterContainer.innerHTML = ''; // Pulisce i filtri esistenti
+    filterContainer.appendChild(tagButton);
+  });
+};
 
-    tags.forEach((tag) => {
-      const tagLink = document.createElement('a');
-      tagLink.href = `?tag=${tag}`;
-      tagLink.classList.add('filter-tag');
-      tagLink.textContent = `#${tag}`;
-      filterContainer.appendChild(tagLink);
-    });
+// Funzione per aggiornare gli articoli in base ai filtri attivi
+const updateArticleFilters = () => {
+  const activeTags = Array.from(
+    document.querySelectorAll('.filter-tag.active')
+  ).map((button) => button.getAttribute('data-tag'));
+
+  // Mostra/nasconde gli articoli in base ai tag attivi
+  const articles = document.querySelectorAll('.article');
+  articles.forEach((article) => {
+    const articleTags = article.getAttribute('data-tags').split(',');
+    const isVisible = activeTags.every((tag) => articleTags.includes(tag));
+    article.style.display = isVisible ? 'block' : 'none';
+  });
+};
 
     // Aggiungere il bottone per rimuovere i filtri
-    const removeFiltersButton = document.createElement('button');
-    removeFiltersButton.classList.add('remove-filters'); // Aggiungi una classe per lo stile
-    removeFiltersButton.textContent = 'Rimuovi i filtri';
-    filterContainer.appendChild(removeFiltersButton);
+   // const removeFiltersButton = document.createElement('button');
+   // removeFiltersButton.classList.add('remove-filters'); // Aggiungi una classe per lo stile
+  //  removeFiltersButton.textContent = 'Rimuovi i filtri';
+  //  filterContainer.appendChild(removeFiltersButton);
 
-    removeFiltersButton.addEventListener('click', () => {
-      window.location.href = window.location.pathname; // Rimuove i filtri, ricaricando la pagina senza query
-    });
-  };
+  //  removeFiltersButton.addEventListener('click', () => {
+  //    window.location.href = window.location.pathname; // Rimuove i filtri, ricaricando la pagina senza query
+ //   });
+ // };
 
   // Funzione per filtrare gli articoli in base al tag selezionato
   const filterArticlesByTag = (articles) => {
