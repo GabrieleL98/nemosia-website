@@ -139,6 +139,10 @@ h3 {
   background-color: #d78c00; /* Colore di sfondo al passaggio del mouse */
 }
 
+body, html {
+  overflow-x: hidden; /* Blocca lo scorrimento orizzontale che potrebbe influire sul layout */
+}
+
 
 /*FISSI*/
 body {
