@@ -1,14 +1,15 @@
-<!-- JAVASCRIPT PER JSON FETCH -->
+// JAVASCRIPT PER JSON FETCH
 document.addEventListener("DOMContentLoaded", () => {
   const articleContainer = document.querySelector(".main-content");
   const jsonDataUrl = "https://raw.githubusercontent.com/GabrieleL98/the_blog/main/articles.json";
-
 
   // Funzione per caricare articoli dal JSON
   const loadArticles = async () => {
     try {
       const response = await fetch(jsonDataUrl);
       const data = await response.json();
+      
+      console.log("JSON caricato con successo. Numero di articoli trovati:", data.length); // Debug: verifica JSON
       displayArticles(data);
     } catch (error) {
       console.error("Errore nel caricamento degli articoli:", error);
@@ -18,7 +19,11 @@ document.addEventListener("DOMContentLoaded", () => {
   // Funzione per mostrare articoli nella home
   const displayArticles = (articles) => {
     articleContainer.innerHTML = ""; // Svuota il contenitore
+
+    console.log("Rendering articoli..."); // Debug: inizio del rendering
     articles.forEach((article) => {
+      console.log("Rendering articolo con ID:", article.id, "Titolo:", article.title); // Debug: ogni articolo
+      
       const articleElement = document.createElement("article");
       articleElement.innerHTML = `
         <img src="${article.image}" alt="${article.title}" />
@@ -29,15 +34,15 @@ document.addEventListener("DOMContentLoaded", () => {
         <div class="meta-info">
           <p>${article.date}, ${article.author}. <b>Tags:</b> 
           ${article.tags
-            .map(
-              (tag) => `<a href="?tag=${tag}" class="tag">#${tag}</a>`
-            )
+            .map((tag) => `<a href="?tag=${tag}" class="tag">#${tag}</a>`)
             .join(" ")}
           </p>
         </div>
       `;
       articleContainer.appendChild(articleElement);
     });
+
+    console.log("Numero di articoli renderizzati nel DOM:", articleContainer.children.length); // Debug: verifica DOM
 
     // Aggiungi l'evento clic ai titoli
     const articleLinks = document.querySelectorAll(".article-title a");
@@ -52,19 +57,19 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Funzione per mostrare un articolo completo
   const showFullArticle = (articles, articleId) => {
+    console.log("Mostrando articolo con ID:", articleId); // Debug: verifica ID
     const article = articles.find((a) => a.id === articleId);
+
     if (article) {
       articleContainer.innerHTML = `
         <article>
           <img src="${article.image}" alt="${article.title}" />
-         <h2 class="article-title">${article.title}</h2>
+          <h2 class="article-title">${article.title}</h2>
           <p>${article.content}</p>
           <div class="meta-info">
             <p>${article.date}, ${article.author}. <b>Tags:</b> 
             ${article.tags
-              .map(
-                (tag) => `<a href="?tag=${tag}" class="tag">#${tag}</a>`
-              )
+              .map((tag) => `<a href="?tag=${tag}" class="tag">#${tag}</a>`)
               .join(" ")}
             </p>
           </div>
@@ -76,6 +81,8 @@ document.addEventListener("DOMContentLoaded", () => {
       document
         .getElementById("back-to-list")
         .addEventListener("click", () => loadArticles());
+    } else {
+      console.error("Articolo non trovato con ID:", articleId); // Debug: articolo non trovato
     }
   };
 
