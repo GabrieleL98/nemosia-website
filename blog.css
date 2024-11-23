@@ -139,14 +139,6 @@ h3 {
   background-color: #d78c00; /* Colore di sfondo al passaggio del mouse */
 }
 
-body, html {
-  overflow-x: hidden; /* Blocca lo scorrimento orizzontale che potrebbe influire sul layout */
-}
-
-footer {
-  clear: both;
-}
-
 /*FISSI*/
 body {
     margin: 0; /* Elimina i margini */
@@ -226,31 +218,29 @@ nav ul li a.active {
     font-weight: bold; /* Rende il testo in grassetto */
 }
 
-/* Footer */
+/* Footer 
 footer {
     width: 100%;
-    background-color: #F8EBD9; /* Colore di sfondo del footer */
-    text-align: center; /* Centra il testo */
-    padding: 20px 0; /* Padding verticale per il footer */
- /*    margin-top: 20px; Margine superiore per separare dal contenuto */
+    background-color: #F8EBD9; 
+    text-align: center; 
+    padding: 20px 0; 
+     margin-top: 20px; 
     position: relative;
 }
 
-/* Aggiunta per separare le sezioni nel footer */
 footer p {
-    margin: 10px 0; /* Margine verticale tra i paragrafi */
-    text-align: center; /* Centra il testo */
-}
+    margin: 10px 0; 
+    text-align: center; 
 
 .social {
-    margin: 10px 0; /* Margine sopra e sotto le icone social */
+    margin: 10px 0; 
 }
 
 .social-icon {
-    width: 30px; /* Dimensione icone social */
-    height: 30px; /* Dimensione icone social */
-    margin: 0 5px; /* Margine laterale tra le icone */
-}
+    width: 30px; 
+    height: 30px; 
+    margin: 0 5px; 
+} */
 
 /* Stili per dispositivi mobili */
 @media (max-width: 768px) {
