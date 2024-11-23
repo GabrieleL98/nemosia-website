@@ -12,7 +12,11 @@ document.addEventListener("DOMContentLoaded", () => {
       allArticles = await response.json();
 
       console.log("JSON caricato con successo. Numero di articoli trovati:", allArticles.length);
-      displayArticles(allArticles);
+
+    // Inverti l'array per mostrare gli articoli dal più recente
+    const reversedArticles = allArticles.reverse();
+      
+      displayArticles(reversedArticles);
       generateFilters(allArticles);
       filterArticlesByTag(); // Aggiungi il filtraggio subito dopo il caricamento degli articoli
     } catch (error) {
