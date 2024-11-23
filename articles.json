@@ -5,8 +5,34 @@
     "image": "the_substance_banner.jpg",
     "description": "Premiato al festival del cinema di Cannes, il film della regista Coralie Fargeat ha portato sul grande schermo il tema dell'ossessione per la bellezza, che con il suo naturale affievolirsi dovuto al tempo, fa emergere tutte le fragilità della protagonista, arrivata alla resa dei conti con un mondo da cui ha preso tutto, sfruttandone gli stessi marci meccanismi che ora la rigettano. Un film che parla di società alla società, una critica violenta veicolata attraverso l'insuale canale narrativo del gener splatter. Che cos'è 'The Substance' E soprattutto, chi è Elizabeth?",
     "content": "Contenuto completo dell'articolo qui. Può includere più paragrafi.",
-    "author": "Gabriele",
-    "date": "21-11-2024",
+    "author": "Gabriele Loccioni",
+    "date": "10-01-2025",
     "tags": ["cinema", "società", "identità"]
+  }
+]
+
+[
+  {
+    "id": "2",
+    "title": "Cosa significa parlare di Biodiversità",
+    "image": "biodiversità.png",
+    "description": "Parlare di biodiversità significa riflettere sulla ricchezza e complessità della vita sulla Terra, dalla più piccola forma di vita ai grandi ecosistemi. È un invito a comprendere come ogni elemento, visibile e invisibile, sia connesso in un equilibrio fragile che tocca ogni aspetto della nostra esistenza.",
+    "content": "Contenuto completo dell'articolo qui. Può includere più paragrafi.",
+    "author": "Valentina Cotichella",
+    "date": "20-01-2025",
+    "tags": ["ecologia", "natura"]
+  }
+]
+
+[
+  {
+    "id": "3",
+    "title": "Teoria Incel: tra isolamento e ideologia",
+    "image": "biodiversità.png",
+    "description": "La teoria incel non è solo una narrazione di isolamento sociale, ma un sistema di credenze che intreccia frustrazione, alienazione e critica alle dinamiche di genere. Uno sguardo su una sottocultura controversa che ci costringe a interrogarci sulle radici del disagio e sulle sue implicazioni nella società digitale di oggi.",
+    "content": "Contenuto completo dell'articolo qui. Può includere più paragrafi.",
+    "author": "Francesco Barchiesi",
+    "date": "30-01-2025",
+    "tags": ["società", "gender"]
   }
 ]
