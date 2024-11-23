@@ -65,30 +65,34 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   };
 
-  // Funzione per generare i filtri nella sidebar
-  const displayFilters = (articles) => {
-    const allTags = new Set(); // Utilizziamo un Set per evitare duplicati
-
-    // Analizza i tag di ogni articolo e aggiungili al Set
+   // Funzione per generare i filtri dalla lista dei tag
+  const generateFilters = (articles) => {
+    const tags = new Set(); // Set per evitare duplicati
     articles.forEach((article) => {
-      article.tags.forEach((tag) => allTags.add(tag));
+      article.tags.forEach((tag) => tags.add(tag));
     });
 
-    // Aggiungi i filtri alla sidebar
-    tagContainer.innerHTML = `<h3>Filtra per Tag</h3>`;
-    allTags.forEach((tag) => {
-      const tagLink = document.createElement("a");
-      tagLink.href = "#";
-      tagLink.classList.add("filter-tag");
+    filterContainer.innerHTML = ''; // Pulisce i filtri esistenti
+
+    tags.forEach((tag) => {
+      const tagLink = document.createElement('a');
+      tagLink.href = `?tag=${tag}`;
+      tagLink.classList.add('filter-tag');
       tagLink.textContent = `#${tag}`;
-      tagLink.addEventListener("click", (event) => {
-        event.preventDefault();
-        loadArticles(tag); // Ricarica gli articoli con il filtro selezionato
-      });
-      tagContainer.appendChild(tagLink);
+      filterContainer.appendChild(tagLink);
+    });
+
+    // Aggiungere il bottone per rimuovere i filtri
+    const removeFiltersButton = document.createElement('button');
+    removeFiltersButton.classList.add('remove-filters'); // Aggiungi una classe per lo stile
+    removeFiltersButton.textContent = 'Rimuovi i filtri';
+    filterContainer.appendChild(removeFiltersButton);
+
+    removeFiltersButton.addEventListener('click', () => {
+      window.location.href = window.location.pathname; // Rimuove i filtri, ricaricando la pagina senza query
     });
   };
-
+  
   // Funzione per mostrare un articolo completo
   const showFullArticle = (articles, articleId) => {
     console.log("Mostrando articolo con ID:", articleId); // Debug: verifica ID
