@@ -1,4 +1,4 @@
-// JAVASCRIPT PER JSON FETCH
+// JAVASCRIPT PER JSON FETCH 
 document.addEventListener("DOMContentLoaded", () => {
   const articleContainer = document.querySelector(".main-content");
   const jsonDataUrl = "https://raw.githubusercontent.com/GabrieleL98/nemosia-website/refs/heads/master/articles.json";
