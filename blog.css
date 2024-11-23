@@ -359,3 +359,9 @@ nav a {
     padding: 0 15px; /* Margini interni per leggibilità */
   }
 }
+
+@media (max-width: 768px) {
+  main {
+    padding: 20px 15px; /* Riduce il padding laterale solo su mobile */
+  }
+}
