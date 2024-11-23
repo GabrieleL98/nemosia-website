@@ -31,6 +31,7 @@ document.addEventListener("DOMContentLoaded", () => {
           <a href="#" data-id="${article.id}">${article.title}</a>
         </h2>
         <p class="justify-text">${article.description}</p>
+        <hr>
         <div class="meta-info">
           <p>${article.date}, ${article.author}. <b>Tags:</b> 
           ${article.tags
@@ -38,6 +39,7 @@ document.addEventListener("DOMContentLoaded", () => {
             .join(" ")}
           </p>
         </div>
+        <hr>
       `;
       articleContainer.appendChild(articleElement);
     });
