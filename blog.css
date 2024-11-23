@@ -118,6 +118,12 @@ h3 {
   background-color: #D8BFA9; /* Sfondo più scuro al passaggio del mouse */
 }
 
+.filter-tag.active {
+  background-color: #D8BFA9; /* Sfondo più scuro per indicare che è attivo */
+  color: #000; /* Testo più visibile */
+}
+
+
 /* Separare ulteriormente il bottone "Rimuovi i filtri" 
 .sidebar.right .remove-filters {
   display: block;
