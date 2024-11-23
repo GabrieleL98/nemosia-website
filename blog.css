@@ -102,6 +102,7 @@ h3 {
 .sidebar.right .filter-tag {
   display: inline-block; /* I tag sono box separati */
   margin: 5px 0;
+  margin-right: 10px;
   padding: 8px 15px; /* Spazi interni per un look più definito */
   text-decoration: none;
   color: #fff; /* Testo bianco */
@@ -115,6 +116,17 @@ h3 {
 
 .sidebar.right .filter-tag:hover {
   background-color: #D8BFA9; /* Sfondo più scuro al passaggio del mouse */
+}
+
+/* Separare ulteriormente il bottone "Rimuovi i filtri" */
+.sidebar.right .remove-filters {
+  display: block;
+  margin-top: 20px;
+  padding: 10px;
+  background-color: #EFD8C3;
+  border: 1px solid #ccc;
+  text-align: center;
+  cursor: pointer;
 }
 
 /* Stile per il pulsante "Torna alla lista" */
