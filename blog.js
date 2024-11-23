@@ -73,6 +73,7 @@ document.addEventListener("DOMContentLoaded", () => {
       // Aggiungi evento click per attivare/disattivare i filtri
       tagButton.addEventListener('click', () => {
         tagButton.classList.toggle('active'); // Attiva/disattiva la classe
+        console.log(tagButton.classList); // Stampa le classi del bottone
         updateArticleFilters(); // Filtra gli articoli
       });
 
