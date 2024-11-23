@@ -118,7 +118,7 @@ h3 {
   background-color: #D8BFA9; /* Sfondo più scuro al passaggio del mouse */
 }
 
-/* Separare ulteriormente il bottone "Rimuovi i filtri" */
+/* Separare ulteriormente il bottone "Rimuovi i filtri" 
 .sidebar.right .remove-filters {
   display: block;
   margin-top: 20px;
@@ -127,11 +127,11 @@ h3 {
   padding: 10px;
   background-color: #EFD8C3;
   border: 1px solid #ccc;
-  border-radius: 5px; /* Angoli arrotondati */
+  border-radius: 5px; 
   text-align: center;
   color: #fff;
   cursor: pointer;
-}
+} */
 
 /* Stile per il pulsante "Torna alla lista" */
 #back-to-list.back_button {
