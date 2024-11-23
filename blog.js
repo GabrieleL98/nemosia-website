@@ -1,16 +1,24 @@
-// JAVASCRIPT PER JSON FETCH 
+// JAVASCRIPT PER JSON FETCH
 document.addEventListener("DOMContentLoaded", () => {
   const articleContainer = document.querySelector(".main-content");
+  const tagContainer = document.querySelector(".tag-filter"); // Sidebar per i filtri
   const jsonDataUrl = "https://raw.githubusercontent.com/GabrieleL98/nemosia-website/refs/heads/master/articles.json";
 
   // Funzione per caricare articoli dal JSON
-  const loadArticles = async () => {
+  const loadArticles = async (filterTag = null) => {
     try {
       const response = await fetch(jsonDataUrl);
       const data = await response.json();
       
       console.log("JSON caricato con successo. Numero di articoli trovati:", data.length); // Debug: verifica JSON
-      displayArticles(data);
+
+      // Se c'è un filtro applicato, filtriamo gli articoli
+      const filteredArticles = filterTag
+        ? data.filter(article => article.tags.includes(filterTag))
+        : data;
+
+      displayArticles(filteredArticles); // Visualizza gli articoli filtrati
+      displayFilters(data); // Mostra i filtri
     } catch (error) {
       console.error("Errore nel caricamento degli articoli:", error);
     }
@@ -23,7 +31,7 @@ document.addEventListener("DOMContentLoaded", () => {
     console.log("Rendering articoli..."); // Debug: inizio del rendering
     articles.forEach((article) => {
       console.log("Rendering articolo con ID:", article.id, "Titolo:", article.title); // Debug: ogni articolo
-      
+
       const articleElement = document.createElement("article");
       articleElement.innerHTML = `
         <img src="${article.image}" alt="${article.title}" />
@@ -35,7 +43,7 @@ document.addEventListener("DOMContentLoaded", () => {
         <div class="meta-info">
           <p>${article.date}, ${article.author}. <b>Tags:</b> 
           ${article.tags
-            .map((tag) => `<a href="?tag=${tag}" class="tag">#${tag}</a>`)
+            .map((tag) => `<a href="?tag=${tag}" class="tag">${tag}</a>`)
             .join(" ")}
           </p>
         </div>
@@ -57,6 +65,30 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   };
 
+  // Funzione per generare i filtri nella sidebar
+  const displayFilters = (articles) => {
+    const allTags = new Set(); // Utilizziamo un Set per evitare duplicati
+
+    // Analizza i tag di ogni articolo e aggiungili al Set
+    articles.forEach((article) => {
+      article.tags.forEach((tag) => allTags.add(tag));
+    });
+
+    // Aggiungi i filtri alla sidebar
+    tagContainer.innerHTML = `<h3>Filtra per Tag</h3>`;
+    allTags.forEach((tag) => {
+      const tagLink = document.createElement("a");
+      tagLink.href = "#";
+      tagLink.classList.add("filter-tag");
+      tagLink.textContent = `#${tag}`;
+      tagLink.addEventListener("click", (event) => {
+        event.preventDefault();
+        loadArticles(tag); // Ricarica gli articoli con il filtro selezionato
+      });
+      tagContainer.appendChild(tagLink);
+    });
+  };
+
   // Funzione per mostrare un articolo completo
   const showFullArticle = (articles, articleId) => {
     console.log("Mostrando articolo con ID:", articleId); // Debug: verifica ID
@@ -71,7 +103,7 @@ document.addEventListener("DOMContentLoaded", () => {
           <div class="meta-info">
             <p>${article.date}, ${article.author}. <b>Tags:</b> 
             ${article.tags
-              .map((tag) => `<a href="?tag=${tag}" class="tag">#${tag}</a>`)
+              .map((tag) => `<a href="?tag=${tag}" class="tag">${tag}</a>`)
               .join(" ")}
             </p>
           </div>
@@ -88,48 +120,6 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   };
 
-  // Carica gli articoli iniziali
+  // Carica gli articoli iniziali senza filtri
   loadArticles();
-});
-
-
-
-<!-- JAVASCRIPT PER FILTRI -->
-document.addEventListener('DOMContentLoaded', () => {
-  // Otteniamo tutti i link dei tag
-  const filterTags = document.querySelectorAll('.filter-tag');
-  
-  // Otteniamo tutti gli articoli
-  const articles = document.querySelectorAll('article');
-  
-  // Aggiungiamo l'evento di clic per ogni tag
-  filterTags.forEach(tag => {
-    tag.addEventListener('click', (event) => {
-      event.preventDefault();  // Impediamo il comportamento di default del link (non vogliamo che la pagina venga ricaricata)
-      
-      // Otteniamo il tag da mostrare
-      const tagName = tag.getAttribute('href').split('=')[1];  // Otteniamo il valore del tag dalla URL
-
-      // Nascondiamo tutti gli articoli
-      articles.forEach(article => {
-        // Troviamo tutti i tag nell'articolo
-        const articleTags = article.querySelectorAll('.meta-details .tag');
-        
-        // Controlliamo se l'articolo ha il tag selezionato
-        let hasTag = false;
-        articleTags.forEach(articleTag => {
-          if (articleTag.getAttribute('href').includes(tagName)) {
-            hasTag = true;
-          }
-        });
-
-        // Mostriamo o nascondiamo l'articolo in base al tag
-        if (hasTag || tagName === '') {
-          article.style.display = 'block';  // Mostriamo l'articolo
-        } else {
-          article.style.display = 'none';  // Nascondiamo l'articolo
-        }
-      });
-    });
-  });
 });
