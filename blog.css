@@ -143,6 +143,9 @@ body, html {
   overflow-x: hidden; /* Blocca lo scorrimento orizzontale che potrebbe influire sul layout */
 }
 
+footer {
+  clear: both;
+}
 
 /*FISSI*/
 body {
