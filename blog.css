@@ -342,36 +342,15 @@ nav a {
     display: block; /* Mostra il menu se la classe "active" è presente */
 }
 
-/* Rimozione foto su mobile */
 @media (max-width: 768px) {
-    .card-image {
-        display: none; /* Nasconde l'immagine su dispositivi mobili */
-    }
+  .sidebar.left,
+  .sidebar.right {
+    display: none; /* Nasconde le sidebar */
+  }
+
+  .main-content {
+    width: 100%; /* La colonna centrale occupa tutta la larghezza */
+    padding: 0 15px; /* Spazio laterale per migliorare leggibilità */
+  }
 }
 
-/* Regole per il menu su desktop */
-@media (min-width: 769px) {
-    #nav-links {
-        display: flex; /* Mantiene il menu orizzontale su desktop */
-    }
-}
-
-/* Stile responsive per mobile */
-@media (max-width: 768px) {
-    .bacheca {
-        padding: 0 10px; /* Riduci il padding su schermi piccoli */
-    }
-
-    .bacheca article {
-        padding: 15px;  /* Riduci il padding interno degli articoli */
-        margin-bottom: 15px; /* Diminuisci il margine inferiore */
-    }
-
-    .bacheca h3 {
-        font-size: 1.2em; /* Ridimensiona il titolo su mobile */
-    }
-
-    .bacheca p {
-        font-size: 0.9em; /* Ridimensiona il testo del paragrafo su mobile */
-    }
-}
