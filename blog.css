@@ -232,7 +232,8 @@ footer {
     background-color: #F8EBD9; /* Colore di sfondo del footer */
     text-align: center; /* Centra il testo */
     padding: 20px 0; /* Padding verticale per il footer */
-    margin-top: 20px; /* Margine superiore per separare dal contenuto */
+ /*    margin-top: 20px; Margine superiore per separare dal contenuto */
+    position: relative;
 }
 
 /* Aggiunta per separare le sezioni nel footer */
