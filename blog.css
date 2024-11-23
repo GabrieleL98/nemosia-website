@@ -229,8 +229,9 @@ nav ul li a.active {
 /* Stile per il bottone PayPal */
 .paypal-button {
   display: inline-block;
+  text-align: center;
   padding: 10px 20px;
-  background-color: #0070ba; /* Colore ufficiale PayPal */
+  background-color: ##FFC439; /* Colore ufficiale PayPal */
   color: #fff;
   font-size: 14px;
   font-weight: bold;
