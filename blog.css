@@ -94,33 +94,6 @@ h3 {
   text-decoration: underline; /* Effetto al passaggio */
 }
 
-
-/* Meta-info: data, autore e tag */
-.meta-info {
-  text-align: center;
-  font-size: 0.9em; /* Più piccolo della descrizione */
-  color: #555; /* Colore testo più tenue */
-  margin-top: 20px;
-}
-
-.meta-divider {
-  border-top: 1px solid #ccc; /* Righe sottili */
-  margin: 10px 0;
-}
-
-.meta-details {
-  margin: 5px 0;
-}
-
-.meta-details .tag {
-  text-decoration: none;
-  color: #007BFF; /* Colore link tag */
-}
-
-.meta-details .tag:hover {
-  text-decoration: underline; /* Effetto al passaggio */
-}
-
 /* Sidebar: filtro per tag */
 .sidebar.right .tag-filter {
   margin-top: 20px;
