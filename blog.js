@@ -12,6 +12,7 @@ document.addEventListener("DOMContentLoaded", () => {
       console.log("JSON caricato con successo. Numero di articoli trovati:", data.length);
       displayArticles(data);
       generateFilters(data);
+      filterArticlesByTag(data); // Aggiungi il filtraggio subito dopo il caricamento degli articoli
     } catch (error) {
       console.error("Errore nel caricamento degli articoli:", error);
     }
@@ -78,6 +79,20 @@ document.addEventListener("DOMContentLoaded", () => {
     removeFiltersButton.addEventListener('click', () => {
       window.location.href = window.location.pathname; // Rimuove i filtri, ricaricando la pagina senza query
     });
+  };
+
+  // Funzione per filtrare gli articoli in base al tag selezionato
+  const filterArticlesByTag = (articles) => {
+    const urlParams = new URLSearchParams(window.location.search);
+    const tagFilter = urlParams.get('tag'); // Ottieni il tag dalla query string
+
+    if (tagFilter) {
+      // Filtra gli articoli che contengono il tag selezionato
+      const filteredArticles = articles.filter((article) => 
+        article.tags.includes(tagFilter)
+      );
+      displayArticles(filteredArticles); // Mostra solo gli articoli filtrati
+    }
   };
 
   // Funzione per mostrare un articolo completo
