@@ -1,24 +1,17 @@
-// JAVASCRIPT PER JSON FETCH
 document.addEventListener("DOMContentLoaded", () => {
   const articleContainer = document.querySelector(".main-content");
-  const tagContainer = document.querySelector(".tag-filter"); // Sidebar per i filtri
   const jsonDataUrl = "https://raw.githubusercontent.com/GabrieleL98/nemosia-website/refs/heads/master/articles.json";
+  const filterContainer = document.querySelector('.tag-filter');
 
   // Funzione per caricare articoli dal JSON
-  const loadArticles = async (filterTag = null) => {
+  const loadArticles = async () => {
     try {
       const response = await fetch(jsonDataUrl);
       const data = await response.json();
-      
-      console.log("JSON caricato con successo. Numero di articoli trovati:", data.length); // Debug: verifica JSON
 
-      // Se c'è un filtro applicato, filtriamo gli articoli
-      const filteredArticles = filterTag
-        ? data.filter(article => article.tags.includes(filterTag))
-        : data;
-
-      displayArticles(filteredArticles); // Visualizza gli articoli filtrati
-      displayFilters(data); // Mostra i filtri
+      console.log("JSON caricato con successo. Numero di articoli trovati:", data.length);
+      displayArticles(data);
+      generateFilters(data);
     } catch (error) {
       console.error("Errore nel caricamento degli articoli:", error);
     }
@@ -28,10 +21,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const displayArticles = (articles) => {
     articleContainer.innerHTML = ""; // Svuota il contenitore
 
-    console.log("Rendering articoli..."); // Debug: inizio del rendering
     articles.forEach((article) => {
-      console.log("Rendering articolo con ID:", article.id, "Titolo:", article.title); // Debug: ogni articolo
-
       const articleElement = document.createElement("article");
       articleElement.innerHTML = `
         <img src="${article.image}" alt="${article.title}" />
@@ -52,9 +42,6 @@ document.addEventListener("DOMContentLoaded", () => {
       articleContainer.appendChild(articleElement);
     });
 
-    console.log("Numero di articoli renderizzati nel DOM:", articleContainer.children.length); // Debug: verifica DOM
-
-    // Aggiungi l'evento clic ai titoli
     const articleLinks = document.querySelectorAll(".article-title a");
     articleLinks.forEach((link) => {
       link.addEventListener("click", (event) => {
@@ -65,7 +52,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   };
 
-   // Funzione per generare i filtri dalla lista dei tag
+  // Funzione per generare i filtri dalla lista dei tag
   const generateFilters = (articles) => {
     const tags = new Set(); // Set per evitare duplicati
     articles.forEach((article) => {
@@ -92,10 +79,9 @@ document.addEventListener("DOMContentLoaded", () => {
       window.location.href = window.location.pathname; // Rimuove i filtri, ricaricando la pagina senza query
     });
   };
-  
+
   // Funzione per mostrare un articolo completo
   const showFullArticle = (articles, articleId) => {
-    console.log("Mostrando articolo con ID:", articleId); // Debug: verifica ID
     const article = articles.find((a) => a.id === articleId);
 
     if (article) {
@@ -115,15 +101,12 @@ document.addEventListener("DOMContentLoaded", () => {
         </article>
       `;
 
-      // Pulsante per tornare alla lista
       document
         .getElementById("back-to-list")
         .addEventListener("click", () => loadArticles());
-    } else {
-      console.error("Articolo non trovato con ID:", articleId); // Debug: articolo non trovato
     }
   };
 
-  // Carica gli articoli iniziali senza filtri
+  // Carica gli articoli iniziali
   loadArticles();
 });
