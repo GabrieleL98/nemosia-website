@@ -348,9 +348,14 @@ nav a {
     display: none; /* Nasconde le sidebar */
   }
 
+  .blog-container {
+    display: block; /* Cambia layout a blocco */
+    width: 100%; /* Occupa tutta la larghezza disponibile */
+  }
+
   .main-content {
-    width: 100%; /* La colonna centrale occupa tutta la larghezza */
-    padding: 0 15px; /* Spazio laterale per migliorare leggibilità */
+    width: 100%; /* Espande la colonna centrale */
+    margin: 0 auto; /* Centra il contenuto */
+    padding: 0 15px; /* Margini interni per leggibilità */
   }
 }
-
