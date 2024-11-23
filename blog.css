@@ -119,26 +119,11 @@ h3 {
 }
 
 /* Filtro attivo */
-.filter-tag.active {
+.sidebar.right .filter-tag.active {
   background-color: #8B5E3C; /* Colore molto più scuro */
   color: #fff; /* Testo sempre bianco per contrasto */
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.3); /* Aggiunge un'ombra leggera */
 }
-
-/* Separare ulteriormente il bottone "Rimuovi i filtri" 
-.sidebar.right .remove-filters {
-  display: block;
-  margin-top: 20px;
-  margin-left: auto;
-  margin-right: auto;
-  padding: 10px;
-  background-color: #EFD8C3;
-  border: 1px solid #ccc;
-  border-radius: 5px; 
-  text-align: center;
-  color: #fff;
-  cursor: pointer;
-} */
 
 /* Stile per il pulsante "Torna alla lista" */
 #back-to-list.back_button {
