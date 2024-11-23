@@ -147,6 +147,10 @@ h3 {
   background-color: #d78c00; /* Colore di sfondo al passaggio del mouse */
 }
 
+.aiuta {
+margin-top: 60px
+}	
+
 /*FISSI*/
 body {
     margin: 0; /* Elimina i margini */
