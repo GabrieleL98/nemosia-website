@@ -374,10 +374,10 @@ nav a {
     nav ul li {
         text-align: center;
         padding: 1rem; /* Aggiunge padding per spaziatura interna */
-        border-bottom: 1px solid #444; /* Separatore tra le voci del menu */
     }
 
-    nav ul li:last-child {
-        border-bottom: none; /* Rimuove il divisore dall'ultima voce */
+  /* Aggiungi il divisore solo su mobile */
+    nav ul li:not(:last-child) {
+        border-bottom: 1px solid #444; /* Separatore tra le voci del menu */
     }
 }
