@@ -328,3 +328,24 @@ nav a {
     padding: 10px 15px; /* Padding per aumentare l'area cliccabile */
 }
 
+/* Nascondi l'hamburger su desktop */
+.hamburger {
+    display: none;
+}
+
+/* Mostra l'hamburger e posizionalo a sinistra su mobile */
+@media (max-width: 768px) {
+    .hamburger {
+        display: block;         /* Rende visibile l'hamburger su mobile */
+        font-size: 30px;        /* Imposta la dimensione dell'icona */
+        cursor: pointer;       /* Aggiunge il cursore pointer */
+        background: none;       /* Rimuove eventuali sfondi */
+        border: none;           /* Rimuove i bordi */
+        color: white;           /* Colore bianco per l'icona */
+        position: absolute;     /* Posizionamento assoluto */
+        left: 20px;             /* Sposta l'icona a sinistra */
+        top: 20px;              /* Posiziona l'icona a 20px dal bordo superiore */
+    }
+}
+
+
