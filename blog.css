@@ -343,7 +343,7 @@ nav a {
         cursor: pointer;       /* Aggiunge il cursore pointer */
         background: none;       /* Rimuove eventuali sfondi */
         border: none;           /* Rimuove i bordi */
-        color: white;           /* Colore bianco per l'icona */
+        color: block;           /* Colore nero per l'icona */
         position: absolute;     /* Posizionamento assoluto */
         left: 20px;             /* Sposta l'icona a sinistra */
         top: 20px;              /* Posiziona l'icona a 20px dal bordo superiore */
