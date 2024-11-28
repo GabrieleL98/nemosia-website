@@ -1,3 +1,11 @@
+/* Stile per l'header */
+header {
+    width: 100%;
+    background-color: #F8EBD9; /* Colore di sfondo per l'header */
+    padding: 10px; /* Ridotto da 20px a 10px */
+    text-align: center;
+}
+
 body {
     background-color: #F0F0F0; /* Un grigio chiaro per le pagine */
     font-family: Arial, sans-serif;
