@@ -147,10 +147,3 @@ document.addEventListener("DOMContentLoaded", () => {
   // Carica gli articoli iniziali
   loadArticles();
 });
-
-
-//menu hamburger
-document.querySelector('.hamburger').addEventListener('click', function () {
-    const menu = document.querySelector('.menu');
-    menu.classList.toggle('show'); // Alterna la classe 'show'
-});
