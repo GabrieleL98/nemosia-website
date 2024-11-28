@@ -328,11 +328,11 @@ nav a {
     padding: 10px 15px; /* Padding per aumentare l'area cliccabile */
 }
 
-/* Stile della navbar su desktop (schermi più grandi) */
-nav ul li {
-    text-align: center;
-    padding: 1rem; /* Aggiunge padding per spaziatura interna */
-    border-bottom: none; /* Rimuove il bordo sulla navbar desktop */
+/* Applicato quando lo schermo è più grande di 768px */
+@media (min-width: 769px) {
+    nav ul li {
+        border-bottom: none; /* Assicura che non ci siano bordi su desktop */
+    }
 }
 
 /* REGOLE MENU MOBILE, SE TUTTO VA BENE, COPIA INCOLLA DA QUA PER GLI ALTRI CSS, RICORDA IL JS E LA PICCOLA MODIFICA HTML */
