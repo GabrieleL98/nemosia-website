@@ -365,3 +365,42 @@ nav a {
     padding: 20px 15px; /* Riduce il padding laterale solo su mobile */
   }
 }
+
+
+
+/* Nasconde gli elementi della navbar su schermi piccoli */
+@media (max-width: 768px) {
+    .menu {
+        display: none; /* Nasconde il menu */
+        flex-direction: column;
+        background-color: #333; /* Sfondo scuro per il menu mobile */
+        position: absolute;
+        top: 100%; /* Posiziona sotto la navbar */
+        left: 0;
+        width: 100%; /* Larghezza piena */
+        padding: 0;
+    }
+
+    .menu li {
+        text-align: center;
+        padding: 1rem;
+        border-bottom: 1px solid #444; /* Divisori tra gli elementi */
+    }
+
+    .menu li:last-child {
+        border-bottom: none;
+    }
+
+    .hamburger {
+        display: block; /* Mostra il pulsante hamburger */
+        background: none;
+        border: none;
+        color: white;
+        font-size: 2rem;
+        cursor: pointer;
+    }
+
+    .menu.show {
+        display: flex; /* Mostra il menu al clic */
+    }
+}
