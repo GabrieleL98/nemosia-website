@@ -17,7 +17,7 @@
     </div>
     
     <!-- Icona del menu hamburger -->
-    <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
+   <button class="hamburger" aria-label="Apri menu">☰</button>
     
     <nav class="navbar">
         <ul id="nav-links">
@@ -146,15 +146,14 @@
         images[currentIndexSlideshow].style.display = 'block'; // Mostra la nuova immagine
     }, 3000); // Cambia immagine ogni 3 secondi
 
-    // Codice per il menu ad hamburger
-    function toggleMenu() {
-        const navLinks = document.getElementById("nav-links");
-        if (navLinks.style.display === "block") {
-            navLinks.style.display = "none";
-        } else {
-            navLinks.style.display = "block";
-        }
-    }
+
+const hamburger = document.querySelector('.hamburger');
+const menu = document.querySelector('nav ul');
+
+hamburger.addEventListener('click', function() {
+    menu.classList.toggle('show');  // Aggiunge o rimuove la classe 'show' dal menu
+});
+
 </script>
 
 <!-- Altri contenuti HTML -->
