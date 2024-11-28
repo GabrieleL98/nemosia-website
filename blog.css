@@ -355,7 +355,7 @@ nav a {
     nav ul {
         display: none; /* Nasconde il menu per impostazione predefinita */
         position: fixed;  /* Posizionamento assoluto */
-        top: 100%;           /* Posiziona il menu subito sotto la navbar */
+        top: 60px;           /* Posiziona il menu subito sotto la navbar */
         left: 0;
         width: 100%;         /* Larghezza completa */
         background-color: #333;
