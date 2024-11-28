@@ -354,7 +354,7 @@ nav a {
 @media (max-width: 768px) {
     nav ul {
         display: none; /* Nasconde il menu per impostazione predefinita */
-        position: absolute;  /* Posizionamento assoluto */
+        position: fixed;  /* Posizionamento assoluto */
         top: 100%;           /* Posiziona il menu subito sotto la navbar */
         left: 0;
         width: 100%;         /* Larghezza completa */
