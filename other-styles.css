@@ -224,4 +224,60 @@ main {
 .paypal-button:hover {
     background-color: #FFB100;
 }
-~
+
+
+/* NAVBAR NORMALE (DESKTOP) */
+@media (min-width: 769px) {
+    nav ul li {
+        border-bottom: none; /* Rimuove il divisore sulla navbar desktop */
+    }
+}
+
+/* MENU MOBILE */
+.hamburger {
+    display: none; /* Nasconde l'hamburger su desktop */
+}
+
+@media (max-width: 768px) {
+    /* Mostra l'hamburger e posizionalo su mobile */
+    .hamburger {
+        display: block;        /* Mostra l'hamburger su mobile */
+        font-size: 30px;       /* Dimensione dell'icona */
+        cursor: pointer;       /* Aggiunge il cursore */
+        background: none;      /* Rimuove sfondi */
+        border: none;          /* Rimuove bordi */
+        color: black;          /* Colore nero */
+        position: absolute;    /* Posizionamento assoluto */
+        left: 20px;            /* Sposta l'hamburger a sinistra */
+        top: 20px;             /* Posiziona in alto */
+    }
+
+    /* Nasconde il menu inizialmente */
+    nav ul {
+        display: none;         /* Nasconde il menu per impostazione predefinita */
+        position: fixed;       /* Fissa il menu in una posizione specifica */
+        top: 160px;             /* Posiziona subito sotto l'header (navbar) */
+        left: 0;
+        width: 100%;           /* Larghezza completa */
+        background-color: #F8EBD9; /* Colore di sfondo */
+        padding: 0;
+        margin: 0;
+        z-index: 999;          /* Porta il menu sopra gli altri contenuti */
+    }
+
+    /* Mostra il menu quando la classe 'show' è presente */
+    nav ul.show {
+        display: block; /* Mostra il menu */
+    }
+
+    /* Stile delle voci del menu */
+    nav ul li {
+        text-align: center;
+        padding: 1rem; /* Spaziatura interna */
+    }
+
+    /* Aggiunge un divisore solo tra le voci, escludendo l'ultima */
+    nav ul li:not(:last-child) {
+        border-bottom: 1px solid #444; /* Separatore tra le voci */
+    }
+}
