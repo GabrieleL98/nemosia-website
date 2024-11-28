@@ -370,3 +370,14 @@ nav a {
     }
 }
 
+ /* Aggiungi la spaziatura tra le voci del menu */
+    nav ul li {
+        text-align: center;
+        padding: 1rem; /* Aggiunge padding per spaziatura interna */
+        border-bottom: 1px solid #444; /* Separatore tra le voci del menu */
+    }
+
+    nav ul li:last-child {
+        border-bottom: none; /* Rimuove il divisore dall'ultima voce */
+    }
+}
