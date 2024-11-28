@@ -1,7 +1,7 @@
 <!DOCTYPE html> 
 <html lang="it">
 <head>
-    <link rel="stylesheet" href="style.css"> <!-- Stili generali -->
+   <!-- <link rel="stylesheet" href="style.css">  Stili generali -->
     <link rel="stylesheet" href="other-styles.css"> <!-- Stili specifici per le altre pagine -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,6 +17,7 @@
         </div>
 <!--    <h1>Chi Siamo</h1> -->
         <nav>
+		   <button class="hamburger" aria-label="Apri menu">☰</button>
             <ul>
                 <li><a href="index.html">Home</a></li>
 		<li><a href="chi-siamo.html" class="active">Chi Siamo</a></li>
@@ -95,5 +96,15 @@
     
     <p>&copy; 2024 Nemosia. Tutti i diritti riservati.</p>
 </footer>
+
+<script>
+const hamburger = document.querySelector('.hamburger');
+const menu = document.querySelector('nav ul');
+
+hamburger.addEventListener('click', function() {
+    menu.classList.toggle('show');  // Aggiunge o rimuove la classe 'show' dal menu
+});
+</script>
+    
 </body>
 </html>
