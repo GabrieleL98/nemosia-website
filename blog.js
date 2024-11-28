@@ -147,3 +147,13 @@ document.addEventListener("DOMContentLoaded", () => {
   // Carica gli articoli iniziali
   loadArticles();
 });
+
+// Seleziona il pulsante hamburger e il menu
+const hamburger = document.querySelector('.hamburger');
+const menu = document.querySelector('nav ul');
+
+// Aggiungi un listener al clic dell'hamburger
+hamburger.addEventListener('click', function() {
+    menu.classList.toggle('show');  // Aggiunge o rimuove la classe 'show' dal menu
+});
+
