@@ -328,7 +328,9 @@ nav a {
     padding: 10px 15px; /* Padding per aumentare l'area cliccabile */
 }
 
-/* Nascondi l'hamburger su desktop */
+
+
+/* REGOLE MENU MOBILE, SE TUTTO VA BENE, COPIA INCOLLA DA QUA PER GLI ALTRI CSS, RICORDA IL JS E LA PICCOLA MODIFICA HTML */
 .hamburger {
     display: none;
 }
@@ -348,4 +350,20 @@ nav a {
     }
 }
 
+/* Nascondi la navbar su dispositivi mobili */
+@media (max-width: 768px) {
+    nav ul {
+        display: none; /* Nasconde il menu */
+    }
+
+    /* Mostra il menu quando la classe 'show' è presente */
+    nav ul.show {
+        display: block; /* Mostra il menu */
+        position: absolute;  /* Può essere posizionato sopra o sotto la navbar */
+        top: 100%;           /* Posiziona il menu sotto la navbar */
+        left: 0;
+        width: 100%;         /* Larghezza completa */
+        background-color: #333;
+    }
+}
 
