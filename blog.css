@@ -358,7 +358,7 @@ nav a {
         top: 180px;           /* Posiziona il menu subito sotto la navbar */
         left: 0;
         width: 100%;         /* Larghezza completa */
-        background-color: #333;
+        background-color: #F8EBD9;
         padding: 0;          /* Rimuove il padding per evitare spazi non voluti */
         margin: 0;           /* Rimuove eventuali margini indesiderati */
         z-index: 999;        /* Assicura che il menu sia visibile sopra altri contenuti */
