@@ -353,17 +353,20 @@ nav a {
 /* Nascondi la navbar su dispositivi mobili */
 @media (max-width: 768px) {
     nav ul {
-        display: none; /* Nasconde il menu */
+        display: none; /* Nasconde il menu per impostazione predefinita */
+        position: absolute;  /* Posizionamento assoluto */
+        top: 100%;           /* Posiziona il menu subito sotto la navbar */
+        left: 0;
+        width: 100%;         /* Larghezza completa */
+        background-color: #333;
+        padding: 0;          /* Rimuove il padding per evitare spazi non voluti */
+        margin: 0;           /* Rimuove eventuali margini indesiderati */
+        z-index: 999;        /* Assicura che il menu sia visibile sopra altri contenuti */
     }
 
     /* Mostra il menu quando la classe 'show' è presente */
     nav ul.show {
         display: block; /* Mostra il menu */
-        position: absolute;  /* Può essere posizionato sopra o sotto la navbar */
-        top: 100%;           /* Posiziona il menu sotto la navbar */
-        left: 0;
-        width: 100%;         /* Larghezza completa */
-        background-color: #333;
     }
 }
 
