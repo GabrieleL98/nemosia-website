@@ -328,7 +328,12 @@ nav a {
     padding: 10px 15px; /* Padding per aumentare l'area cliccabile */
 }
 
-
+/* Stile della navbar su desktop (schermi più grandi) */
+nav ul li {
+    text-align: center;
+    padding: 1rem; /* Aggiunge padding per spaziatura interna */
+    border-bottom: none; /* Rimuove il bordo sulla navbar desktop */
+}
 
 /* REGOLE MENU MOBILE, SE TUTTO VA BENE, COPIA INCOLLA DA QUA PER GLI ALTRI CSS, RICORDA IL JS E LA PICCOLA MODIFICA HTML */
 .hamburger {
@@ -370,13 +375,13 @@ nav a {
     }
 }
 
- /* Aggiungi la spaziatura tra le voci del menu */
+  /* Aggiungi la spaziatura tra le voci del menu e il divisore solo su mobile */
     nav ul li {
         text-align: center;
         padding: 1rem; /* Aggiunge padding per spaziatura interna */
     }
 
-  /* Aggiungi il divisore solo su mobile */
+    /* Aggiungi il divisore solo su mobile */
     nav ul li:not(:last-child) {
         border-bottom: 1px solid #444; /* Separatore tra le voci del menu */
     }
