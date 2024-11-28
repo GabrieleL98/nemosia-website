@@ -328,61 +328,58 @@ nav a {
     padding: 10px 15px; /* Padding per aumentare l'area cliccabile */
 }
 
-/* Applicato quando lo schermo è più grande di 768px */
+/* NAVBAR NORMALE (DESKTOP) */
 @media (min-width: 769px) {
     nav ul li {
-        border-bottom: none; /* Assicura che non ci siano bordi su desktop */
+        border-bottom: none; /* Rimuove il divisore sulla navbar desktop */
     }
 }
 
-/* REGOLE MENU MOBILE, SE TUTTO VA BENE, COPIA INCOLLA DA QUA PER GLI ALTRI CSS, RICORDA IL JS E LA PICCOLA MODIFICA HTML */
+/* MENU MOBILE */
 .hamburger {
-    display: none;
+    display: none; /* Nasconde l'hamburger su desktop */
 }
 
-/* Mostra l'hamburger e posizionalo a sinistra su mobile */
 @media (max-width: 768px) {
+    /* Mostra l'hamburger e posizionalo su mobile */
     .hamburger {
-        display: block;         /* Rende visibile l'hamburger su mobile */
-        font-size: 30px;        /* Imposta la dimensione dell'icona */
-        cursor: pointer;       /* Aggiunge il cursore pointer */
-        background: none;       /* Rimuove eventuali sfondi */
-        border: none;           /* Rimuove i bordi */
-        color: block;           /* Colore nero per l'icona */
-        position: absolute;     /* Posizionamento assoluto */
-        left: 20px;             /* Sposta l'icona a sinistra */
-        top: 20px;              /* Posiziona l'icona a 20px dal bordo superiore */
+        display: block;        /* Mostra l'hamburger su mobile */
+        font-size: 30px;       /* Dimensione dell'icona */
+        cursor: pointer;       /* Aggiunge il cursore */
+        background: none;      /* Rimuove sfondi */
+        border: none;          /* Rimuove bordi */
+        color: black;          /* Colore nero */
+        position: absolute;    /* Posizionamento assoluto */
+        left: 20px;            /* Sposta l'hamburger a sinistra */
+        top: 20px;             /* Posiziona in alto */
     }
-}
 
-/* Nascondi la navbar su dispositivi mobili */
-@media (max-width: 768px) {
+    /* Nasconde il menu inizialmente */
     nav ul {
-        display: none; /* Nasconde il menu per impostazione predefinita */
-        position: fixed;  /* Posizionamento assoluto */
-        top: 180px;           /* Posiziona il menu subito sotto la navbar */
+        display: none;         /* Nasconde il menu per impostazione predefinita */
+        position: fixed;       /* Fissa il menu in una posizione specifica */
+        top: 60px;             /* Posiziona subito sotto l'header (navbar) */
         left: 0;
-        width: 100%;         /* Larghezza completa */
-        background-color: #F8EBD9;
-        padding: 0;          /* Rimuove il padding per evitare spazi non voluti */
-        margin: 0;           /* Rimuove eventuali margini indesiderati */
-        z-index: 999;        /* Assicura che il menu sia visibile sopra altri contenuti */
+        width: 100%;           /* Larghezza completa */
+        background-color: #F8EBD9; /* Colore di sfondo */
+        padding: 0;
+        margin: 0;
+        z-index: 999;          /* Porta il menu sopra gli altri contenuti */
     }
 
     /* Mostra il menu quando la classe 'show' è presente */
     nav ul.show {
         display: block; /* Mostra il menu */
     }
-}
 
-  /* Aggiungi la spaziatura tra le voci del menu e il divisore solo su mobile */
+    /* Stile delle voci del menu */
     nav ul li {
         text-align: center;
-        padding: 1rem; /* Aggiunge padding per spaziatura interna */
+        padding: 1rem; /* Spaziatura interna */
     }
 
-    /* Aggiungi il divisore solo su mobile */
+    /* Aggiunge un divisore solo tra le voci, escludendo l'ultima */
     nav ul li:not(:last-child) {
-        border-bottom: 1px solid #444; /* Separatore tra le voci del menu */
+        border-bottom: 1px solid #444; /* Separatore tra le voci */
     }
 }
