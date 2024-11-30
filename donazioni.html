@@ -13,6 +13,7 @@
             <img src="logo-finale.jpg" alt="Logo di Nemosia" class="logo-img">
         </div>
         <nav>
+		   <button class="hamburger" aria-label="Apri menu">☰</button>
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="chi-siamo.html">Chi Siamo</a></li>
@@ -68,5 +69,14 @@
     
     <p>&copy; 2024 Nemosia. Tutti i diritti riservati.</p>
 </footer>
+
+	<script>
+const hamburger = document.querySelector('.hamburger');
+const menu = document.querySelector('nav ul');
+
+hamburger.addEventListener('click', function() {
+    menu.classList.toggle('show');  // Aggiunge o rimuove la classe 'show' dal menu
+});
+</script>
 </body>
 </html>
