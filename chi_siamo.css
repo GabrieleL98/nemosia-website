@@ -26,6 +26,19 @@ p {
     text-align: center; /* Giustifica il testo nei paragrafi */
 }
 
+.secondary-logo {
+    display: block; /* Cambiato da inline-block a block per centrare */
+    margin: 0 auto; /* Aggiunto per centrare il logo */
+    text-align: center; /* Centra il contenuto all'interno del blocco */
+}
+
+.secondary-logo .logo-img {
+    width: 300px; 
+    height: auto; 
+    vertical-align: middle; 
+}
+
+
 /* Stile per la navbar */
 nav {
     background-color: #F8EBD9; /* Colore di sfondo della nav bar */
