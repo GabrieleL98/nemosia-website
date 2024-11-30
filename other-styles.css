@@ -30,7 +30,7 @@ nav ul {
     margin: 0; /* Rimuove il margine */
     padding: 0; /* Rimuove il padding */
     display: flex; /* Fa sì che gli elementi siano affiancati */
-    justify-content: center; /* Centra gli elementi orizzontalmente */
+	justify-content: center; /* Centra gli elementi orizzontalmente */
 }
 
 nav ul li {
