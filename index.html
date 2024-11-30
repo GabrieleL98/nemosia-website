@@ -150,6 +150,7 @@
 
     hamburger.addEventListener('click', function() {
         menu.classList.toggle('show');  // Aggiunge o rimuove la classe 'show' dal menu
+        console.log('Hamburger menu clicked. Menu state:', menu.classList.contains('show') ? 'open' : 'closed');
     });
 
     // Codice per la slideshow della sezione novità
