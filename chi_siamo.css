@@ -1,0 +1,204 @@
+/* QUESTO MAIN INLFUENZA TUTTE LE PAGINE */
+main {
+    background-color: #fff; 
+    padding: 20px /* aggiungi 120px se vuoi modificare i marginia lato, la prima cifra è sopra-sotto, la seconda sx dx*/; 
+    margin: 20px auto; 
+    max-width: 800px; /*modifica ampiezza*/
+
+/* Stile per l'header */
+header {
+    width: 100%;
+    background-color: #F8EBD9; /* Colore di sfondo per l'header */
+    padding: 10px; /* Ridotto da 20px a 10px */
+    text-align: center;
+}
+
+body {
+    background-color: #F0F0F0; /* Un grigio chiaro per le pagine */
+    font-family: Arial, sans-serif;
+}
+
+h1, h2, h3 {
+    color: #333; /* Colore del testo per i titoli */
+}
+
+p {
+    text-align: center; /* Giustifica il testo nei paragrafi */
+}
+
+/* Stile per la navbar */
+nav {
+    background-color: #F8EBD9; /* Colore di sfondo della nav bar */
+    padding: 10px 20px; /* Padding per la nav bar */
+}
+
+nav ul {
+    list-style-type: none; /* Rimuove i punti dall'elenco */
+    margin: 0; /* Rimuove il margine */
+    padding: 0; /* Rimuove il padding */
+    display: flex; /* Fa sì che gli elementi siano affiancati */
+	justify-content: center; /* Centra gli elementi orizzontalmente */
+}
+
+nav ul li {
+    margin-right: 20px; /* Spazio tra le opzioni */
+}
+
+nav ul li a {
+    text-decoration: none; /* Rimuove la sottolineatura dei link */
+    color: black; /* Colore del testo */
+    padding: 5px 10px; /* Padding per i link */
+    transition: color 0.3s, text-decoration 0.3s; /* Transizione per il passaggio del cursore */
+}
+
+nav ul li a:hover {
+    text-decoration: underline; /* Sottolinea il testo al passaggio del cursore */
+    color: #333; /* Colore del testo al passaggio del cursore */
+}
+
+nav ul li a.active {
+    color: #333; /* Colore del testo attivo */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3); /* Aggiunge un'ombra al testo */
+    font-weight: bold; /* Rende il testo in grassetto */
+}
+
+footer {
+    width: 100%;
+    background-color: #F8EBD9; 
+    text-align: center; 
+    padding: 20px 0; 
+     margin-top: 20px; 
+    position: relative;
+}
+
+footer p {
+    margin: 10px 0; 
+    text-align: center; 
+
+.social {
+    margin: 10px 0; 
+}
+
+.social-icon {
+    width: 30px; 
+    height: 30px; 
+    margin: 0 5px; 
+}
+
+@media (max-width: 768px) {
+  main {
+    padding: 20px 15px; /* Riduce il padding laterale solo su mobile */
+  }
+}
+
+
+
+/* Stili per dispositivi mobili */
+@media (max-width: 768px) {
+    body {
+        font-size: 14px; /* Dimensione del testo per mobile */
+    }
+    
+    .header {
+        text-align: center; /* Centra il contenuto nella header */
+    }
+    
+nav a {
+    font-size: 16px; /* Dimensione per desktop */
+    padding: 10px 15px; /* Padding per aumentare l'area cliccabile */
+}
+
+/* NAVBAR NORMALE (DESKTOP) */
+@media (min-width: 769px) {
+    nav ul li {
+        border-bottom: none; /* Rimuove il divisore sulla navbar desktop */
+    }
+}
+
+/* MENU MOBILE */
+.hamburger {
+    display: none; /* Nasconde l'hamburger su desktop */
+}
+
+@media (max-width: 768px) {
+    /* Mostra l'hamburger e posizionalo su mobile */
+    .hamburger {
+        display: block;        /* Mostra l'hamburger su mobile */
+        font-size: 30px;       /* Dimensione dell'icona */
+        cursor: pointer;       /* Aggiunge il cursore */
+        background: none;      /* Rimuove sfondi */
+        border: none;          /* Rimuove bordi */
+        color: black;          /* Colore nero */
+        position: absolute;    /* Posizionamento assoluto */
+        left: 20px;            /* Sposta l'hamburger a sinistra */
+        top: 20px;             /* Posiziona in alto */
+    }
+
+    /* Nasconde il menu inizialmente */
+    nav ul {
+        display: none;         /* Nasconde il menu per impostazione predefinita */
+        position: fixed;       /* Fissa il menu in una posizione specifica */
+        top: 160px;             /* Posiziona subito sotto l'header (navbar) */
+        left: 0;
+        width: 100%;           /* Larghezza completa */
+        background-color: #F8EBD9; /* Colore di sfondo */
+        padding: 0;
+        margin: 0;
+        z-index: 999;          /* Porta il menu sopra gli altri contenuti */
+    }
+
+    /* Mostra il menu quando la classe 'show' è presente */
+    nav ul.show {
+        display: block; /* Mostra il menu */
+    }
+
+    /* Stile delle voci del menu */
+    nav ul li {
+        text-align: center;
+        padding: 1rem; /* Spaziatura interna */
+    }
+
+    /* Aggiunge un divisore solo tra le voci, escludendo l'ultima */
+    nav ul li:not(:last-child) {
+        border-bottom: 1px solid #444; /* Separatore tra le voci */
+    }
+}
+  
+/* STILI SPECIFICI PAGINA */
+.member {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+/* Alternanza delle direzioni */
+.member:nth-child(odd) {
+    flex-direction: row;
+}
+
+.member:nth-child(even) {
+    flex-direction: row-reverse;
+}
+  
+/* Stili per l'immagine del membro */
+.member img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin: 0 20px;
+    object-fit: cover;
+}
+
+/* Stili per la descrizione del membro */
+.member-info {
+    max-width: 60%;
+}
+
+.member-info p {
+    font-family: 'Moon Dance', cursive;
+    font-size: 1.5em;
+    color: #555;
+    margin: 0;
+}
+
