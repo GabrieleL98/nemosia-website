@@ -19,6 +19,42 @@ p {
     text-align: center; /* Giustifica il testo nei paragrafi */
 }
 
+	
+nav {
+    background-color: #F8EBD9; /* Colore di sfondo della nav bar */
+    padding: 10px 20px; /* Padding per la nav bar */
+}
+
+nav ul {
+    list-style-type: none; /* Rimuove i punti dall'elenco */
+    margin: 0; /* Rimuove il margine */
+    padding: 0; /* Rimuove il padding */
+    display: flex; /* Fa sì che gli elementi siano affiancati */
+    justify-content: center; /* Centra gli elementi orizzontalmente */
+}
+
+nav ul li {
+    margin-right: 20px; /* Spazio tra le opzioni */
+}
+
+nav ul li a {
+    text-decoration: none; /* Rimuove la sottolineatura dei link */
+    color: black; /* Colore del testo */
+    padding: 5px 10px; /* Padding per i link */
+    transition: color 0.3s, text-decoration 0.3s; /* Transizione per il passaggio del cursore */
+}
+
+nav ul li a:hover {
+    text-decoration: underline; /* Sottolinea il testo al passaggio del cursore */
+    color: #333; /* Colore del testo al passaggio del cursore */
+}
+
+nav ul li a.active {
+    color: #333; /* Colore del testo attivo */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3); /* Aggiunge un'ombra al testo */
+    font-weight: bold; /* Rende il testo in grassetto */
+}
+
 .secondary-logo {
     display: block; /* Cambiato da inline-block a block per centrare */
     margin: 0 auto; /* Aggiunto per centrare il logo */
@@ -205,43 +241,6 @@ main {
     background-color: #FFB100;
 }
 
-
-
-	
-nav {
-    background-color: #F8EBD9; /* Colore di sfondo della nav bar */
-    padding: 10px 20px; /* Padding per la nav bar */
-}
-
-nav ul {
-    list-style-type: none; /* Rimuove i punti dall'elenco */
-    margin: 0; /* Rimuove il margine */
-    padding: 0; /* Rimuove il padding */
-    display: flex; /* Fa sì che gli elementi siano affiancati */
-    justify-content: center; /* Centra gli elementi orizzontalmente */
-}
-
-nav ul li {
-    margin-right: 20px; /* Spazio tra le opzioni */
-}
-
-nav ul li a {
-    text-decoration: none; /* Rimuove la sottolineatura dei link */
-    color: black; /* Colore del testo */
-    padding: 5px 10px; /* Padding per i link */
-    transition: color 0.3s, text-decoration 0.3s; /* Transizione per il passaggio del cursore */
-}
-
-nav ul li a:hover {
-    text-decoration: underline; /* Sottolinea il testo al passaggio del cursore */
-    color: #333; /* Colore del testo al passaggio del cursore */
-}
-
-nav ul li a.active {
-    color: #333; /* Colore del testo attivo */
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3); /* Aggiunge un'ombra al testo */
-    font-weight: bold; /* Rende il testo in grassetto */
-}
 	
 
 /* NAVBAR NORMALE (DESKTOP) */
