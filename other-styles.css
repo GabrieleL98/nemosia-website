@@ -39,40 +39,6 @@ p {
     margin: 20px 0;
     background-color: #fff; /* Bianco per il box */
 }
-nav {
-    background-color: #F8EBD9; /* Colore di sfondo della nav bar */
-    padding: 10px 20px; /* Padding per la nav bar */
-}
-
-nav ul {
-    list-style-type: none; /* Rimuove i punti dall'elenco */
-    margin: 0; /* Rimuove il margine */
-    padding: 0; /* Rimuove il padding */
-    display: flex; /* Fa sì che gli elementi siano affiancati */
-	justify-content: center; /* Centra gli elementi orizzontalmente */
-}
-
-nav ul li {
-    margin-right: 20px; /* Spazio tra le opzioni */
-}
-
-nav ul li a {
-    text-decoration: none; /* Rimuove la sottolineatura dei link */
-    color: black; /* Colore del testo */
-    padding: 5px 10px; /* Padding per i link */
-    transition: color 0.3s, text-decoration 0.3s; /* Transizione per il passaggio del cursore */
-}
-
-nav ul li a:hover {
-    text-decoration: underline; /* Sottolinea il testo al passaggio del cursore */
-    color: #333; /* Colore del testo al passaggio del cursore */
-}
-
-nav ul li a.active {
-    color: #333; /* Colore del testo attivo */
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3); /* Aggiunge un'ombra al testo */
-    font-weight: bold; /* Rende il testo in grassetto */
-}
 
 /* Footer */
 footer {
@@ -240,6 +206,44 @@ main {
 }
 
 
+
+	
+nav {
+    background-color: #F8EBD9; /* Colore di sfondo della nav bar */
+    padding: 10px 20px; /* Padding per la nav bar */
+}
+
+nav ul {
+    list-style-type: none; /* Rimuove i punti dall'elenco */
+    margin: 0; /* Rimuove il margine */
+    padding: 0; /* Rimuove il padding */
+    display: flex; /* Fa sì che gli elementi siano affiancati */
+    justify-content: center; /* Centra gli elementi orizzontalmente */
+}
+
+nav ul li {
+    margin-right: 20px; /* Spazio tra le opzioni */
+}
+
+nav ul li a {
+    text-decoration: none; /* Rimuove la sottolineatura dei link */
+    color: black; /* Colore del testo */
+    padding: 5px 10px; /* Padding per i link */
+    transition: color 0.3s, text-decoration 0.3s; /* Transizione per il passaggio del cursore */
+}
+
+nav ul li a:hover {
+    text-decoration: underline; /* Sottolinea il testo al passaggio del cursore */
+    color: #333; /* Colore del testo al passaggio del cursore */
+}
+
+nav ul li a.active {
+    color: #333; /* Colore del testo attivo */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3); /* Aggiunge un'ombra al testo */
+    font-weight: bold; /* Rende il testo in grassetto */
+}
+	
+
 /* NAVBAR NORMALE (DESKTOP) */
 @media (min-width: 769px) {
     nav ul li {
@@ -247,7 +251,6 @@ main {
     }
 }
 
-/* MENU MOBILE */
 .hamburger {
     display: none; /* Nasconde l'hamburger su desktop */
 }
@@ -270,7 +273,7 @@ main {
     nav ul {
         display: none;         /* Nasconde il menu per impostazione predefinita */
         position: fixed;       /* Fissa il menu in una posizione specifica */
-        top: 160px;             /* Posiziona subito sotto l'header (navbar) */
+        top: 160px;            /* Posiziona subito sotto l'header (navbar) */
         left: 0;
         width: 100%;           /* Larghezza completa */
         background-color: #F8EBD9; /* Colore di sfondo */
@@ -295,3 +298,4 @@ main {
         border-bottom: 1px solid #444; /* Separatore tra le voci */
     }
 }
+
