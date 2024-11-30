@@ -150,7 +150,7 @@ main {
     padding: 20px /* aggiungi 120px se vuoi modificare i marginia lato, la prima cifra è sopra-sotto, la seconda sx dx*/; 
     margin: 20px auto; 
     max-width: 800px; /*modifica ampiezza*/
-
+}
 
 /* NAVBAR NORMALE (DESKTOP) */
 @media (min-width: 769px) {
