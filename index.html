@@ -128,8 +128,6 @@
     <p>&copy; 2024 Nemosia. Tutti i diritti riservati.</p>
 </footer>
 
-
-
 <script>
     // Codice per la slideshow
     let currentIndexSlideshow = 0; // Variabile per la slideshow
@@ -146,48 +144,45 @@
         images[currentIndexSlideshow].style.display = 'block'; // Mostra la nuova immagine
     }, 3000); // Cambia immagine ogni 3 secondi
 
+    // Codice per il menu hamburger
+    const hamburger = document.querySelector('.hamburger');
+    const menu = document.querySelector('nav ul');
 
-const hamburger = document.querySelector('.hamburger');
-const menu = document.querySelector('nav ul');
+    if (hamburger && menu) {
+        hamburger.addEventListener('click', function() {
+            menu.classList.toggle('show');  // Aggiunge o rimuove la classe 'show' dal menu
+        });
+    } else {
+        console.error('Elementi hamburger o menu non trovati.');
+    }
 
-hamburger.addEventListener('click', function() {
-    menu.classList.toggle('show');  // Aggiunge o rimuove la classe 'show' dal menu
-});
+    // Codice per la slideshow della bacheca
+    let currentSlide = 0;
 
-</script>
+    function showSlide(index) {
+        const slides = document.querySelectorAll('.bacheca-item');
+        const totalSlides = slides.length;
 
-<!-- Altri contenuti HTML -->
-<script>
-	
-let currentSlide = 0;
+        // Nascondi tutte le slide
+        slides.forEach(slide => {
+            slide.style.display = 'none';
+        });
 
-function showSlide(index) {
-    const slides = document.querySelectorAll('.bacheca-item');
-    const totalSlides = slides.length;
+        // Mostra la slide corrente
+        slides[index].style.display = 'block';
+    }
 
-    // Nascondi tutte le slide
-    slides.forEach(slide => {
-        slide.style.display = 'none';
-    });
+    function nextSlide() {
+        const slides = document.querySelectorAll('.bacheca-item');
+        currentSlide = (currentSlide + 1) % slides.length;
+        showSlide(currentSlide);
+    }
 
-    // Mostra la slide corrente
-    slides[index].style.display = 'block';
-}
-
-function nextSlide() {
-    const slides = document.querySelectorAll('.bacheca-item');
-    currentSlide = (currentSlide + 1) % slides.length;
-    showSlide(currentSlide);
-}
-
-function prevSlide() {
-    const slides = document.querySelectorAll('.bacheca-item');
-    currentSlide = (currentSlide - 1 + slides.length) % slides.length;
-    showSlide(currentSlide);
-}
-
-// Inizializza la prima slide visibile
-showSlide(currentSlide);
+    function prevSlide() {
+        const slides = document.querySelectorAll('.bacheca-item');
+        currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+        showSlide(currentSlide);
+    }
 
 </script>
 
