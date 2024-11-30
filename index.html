@@ -129,8 +129,8 @@
 </footer>
 
 <script>
-    // Codice per la slideshow
-    let currentIndexSlideshow = 0; // Variabile per la slideshow
+    // Codice per la slideshow automatica
+    let currentIndexSlideshow = 0; // Variabile per la slideshow automatica
     const images = document.querySelectorAll('.slideshow img');
     
     // Mostra solo la prima immagine all'inizio
@@ -148,15 +148,11 @@
     const hamburger = document.querySelector('.hamburger');
     const menu = document.querySelector('nav ul');
 
-    if (hamburger && menu) {
-        hamburger.addEventListener('click', function() {
-            menu.classList.toggle('show');  // Aggiunge o rimuove la classe 'show' dal menu
-        });
-    } else {
-        console.error('Elementi hamburger o menu non trovati.');
-    }
+    hamburger.addEventListener('click', function() {
+        menu.classList.toggle('show');  // Aggiunge o rimuove la classe 'show' dal menu
+    });
 
-    // Codice per la slideshow della bacheca
+    // Codice per la slideshow della sezione novità
     let currentSlide = 0;
 
     function showSlide(index) {
@@ -184,8 +180,12 @@
         showSlide(currentSlide);
     }
 
+    // Inizializzazione all'apertura della pagina
+    document.addEventListener('DOMContentLoaded', () => {
+        // Mostra la prima slide nella sezione novità
+        showSlide(currentSlide);
+    });
 </script>
-
 
 </body>
 </html>
