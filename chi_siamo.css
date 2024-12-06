@@ -180,7 +180,7 @@ main {
     /* Nasconde il menu inizialmente */
     nav ul {
         display: none;         /* Nasconde il menu per impostazione predefinita */
-        position: fixed;       /* Fissa il menu in una posizione specifica */
+        position: absolute;       /* Fissa il menu in una posizione specifica */
         top: 160px;            /* Posiziona subito sotto l'header (navbar) */
         left: 0;
         width: 100%;           /* Larghezza completa */
