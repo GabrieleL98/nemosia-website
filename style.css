@@ -288,8 +288,6 @@ footer p {
         text-align: center; /* Centra il contenuto nella header */
     }
     
-    /* Altri stili specifici per mobile */
-}
 img {
     max-width: 100%; /* Limita la larghezza massima al 100% del contenitore */
     height: auto; /* Mantiene le proporzioni */
@@ -306,6 +304,7 @@ img {
 nav a {
     font-size: 16px; /* Dimensione per desktop */
     padding: 10px 15px; /* Padding per aumentare l'area cliccabile */
+}
 }
 
 /* NAVBAR NORMALE (DESKTOP) */
@@ -332,13 +331,14 @@ nav a {
         position: absolute;    /* Posizionamento assoluto */
         left: 20px;            /* Sposta l'hamburger a sinistra */
         top: 20px;             /* Posiziona in alto */
+        z-index: 1000;         /* Porta l'hamburger sopra altri elementi */
     }
 
     /* Nasconde il menu inizialmente */
     nav ul {
         display: none;         /* Nasconde il menu per impostazione predefinita */
         position: fixed;       /* Fissa il menu in una posizione specifica */
-        top: 500px;             /* Posiziona subito sotto l'header (navbar) */
+        top: 60px;             /* Posiziona sotto l'hamburger (adatta secondo il layout) */
         left: 0;
         width: 100%;           /* Larghezza completa */
         background-color: #F8EBD9; /* Colore di sfondo */
@@ -349,7 +349,7 @@ nav a {
 
     /* Mostra il menu quando la classe 'show' è presente */
     nav ul.show {
-        display: block; /* Mostra il menu */
+        display: block !important; /* Sovrascrive il display: none */
     }
 
     /* Stile delle voci del menu */
@@ -363,6 +363,7 @@ nav a {
         border-bottom: 1px solid #444; /* Separatore tra le voci */
     }
 }
+
 
 /* Regole per il menu in generale */
 #nav-links {
