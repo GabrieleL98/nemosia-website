@@ -338,7 +338,7 @@ nav a {
     nav ul {
         display: none;         /* Nasconde il menu per impostazione predefinita */
         position: fixed;       /* Fissa il menu in una posizione specifica */
-        top: 260px;             /* Posiziona subito sotto l'header (navbar) */
+        top: 500px;             /* Posiziona subito sotto l'header (navbar) */
         left: 0;
         width: 100%;           /* Larghezza completa */
         background-color: #F8EBD9; /* Colore di sfondo */
